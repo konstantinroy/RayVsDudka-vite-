@@ -1,0 +1,119 @@
+@import '../../index.scss';
+
+.content {
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+}
+
+.heading {
+  font-size: 4vw;
+  font-weight: 900;
+  margin: 0;
+  width: 55%;
+}
+
+.pagePhotoBlock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.locationsPageHeading {
+  text-align: center;
+  padding: 0;
+}
+
+.locationsPageHeading img {
+  width: 100%;
+  animation-name: animate-main-photo;
+  animation-duration: 3s;
+}
+
+.headingText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3vw 0 4vw;
+}
+
+.locationInfoBlock {
+  width: 100%;
+  background-color: $infoBlockColor;
+  margin-bottom: 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  padding: 2vw 0;
+  text-shadow: $infoBlockTextShadow;
+}
+
+.locationInfoBlock h1 {
+  font-size: 3vw;
+  margin: 2vw 0 3vw;
+}
+
+.locationPhotoBlock {
+  width: 60%;
+}
+
+.locationPhotoBlock img {
+  width: 100%;
+}
+
+@keyframes animate-main-photo {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .pagePhotoBlock {
+    padding-top: 8vw;
+  }
+  .locationsPageHeading img {
+    width: 150%;
+    margin-left: 0vw;
+  }
+  .headingText {
+    padding: 7vw 0;
+  }
+  .locationInfoBlock h1 {
+    margin: 3vw 0 4vw;
+  }
+  .locationPhotoBlock {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .pagePhotoBlock {
+    padding-top: 14vw;
+  }
+  .locationsPageHeading img {
+    width: 200%;
+    margin-left: -3vw;
+  }
+  .headingText {
+    padding: 10vw 0;
+  }
+  .heading {
+    font-size: 6vw;
+    width: 80%;
+  }
+  .locationInfoBlock {
+    padding: 4vw 0;
+    margin-bottom: 10vw;
+  }
+  .locationInfoBlock h1 {
+    font-size: 5vw;
+    margin: 4vw 0 7vw;
+  }
+  .locationPhotoBlock {
+    width: 100%;
+  }
+}

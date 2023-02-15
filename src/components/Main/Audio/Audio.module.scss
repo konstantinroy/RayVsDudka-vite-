@@ -1,0 +1,46 @@
+.audioPhotoBlock {
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.audioPcPhoto {
+  width: 100%;
+}
+
+.audioMobPhoto {
+  display: none;
+  width: 100%;
+}
+
+.audioText {
+  font-family: "Rubik Vinyl", cursive;
+  font-size: 11vw;
+  font-weight: 900;
+  position: absolute;
+  top: 263vw;
+  text-transform: uppercase;
+  width: 78%;
+}
+
+@media only screen and (max-width: 760px) {
+  .audioText {
+    top: 275vw;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .audioPcPhoto {
+    display: none;
+  }
+  .audioMobPhoto {
+    display: block;
+  }
+  .audioText {
+    top: 611vw;
+    width: 90%;
+    font-size: 14vw;
+  }
+}

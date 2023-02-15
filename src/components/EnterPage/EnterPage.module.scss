@@ -1,0 +1,286 @@
+@import "../../index.scss";
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@900&display=swap");
+
+.content {
+  display: flex;
+  justify-content: center;
+  padding: 7vw 0;
+}
+
+.mainBlock {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.pageIcon {
+  width: 25%;
+  height: 32%;
+  border: 3px solid $infoBlockColor;
+  border-radius: 50%;
+  padding: 1vw;
+  margin-bottom: 2vw;
+  display: flex;
+  justify-content: center;
+}
+
+.pageIcon svg {
+  width: 100%;
+  height: 100%;
+  color: $infoBlockColor;
+}
+
+.formBlock {
+  width: 100%;
+}
+
+.registrButton {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  padding: 0vw 4vw;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4vw;
+}
+
+.registrButton button {
+  background-color: rgba(255, 255, 255, 0);
+  color: #fff;
+  font-size: 1.4vw;
+  border: none;
+  border-radius: 6px 6px 0px 0px;
+  padding: 1vw 0.7vw;
+  cursor: pointer;
+}
+
+.registrBtn {
+  margin-right: 1vw;
+}
+
+.inputsBlock {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 0.5vw 4vw 3vw;
+}
+
+.errorTextBlock {
+  width: 100%;
+  text-align: start;
+}
+
+.inputErrorText {
+  font-size: 1.2vw;
+  color: #b71111;
+  margin: 0.5vw 0;
+  font-weight: 500;
+}
+
+.input {
+  position: relative;
+  width: 100%;
+  height: 4vw;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1vw;
+  border: 1px solid $infoBlockColor;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.passEye {
+  position: absolute;
+  right: 0;
+  background-color: #ffffff00;
+  color: #ffffff94;
+  width: 11%;
+  height: 100%;
+  padding-right: 1vw;
+  cursor: pointer;
+}
+
+.inputIcon {
+  width: 17%;
+  height: 65%;
+  color: $infoBlockColor;
+}
+
+.input input {
+  width: 100%;
+  height: 100%;
+  background-color: $infoBlockColor;
+  color: #fff;
+  padding: 1.5vw;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5vw;
+  border: none;
+}
+
+.inputsBlock button {
+  background-color: #d17ea500;
+  color: #fff;
+  width: 100%;
+  height: 4vw;
+  margin-top: 1vw;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5vw;
+  border: 1px solid $infoBlockColor;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.inputsBlock button:hover {
+  background-color: $infoBlockColor;
+  transition: 1s;
+}
+
+.personalInfoText {
+  font-size: 1.2vw;
+  padding: 0.5vw 0vw;
+}
+
+.rememberMeInput {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0.5vw 1vw;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4vw;
+}
+
+.rememberMeInput input {
+  background-color: rgba(255, 255, 255, 0);
+  height: 1.5vw;
+  width: 1.5vw;
+  margin-right: 0.5vw;
+}
+
+.successRegistr {
+  text-align: center;
+  width: 40%;
+  padding: 0vw 4vw;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2vw;
+}
+
+.successRegistrIcon {
+  color: $infoBlockColor;
+  width: 35%;
+  height: 50%;
+  margin-bottom: 1vw;
+}
+
+@media only screen and (max-width: 760px) {
+  .content {
+    padding: 17vw 0 10vw;
+  }
+  .mainBlock {
+    width: 45%;
+  }
+  .pageIcon {
+    width: 30%;
+    height: 36%;
+  }
+  .registrButton button {
+    font-size: 1.8vw;
+  }
+  .input {
+    height: 5vw;
+    margin-bottom: 1.5vw;
+  }
+  .inputErrorText {
+    font-size: 1.7vw;
+  }
+  .input input {
+    font-size: 2vw;
+  }
+  .personalInfoText {
+    font-size: 1.7vw;
+  }
+  .rememberMeInput {
+    font-size: 1.8vw;
+  }
+  .inputsBlock button {
+    height: 5vw;
+    margin-top: 1.5vw;
+    font-size: 2vw;
+  }
+  .successRegistr {
+    width: 50%;
+    font-size: 3vw;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .content {
+    padding: 27vw 0 17vw;
+  }
+  .mainBlock {
+    width: 80%;
+  }
+  .pageIcon {
+    height: 43%;
+    width: 35%;
+  }
+  .formBlock {
+    margin-top: 10vw;
+  }
+  .registrButton button {
+    font-size: 5.5vw;
+    padding: 2vw;
+  }
+  .registrBtn {
+    margin-right: 2vw;
+  }
+  .inputsBlock {
+    padding: 4vw 4vw;
+  }
+  .inputErrorText {
+    font-size: 5vw;
+    margin: 2vw 0;
+  }
+  .input {
+    height: 12vw;
+    margin-bottom: 4.5vw;
+  }
+  .inputIcon {
+    width: 20%;
+  }
+  .passEye {
+    width: 15%;
+    height: 60%;
+    padding-right: 2vw;
+  }
+  .input input {
+    font-size: 6vw;
+    padding: 3.5vw;
+  }
+  .personalInfoText {
+    font-size: 5vw;
+  }
+  .rememberMeInput {
+    padding: 0.5vw 3vw;
+    font-size: 4.5vw;
+  }
+  .rememberMeInput input {
+    height: 5.5vw;
+    width: 5.5vw;
+    margin-right: 1.5vw;
+  }
+  .inputsBlock button {
+    height: 12vw;
+    margin-top: 4.5vw;
+    font-size: 5vw;
+  }
+  .successRegistr {
+    width: 85%;
+    font-size: 7vw;
+    margin: 17vw 0;
+  }
+  .successRegistrIcon {
+    width: 80%;
+    margin-bottom: 5vw;
+  }
+}

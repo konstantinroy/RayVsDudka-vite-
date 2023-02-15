@@ -1,0 +1,43 @@
+.quotesPhotoBlock {
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.quotesPcPhoto {
+    width: 100%;
+}
+
+.quotesMobPhoto {
+    display: none;
+    width: 100%;
+}
+
+.quotesText {
+    font-family: "Rubik Vinyl", cursive;
+    font-size: 11vw;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 380vw;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+@media only screen and (max-width: 760px) {
+    .quotesText {
+        top: 393vw;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .quotesPcPhoto {
+        display: none;
+    }
+    .quotesMobPhoto {
+        display: block;
+    }
+    .quotesText {
+        top: 855vw;
+        font-size: 13vw;
+    }
+}

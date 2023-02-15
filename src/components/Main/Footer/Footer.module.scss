@@ -1,0 +1,159 @@
+.footerBlockStyles {
+  padding: 7vw 7vw 3vw 7vw;
+  border-top: 2px solid #a1a1a1;
+}
+
+.mainBlockPC {
+  padding: 0vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding-bottom: 5vw;
+  border-bottom: 1px solid #a1a1a1;
+}
+
+.linksPCBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  color: #fff;
+  font-size: 1.5vw;
+}
+
+.linksPCBlock h1 {
+  margin: 0;
+  margin-bottom: 1.5vw;
+  font-size: 2vw;
+}
+
+.linksPCBlock a {
+  color: #fff;
+}
+
+.linksPCBlock a:hover {
+  text-decoration: underline;
+}
+
+.linksPC {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.footerCapText {
+  margin-top: 2vw;
+  color: #fff;
+  font-size: 1.6vw;
+}
+
+.icons {
+  width: 15%;
+}
+
+.icons img {
+  width: 100%;
+  margin-bottom: 0.5vw;
+}
+
+.mainBlockMOB {
+  display: none;
+}
+
+.mainBlockMOB h1 {
+  font-size: 5vw;
+  margin: 0;
+}
+
+.mainBlockMOB a {
+  color: #fff;
+}
+
+.linksBlockMOB {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ffffff52;
+  border-radius: 5px;
+  padding: 3vw 4vw;
+  margin-bottom: 3vw;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.heading button {
+  background: rgba(0, 170, 238, 0);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.menu {
+  padding-top: 10vw;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.linksMOB {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2vw;
+  padding: 0;
+}
+
+.linksMOB li {
+  margin-bottom: 0.7vw;
+}
+
+@media only screen and (max-width: 760px) {
+  .linksPCBlock {
+    font-size: 2vw;
+}
+  .linksPCBlock h1 {
+    font-size: 2.5vw;
+}
+.footerCapText {
+  font-size: 2.6vw;
+}
+}
+
+@media only screen and (max-width: 480px) {
+  .mainBlockPC {
+    display: none;
+  }
+  .mainBlockMOB {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+  }
+  .linksBlockMOB__box {
+    display: block;
+  }
+  .icons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 5vw 0;
+    border-bottom: 1px solid #ffffff52;
+  }
+
+  .icons img {
+    width: 80%;
+    margin-bottom: 0.5vw;
+  }
+  .footerCapText {
+    font-size: 4.6vw;
+    text-align: center;
+  }
+}

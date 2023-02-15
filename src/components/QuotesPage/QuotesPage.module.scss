@@ -1,0 +1,115 @@
+@import '../../index.scss';
+
+.content {
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.heading {
+  font-size: 4vw;
+  font-weight: 900;
+  margin: 0;
+  width: 70%;
+}
+
+.pagePhotoBlock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quotesHeading {
+  text-align: center;
+  padding: 0;
+}
+
+.quotesHeading img {
+  width: 100%;
+  animation-name: animate-main-photo;
+  animation-duration: 3s;
+}
+
+.headingText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4vw 0;
+}
+
+.quotesBlock {
+  background-color: $infoBlockColor;
+  display: block;
+  padding: 2vw 10vw;
+  margin-bottom: 4vw;
+  cursor: context-menu;
+  font-size: 2.5vw;
+  font-weight: 900;
+  text-shadow: $infoBlockTextShadow;
+}
+
+.quoteAuthor {
+  margin-top: 1vw;
+  text-align: end;
+}
+
+@keyframes animate-main-photo {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .pagePhotoBlock {
+    padding-top: 8vw;
+    overflow: hidden;
+  }
+  .quotesHeading img {
+    width: 150%;
+    margin-left: 20vw;
+  }
+  .heading {
+    font-size: 6vw;
+  }
+  .headingText {
+    padding: 5vw 0;
+  }
+  .quotesBlock {
+    padding: 3vw 5vw;
+    font-size: 3vw;
+  }
+  .quoteAuthor {
+    margin-right: 5vw;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .pagePhotoBlock {
+    padding-top: 14vw;
+  }
+  .quotesHeading img {
+    width: 200%;
+    margin-left: 20vw;
+  }
+  .headingText {
+    padding: 10vw 0;
+  }
+  .heading {
+    font-size: 6vw;
+    width: 60%;
+  }
+  .quotesBlock {
+    padding: 5vw 5vw;
+    margin-bottom: 10vw;
+    font-size: 4.5vw;
+  }
+  .quotesText {
+    text-align: inherit;
+  }
+  .quoteAuthor {
+    margin-right: 5vw;
+    margin-top: 5vw;
+  }
+}

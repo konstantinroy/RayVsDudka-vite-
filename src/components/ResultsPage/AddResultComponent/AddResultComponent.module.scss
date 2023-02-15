@@ -1,0 +1,393 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap");
+.mainBlock {
+    width: 100%;
+}
+
+.matchDayBlock {
+  background-color: #d9d9d96e;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 2vw 0 0;
+  margin: 2vw 0;
+  cursor: context-menu;
+  text-shadow: 0px 0px 5px #545454;
+}
+
+.dateBlock {
+  width: 45%;
+}
+
+.dateHeader {
+  margin-bottom: 1vw;
+}
+
+.dateHeaderText {
+  font-size: 2.2vw;
+}
+
+.dateForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 1.8vw;
+}
+
+.dateInputsBlock {
+  display: flex;
+  align-items: center;
+}
+
+.dateInput {
+  background-color: #ffffff00;
+  height: 4vw;
+  border: 1px solid #d9d9d96e;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 0 0.5vw;
+}
+
+.dateInput input {
+  width: 10vw;
+  height: 100%;
+  border: none;
+  background-color: #ffffffb3;
+  padding: 0;
+  margin: 0;
+  font-size: 1.8vw;
+  text-align: center;
+}
+
+.dateSelect {
+  height: 4vw;
+  border: none;
+  background-color: #ffffff00;
+  border: 1px solid #d9d9d96e;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 0 0.5vw;
+}
+
+.dateSelect select {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: #ffffffb3;
+  padding: 0 1vw;
+  font-size: 1.8vw;
+  color: #00000094;
+}
+
+.tourDateBlock {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.editBtn svg {
+  position: absolute;
+  top: 0;
+  font-size: 1.3vw;
+  margin-left: 1vw;
+  margin-top: 0.7vw;
+}
+
+.editBtn button {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 0;
+  margin-right: 0.5vw;
+}
+
+.matchScoreText {
+  font-family: system-ui;
+  font-size: 3vw;
+  margin: 1vw 0.5vw;
+  font-weight: 900;
+}
+
+.resultsInputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resultTeamInput {
+  display: flex;
+  align-items: center;
+  border: 1px solid;
+  background-color: #ffffff00;
+  height: 4vw;
+  border: 1px solid #d9d9d96e;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 0 0.5vw;
+}
+
+.resultScoreInput {
+  border: 1px solid;
+  background-color: #ffffff00;
+  height: 4vw;
+  border: 1px solid #d9d9d96e;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 0 0.5vw;
+}
+
+.scoreInputsBlock {
+  display: flex;
+  align-items: center;
+}
+
+.inputIcon {
+  background-color: #ffffff00;
+  width: 20%;
+  height: 60%;
+  padding: 0 0.5vw;
+}
+
+.resultTeamInput input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  background-color: #ffffffb3;
+  padding: 0 0vw 0 1vw;
+  margin: 0;
+  font-size: 1.5vw;
+}
+
+.resultScoreInput input {
+  height: 100%;
+  border: none;
+  background-color: #ffffffb3;
+  margin: 0;
+  font-size: 2vw;
+  text-align: center;
+  width: 5vw;
+}
+
+.saveMatchResultBtn {
+  background-color: #ffffff29;
+  color: #fff;
+  width: 100%;
+  height: 4vw;
+  font-size: 2vw;
+  padding: 0 2vw;
+  margin: 1.5vw 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5vw;
+  border: 1px solid #d9d9d96e;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 2vw;
+}
+
+.resultList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1vw 0 2vw;
+  margin: 0;
+}
+
+.resultList ul {
+  margin: 1vw 0;
+  font-size: 2vw;
+  padding: 0;
+}
+
+.resultList li {
+  display: block;
+  animation: match-result-animation 0.1s ease-in-out;
+}
+
+.resultList ul p {
+  font-size: 2vw;
+  margin-top: 2vw;
+}
+
+.mathesQuotes {
+  margin-top: 2vw;
+  font-size: 1.8vw;
+}
+
+.goalsQuotes {
+  margin-top: 0vw;
+  font-size: 1.8vw;
+}
+
+@keyframes match-result-animation {
+  0% {
+    transform: translate(0, -500vw);
+    transform: scale(5, 5);
+  }
+  100% {
+    transform: translate(0, 0);
+    transform: scale(1, 1);
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .matchDayBlock {
+    padding: 4vw 0 2vw;
+}
+  .dateBlock {
+    width: 65%;
+  }
+  .dateHeaderText {
+    font-size: 3vw;
+  }
+  .editBtn svg {
+    font-size: 1.6vw;
+    margin-left: 1vw;
+    margin-top: 1vw;
+  }
+  .dateInput {
+    height: 5vw;
+  }
+  .dateInput input {
+    font-size: 2.8vw;
+  }
+  .dateSelect {
+    height: 5vw;
+  }
+  .dateSelect select {
+    font-size: 2.8vw;
+  }
+  .saveMatchResultBtn {
+    height: 5vw;
+    font-size: 2.8vw;
+  }
+  .matchScoreText {
+    font-size: 5vw;
+  }
+  .resultsInputs {
+    margin-bottom: 1vw;
+  }
+  .inputIcon {
+    width: 16%;
+    height: 73%;
+}
+  .resultTeamInput {
+    height: 5vw;
+    width: 30%;
+  }
+  .resultTeamInput input {
+    font-size: 2.8vw;
+  }
+  .resultScoreInput {
+    height: 5vw;
+  }
+  .resultScoreInput input {
+    font-size: 3vw;
+  }
+  .resultList ul {
+    font-size: 3vw;
+  }
+  .mathesQuotes {
+    margin-top: 2vw;
+    font-size: 2.8vw;
+  }
+  .goalsQuotes {
+    font-size: 2.8vw;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .matchDayBlock {
+    padding: 8vw 0 5vw;
+    margin: 5vw 0;
+  }
+  .dateBlock {
+    width: 90%;
+    margin-bottom: 4vw;
+  }
+  .dateForm {
+    flex-direction: column;
+}
+  .dateInputsBlock {
+    width: 100%;
+    margin: 1vw 0 2vw;
+}
+  .editBtn svg {
+    font-size: 3vw;
+    margin-left: 3vw;
+    margin-top: 1.5vw;
+  }
+  .dateHeaderText {
+    font-size: 5vw;
+  }
+  .dateInput {
+    height: 10vw;
+    width: 100%;
+  }
+  .dateInput input {
+    width: 100%;
+    font-size: 4vw;
+  }
+  .dateSelect {
+    height: 10vw;
+    width: 100%;
+  }
+  .dateSelect select {
+    font-size: 4vw;
+  }
+  .saveMatchResultBtn {
+    height: 11vw;
+    font-size: 5vw;
+    margin: 1.5vw 0.5vw;
+  }
+  .matchScoreText {
+    font-size: 8vw;
+    margin-bottom: 4vw;
+  }
+  .resultList {
+    width: 100%;
+}
+  .resultsInputs {
+    flex-direction: column;
+    width: 60%;
+    margin-bottom: 4vw;
+  }
+  .inputIcon {
+    width: 18%;
+    height: 70%;
+  }
+  .resultTeamInput {
+    height: 11vw;
+    width: 100%;
+  }
+  .resultTeamInput input {
+    font-size: 5vw;
+    padding: 0 0vw 0 1.5vw;
+  }
+  .scoreInputsBlock {
+    margin: 3vw 0;
+}
+  .resultScoreInput {
+    height: 11vw;
+  }
+  .resultScoreInput input {
+    font-size: 5vw;
+    width: 11vw;
+  }
+  .resultList ul {
+    font-size: 4.7vw;
+    margin: 4vw 0;
+  }
+  .mathesQuotes {
+    margin-top: 2vw;
+    font-size: 5vw;
+  }
+  .goalsQuotes {
+    font-size: 5vw;
+  }
+}

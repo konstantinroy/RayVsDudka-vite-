@@ -1,0 +1,96 @@
+.main-photo-block {
+    width: 100%;
+    overflow: hidden;
+}
+
+.main-photo-block img {
+    width: 100%;
+}
+.pcPhoto {
+    animation-name: animate-main-photo;
+    animation-duration: 3s;
+}
+.mobilePhoto {
+    animation-name: animate-main-photo;
+    animation-duration: 3s;
+}
+.mobilePhoto {
+    display: none;
+}
+
+.mainPhotoText {
+    display: none;
+    position: absolute;
+}
+
+.mainPhotoText p {
+    text-transform: uppercase;
+    font-size: 4.5vw;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    text-align: center;
+}
+
+.mainPhotoText-1 {
+    color: white;
+    position: relative;
+    right: 24vw;
+    top: 33vw;
+}
+
+.mainPhotoText-2 {
+    color: rgb(0, 0, 0);
+    position: relative;
+    left: 24vw;
+    top: 26vw;
+}
+
+.mainPhotoText-3 {
+    color: white;
+    position: relative;
+    right: 24vw;
+    top: 126vw;
+}
+
+.mainPhotoText-4 {
+    color: rgb(0, 0, 0);
+    position: relative;
+    left: 24vw;
+    top: 119vw;
+}
+
+@keyframes animate-main-photo {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .main-photo-block {
+        display: flex;
+        justify-content: center;
+        padding-top: 8vw;
+    }
+    
+    .main-photo-block img {
+        width: 120%;
+    }
+
+
+}
+
+@media only screen and (max-width: 480px) {
+    .pcPhoto {
+        display: none;
+    }
+    .mobilePhoto {
+        display: block;
+    }
+    .mainPhotoText {
+        display: block;
+        position: absolute;
+    }
+}

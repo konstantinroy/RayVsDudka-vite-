@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap");
+
+.tableBlock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+table {
+  font-family: "Oswald", sans-serif;
+  border: 1px solid #3a3a3a;
+  border-spacing: 0px;
+  font-size: 2.8vw;
+}
+
+tbody {
+  font-weight: 900;
+}
+
+th {
+  background: linear-gradient(to bottom, #323232 0%, #3f3f3f 40%, #1c1c1c 150%),
+    linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(0, 0, 0, 0.25) 200%
+    );
+  background-blend-mode: multiply;
+  color: #f5f5f5;
+  font-weight: 100;
+  border-right: 1px solid rgb(133, 133, 133);
+  padding: 0.5vw 3vw;
+}
+
+tr {
+  color: #000;
+}
+
+td {
+  border-right: 1px solid #3a3a3a;
+  border-bottom: 1px solid #3a3a3a;
+  padding: 0.5vw;
+}
+
+.thHeader {
+  text-align: center;
+}
+
+.tdName {
+  display: flex;
+  text-transform: uppercase;
+  padding: 0.5vw 10vw 0.5vw 0.5vw;
+}
+
+.trWinner {
+  background-color: #ffffff;
+}
+
+.trLoser {
+  background-color: rgb(241, 241, 241);
+}
+
+.tdPoints {
+	text-align: center;
+}
+
+@media only screen and (max-width: 760px) {
+  table {
+    font-size: 3vw;
+  }
+  .tdName {
+    padding: 0.5vw 5vw 0.5vw 0.5vw;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  tbody {
+    font-size: 4.7vw;
+  }
+  tr {
+    font-size: 5.2vw;
+  }
+  .tdName {
+    padding: 0.5vw 15vw 0.5vw 0.5vw;
+  }
+  .playerName {
+    display: none;
+  }
+}

@@ -1,0 +1,189 @@
+@import '../../index.scss';
+
+.content {
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.inputBlock {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: end;
+  padding: 0vw 2vw;
+  margin-bottom: 2vw;
+}
+
+.inputBlock input {
+  background-color: $infoBlockColor;
+  width: 30%;
+  padding: 0vw 0.5vw;
+  font-size: 1.7vw;
+  margin: 0 2vw 0 0vw;
+  border: none;
+  box-shadow: 0px 0px 3px #fff;
+  color: #fff;
+}
+
+.inputBlock select {
+  background-color: $infoBlockColor;
+  display: block;
+  width: 12%;
+  font-size: 1.5vw;
+  color: #fff;
+  padding: 2vw 0.5vw;
+}
+
+.heading {
+  font-size: 4vw;
+  font-weight: 900;
+  margin: 0;
+  width: 55%;
+}
+
+.pagePhotoBlock {
+  background-image: $pagePhotoBg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25vw;
+}
+
+.audioName {
+  font-size: 1.7vw;
+  margin: 0 0 0 2vw;
+  width: 50%;
+}
+
+.audioHeading {
+  text-align: center;
+  padding: 0;
+}
+
+.audioHeading img {
+  width: 100%;
+  animation-name: animate-main-photo;
+  animation-duration: 3s;
+}
+
+.headingText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4vw 0;
+}
+
+.audioBlock {
+  background-color: $infoBlockColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2vw 0;
+  margin-bottom: 2vw;
+  cursor: context-menu;
+  color: #fff;
+  text-shadow: $infoBlockTextShadow;
+}
+
+.audioBlock audio {
+  width: 50%;
+  height: 4.5vw;
+  margin-top: 1vw;
+}
+
+@keyframes animate-main-photo {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .pagePhotoBlock {
+    padding-top: 8vw;
+    overflow: hidden;
+    height: 35vw;
+  }
+  .audioHeading img {
+    width: 150%;
+    margin-left: 20vw;
+  }
+  .headingText {
+    padding: 5vw 0;
+  }
+  .inputBlock input {
+    width: 40%;
+    font-size: 2.5vw;
+    margin: 0 4vw 0 0vw;
+  }
+  .inputBlock select {
+    width: 17%;
+    font-size: 2vw;
+  }
+  .audioBlock {
+    padding: 3vw 0;
+  }
+  .audioName {
+    width: 59%;
+    font-size: 2.5vw;
+    margin: 0vw 0vw 0vw 1vw;
+  }
+  .audioBlock audio {
+    width: 60%;
+    height: 5.5vw;
+    margin-top: 2vw;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .pagePhotoBlock {
+    padding-top: 14vw;
+    height: 45vw;
+  }
+  .audioHeading img {
+    width: 200%;
+    margin-left: 20vw;
+  }
+  .headingText {
+    padding: 7vw 0;
+    border-bottom: 1px solid #b1b1b1;
+  }
+  .heading {
+    font-size: 6vw;
+    width: 80%;
+  }
+  .inputBlock {
+    margin: 4vw 0;
+    justify-content: space-evenly;
+}
+  .inputBlock input {
+    width: 60%;
+    font-size: 4.5vw;
+    padding: 0 2vw;
+    margin: 0 4vw 0 0vw;
+  }
+  .inputBlock select {
+    width: 28%;
+    font-size: 3.5vw;
+  }
+  .audioBlock {
+    padding: 5vw 0 7vw;
+    margin-bottom: 4vw;
+  }
+  .audioName {
+    width: 90%;
+    font-size: 4vw;
+    margin: 0 0 0 3vw;
+  }
+  .audioBlock audio {
+    width: 90%;
+    height: 9.5vw;
+    margin-top: 2.5vw;
+  }
+  .footer {
+    margin-top: 10vw;
+  }
+}
