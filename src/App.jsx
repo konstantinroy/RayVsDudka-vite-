@@ -1,5 +1,7 @@
-import { useState, useEffect } from "react";
 import { HashRouter, Routes, Route } from "react-router-dom";
+import { useEffect } from 'react';
+import { useStore } from './store/store';
+import { Provider, useSelector } from 'react-redux';
 import ScrollToTop from "../src/components/CommonComponents/ReactScrollToTop/ScrollToTop";
 import Main from "../src/components/Main/Main.jsx";
 import Results from "../src/components/ResultsPage/ResultsPage.jsx";
@@ -10,8 +12,16 @@ import PhotoPage from "../src/components/PhotosPage/PhotosPage.jsx";
 import QuotesPage from "../src/components/QuotesPage/QuotesPage.jsx";
 import EnterPage from "../src/components/EnterPage/EnterPage";
 import SettingsPage from "../src/components/SettingsPage/SettingsPage"
+import { getTheme } from './store/selectors/user';
 
 const Links = () => {
+  const theme = useSelector(getTheme);
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme
+    window.localStorage.setItem('theme', theme)
+  }, [ theme ])
+
   return (
     <ScrollToTop>
     <Routes>
@@ -33,23 +43,15 @@ const Links = () => {
 
 
 function App() {
-  const [theme, setTheme] = useState(
-    JSON.parse(localStorage.getItem('theme')) || false
-  );
-  const click = () => {
-    setTheme(!theme);
-  };
-
-  useEffect(() => {
-    localStorage.setItem('theme', JSON.stringify(theme))
-    document.body.className = theme && "darkTheme"
-  }, [theme])
+  const store = useStore();
 
   return (
     <div className="App">
-      <HashRouter>
-        <Links />
-      </HashRouter>
+      <Provider store={store}>
+        <HashRouter>
+          <Links />
+        </HashRouter>
+      </Provider>
     </div>
   );
 }

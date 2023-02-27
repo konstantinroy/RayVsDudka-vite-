@@ -1,14 +1,12 @@
 import React from "react";
 import Navbar from "../../Main/Header/Navbar.jsx";
 import Footer from "../../Main/Footer/Footer";
-import SeasonTable from "./SeasonTable2022/SeasonTable2022.jsx";
+import SeasonTable from "./SeasonTable2022/SeasonTable2022";
 import styles from "./Result2022Year.module.scss";
 import Results2022Array from "./Results2022Array.jsx";
 import MatchDayBlock from "./MatchDayBlock.jsx";
 
 function Result2022Year() {
-  
-
   return (
     <div>
       <Navbar />
@@ -32,31 +30,9 @@ function Result2022Year() {
           <h1>Результаты всех туров сезона</h1>
         </div>
 
-        {Results2022Array.map((matchDay) => {
-          return (
-            <MatchDayBlock key={matchDay.tour} matchDay={matchDay} Results2022Array={Results2022Array} />
-          );
+        {Results2022Array.map((data) => {
+          return <MatchDayBlock key={data.tour} data={data} />;
         })}
-
-        {/* {
-          Results2022Array.map((matchDay) => {
-            console.log(matchDay)
-            matchDay.matches.map((match) => {
-              
-              return <MatchDayBlock key={matchDay.tour} matchDay={matchDay} match={match} />
-            })
-          })
-        } */}
-
-        {/* {
-          Results2022Array.map((matchDay) => {
-            return matchDay.matches.map((match) => {
-              return <MatchDayBlock key={matchDay.tour} matchDay={matchDay} match={match} />
-            })
-          })
-        } */}
-
-        
       </div>
 
       <Footer />

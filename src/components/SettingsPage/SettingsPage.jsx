@@ -1,12 +1,27 @@
 import { VscColorMode } from 'react-icons/vsc';
+import { useSelector, useDispatch } from 'react-redux';
 import Navbar from "../Main/Header/Navbar";
 import Footer from "../Main/Footer/Footer";
 import styles from "./SettingsPage.module.scss";
 import RayAvatar from "../../assets/img/GoldenBallMob.jpg";
 import ToggleSwitchBtn from "./ToggleSwitchBtn/ToggleSwitchBtn"
-
+import { changeTheme } from '../../store/actions/user';
+import { getTheme } from '../../store/selectors/user';
 
 function SettingsPage() {
+  const dispatch = useDispatch();
+  const theme = useSelector(getTheme);
+
+  console.log({
+    theme
+  })
+
+  const onThemeChange = () => {
+    dispatch(changeTheme());
+
+
+  };
+
   return (
     <div>
       <Navbar />
@@ -35,8 +50,9 @@ function SettingsPage() {
             </div>
             </div>
             <div className={styles.chapterMakingChanges}>
-                <ToggleSwitchBtn 
-                // onClick={changeTheme}
+                <ToggleSwitchBtn
+                  value={theme}
+                  onChange={onThemeChange}
                  />
             </div>
           </div>
