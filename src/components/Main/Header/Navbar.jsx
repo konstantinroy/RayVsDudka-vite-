@@ -58,6 +58,7 @@ const Navbar = () => {
         <Link to="/audio">Аудио</Link>
         <Link to="/photo">Фоточки</Link>
         <Link to="/quotes">Цитаты</Link>
+        <Link to="/settings">Настройки</Link>
           <div className="registrButtons">
           <Link to="/account">ВХОД</Link>
           {/* <Link to="/">РЕГИСТРАЦИЯ</Link> */}

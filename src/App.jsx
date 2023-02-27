@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "../src/components/CommonComponents/ReactScrollToTop/ScrollToTop";
 import Main from "../src/components/Main/Main.jsx";
@@ -8,6 +9,7 @@ import AudioPage from "../src/components/AudioPage/AudioPage.jsx";
 import PhotoPage from "../src/components/PhotosPage/PhotosPage.jsx";
 import QuotesPage from "../src/components/QuotesPage/QuotesPage.jsx";
 import EnterPage from "../src/components/EnterPage/EnterPage";
+import SettingsPage from "../src/components/SettingsPage/SettingsPage"
 
 const Links = () => {
   return (
@@ -23,6 +25,7 @@ const Links = () => {
         <Route path="/photo" element={<PhotoPage />} />
         <Route path="/quotes" element={<QuotesPage />} />
         <Route path="/account" element={<EnterPage />} />
+        <Route path="/settings" element={<SettingsPage />} />
       </Routes>
       </ScrollToTop>
   )
@@ -30,6 +33,18 @@ const Links = () => {
 
 
 function App() {
+  const [theme, setTheme] = useState(
+    JSON.parse(localStorage.getItem('theme')) || false
+  );
+  const click = () => {
+    setTheme(!theme);
+  };
+
+  useEffect(() => {
+    localStorage.setItem('theme', JSON.stringify(theme))
+    document.body.className = theme && "darkTheme"
+  }, [theme])
+
   return (
     <div className="App">
       <HashRouter>

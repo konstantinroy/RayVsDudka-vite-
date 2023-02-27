@@ -1,10 +1,11 @@
+@import '../../../index.scss';
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap");
 .mainBlock {
     width: 100%;
 }
 
 .matchDayBlock {
-  background-color: #d9d9d96e;
+  background-color: $infoBlockColor;
   width: 100%;
   display: flex;
   align-items: center;
