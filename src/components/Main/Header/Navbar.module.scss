@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@900&display=swap");
+@import "../../../index.scss";
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  background-color: #141414;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #dbdbdb;
+  padding: 0.5vw 0vw;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.logoBlock {
+  font-family: "Quantico", sans-serif;
+  font-size: 3vw;
+  margin-left: 4vw;
+}
+
+.linksBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 4vw;
+}
+
+.pages {
+  display: flex;
+  border-right: 1px solid #fff;
+  padding-right: 2vw;
+}
+
+.pages a {
+  font-size: 1.2vw;
+  margin: 0 0.5vw;
+}
+
+.pages a:hover {
+  text-decoration: underline;
+}
+
+.enterBtn {
+  padding-left: 2vw;
+}
+
+.enterBtn button {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  cursor: pointer;
+  padding: 0.7vw;
+  font-size: 1.2vw;
+}
+
+.burgerBtn {
+  display: none;
+  font-size: 7vw;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1100px) {
+  .navbar {
+    padding: 0.7vw 0vw;
+  }
+  .pages a {
+    font-size: 1.3vw;
+  }
+}
+
+@media only screen and (max-width: 912px) {
+  .navbar {
+    padding: 2vw 0vw;
+  }
+  .logoBlock {
+    font-size: 3.5vw;
+    margin-left: 2vw;
+  }
+  .linksBlock {
+    margin-right: 2vw;
+  }
+  .pages a {
+    font-size: 1.8vw;
+  }
+  .enterBtn button {
+    padding: 0.8vw;
+    font-size: 1.7vw;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .logoBlock {
+    font-size: 4vw;
+  }
+  .pages a {
+    font-size: 1.9vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    height: 6vw;
+    justify-content: flex-start;
+    padding: 2vw;
+  }
+  .burgerBtn {
+    display: flex;
+    font-size: 6vw;
+  }
+  .logoBlock {
+    font-size: 5vw;
+    margin-left: 2vw;
+  }
+  .linksBlock {
+    background-color: #141414;
+    height: 100vh;
+    width: 50%;
+    flex-direction: column;
+    position: absolute;
+    top: 10vw;
+    left: 0;
+    transform: translate(-100vw, 0);
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10vw;
+    border-right: 1px solid #fff;
+    border-top: 1px solid #fff;
+    opacity: 0;
+    transition: ease-out 0.2s;
+  }
+  .linksBlock.visible {
+    top: 10vw;
+    transform: translate(0, 0);
+    opacity: 1;
+    transition: ease-out 0.2s;
+  }
+  .pages {
+    flex-direction: column;
+    border: none;
+  }
+  .pages a {
+    margin-top: 2vw;
+    font-size: 5vw;
+  }
+  .enterBtn {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .navbar {
+    height: 7vw;
+  }
+  .burgerBtn {
+    font-size: 7vw;
+  }
+  .logoBlock {
+    font-size: 6vw;
+    margin-left: 2vw;
+  }
+  .linksBlock {
+    top: 11vw;
+    left: 0;
+  }
+  .linksBlock.visible {
+    top: 11vw;
+  }
+  .pages a {
+    margin-top: 2vw;
+    font-size: 5vw;
+  }
+  .enterBtn {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .navbar {
+    height: 13vw;
+  }
+  .burgerBtn {
+    display: flex;
+    font-size: 8.5vw;
+  }
+  .logoBlock {
+    font-size: 7vw;
+    margin-left: 2vw;
+  }
+  .linksBlock {
+    width: 90%;
+    top: 13vw;
+    left: 0;
+    padding: 10vw;
+  }
+  .linksBlock.visible {
+    top: 13vw;
+  }
+  .pages a {
+    margin-top: 2vw;
+    font-size: 10vw;
+  }
+}
