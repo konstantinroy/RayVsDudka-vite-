@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { Link } from 'react-router-dom';
-import { AiOutlineMenu } from 'react-icons/ai';
-import { RxCross2 } from 'react-icons/rx';
+import { Link } from "react-router-dom";
+import { AiOutlineMenu } from "react-icons/ai";
+import { RxCross2 } from "react-icons/rx";
+import { MdAccountCircle } from "react-icons/md";
 import styles from "./Navbar.module.scss";
-// import FifaIcon from '../../../assets/img/Fifa.png'
+import FifaIcon from '../../../assets/img/Fifa.png'
 
 function Navbar() {
   const [isMenuClicked, setIsMenuClicked] = useState(false);
@@ -25,6 +26,9 @@ function Navbar() {
         ${isMenuClicked ? styles.visible : ""}`}
         >
           <div className={styles.pages}>
+            <div className={styles.fifaIcon}>
+              <img src={FifaIcon} alt=""></img>
+            </div>
             <Link to="/results">Результаты</Link>
             <Link to="/locations">Локации</Link>
             <Link to="/audio">Аудио</Link>
@@ -36,6 +40,9 @@ function Navbar() {
               <button className="login-button">ВХОД / РЕГИСТРАЦИЯ</button>
             </Link>
           </div>
+        </div>
+        <div className={styles.accountMobBtn}>
+          <MdAccountCircle />
         </div>
       </div>
     </>

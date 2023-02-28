@@ -2,18 +2,20 @@
 @import "../../../index.scss";
 
 .navbar {
+  background-color: var(--background-color);
+  color: var(--text-color);
   position: fixed;
   width: 100%;
-  background-color: #141414;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #dbdbdb;
+  border-bottom: 1px solid #ffffff;
   padding: 0.5vw 0vw;
+  z-index: 100;
 }
 
 .navbar a {
-  color: #fff;
+  color: var(--text-color);
   text-decoration: none;
 }
 
@@ -24,6 +26,7 @@
 }
 
 .linksBlock {
+  background-color: var(--background-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -51,18 +54,35 @@
 
 .enterBtn button {
   background: transparent;
-  color: #fff;
   border: 1px solid #fff;
   cursor: pointer;
   padding: 0.7vw;
   font-size: 1.2vw;
 }
 
+.accountMobBtn {
+  display: none;
+  position: absolute;
+  right: 0;
+  margin-right: 2vw;
+  font-size: 5vw;
+}
+
 .burgerBtn {
   display: none;
   font-size: 7vw;
-  color: #fff;
   cursor: pointer;
+}
+
+.fifaIcon {
+  display: none;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.fifaIcon img {
+  width: 100%;
 }
 
 @media only screen and (max-width: 1100px) {
@@ -105,9 +125,9 @@
 
 @media only screen and (max-width: 768px) {
   .navbar {
-    height: 6vw;
+    height: 7vw;
     justify-content: flex-start;
-    padding: 2vw;
+    padding: 0 2vw;
   }
   .burgerBtn {
     display: flex;
@@ -118,44 +138,52 @@
     margin-left: 2vw;
   }
   .linksBlock {
-    background-color: #141414;
     height: 100vh;
     width: 50%;
     flex-direction: column;
     position: absolute;
-    top: 10vw;
+    top: 7vw;
     left: 0;
     transform: translate(-100vw, 0);
     align-items: center;
     justify-content: flex-start;
-    padding: 10vw;
+    padding: 3vw 7vw;
     border-right: 1px solid #fff;
-    border-top: 1px solid #fff;
+    // border-top: 1px solid #fff;
     opacity: 0;
     transition: ease-out 0.2s;
   }
   .linksBlock.visible {
-    top: 10vw;
+    top: 7vw;
     transform: translate(0, 0);
     opacity: 1;
     transition: ease-out 0.2s;
   }
+  .fifaIcon {
+    display: flex;
+  }
   .pages {
     flex-direction: column;
+    align-items: center;
     border: none;
+    padding: 0;
   }
   .pages a {
     margin-top: 2vw;
     font-size: 5vw;
+    text-transform: uppercase;
   }
   .enterBtn {
     display: none;
+  }
+  .accountMobBtn {
+    display: flex;
   }
 }
 
 @media only screen and (max-width: 540px) {
   .navbar {
-    height: 7vw;
+    height: 8vw;
   }
   .burgerBtn {
     font-size: 7vw;
@@ -165,11 +193,12 @@
     margin-left: 2vw;
   }
   .linksBlock {
-    top: 11vw;
+    width: 60%;
+    top: 8vw;
     left: 0;
   }
   .linksBlock.visible {
-    top: 11vw;
+    top: 8vw;
   }
   .pages a {
     margin-top: 2vw;
@@ -196,13 +225,19 @@
     width: 90%;
     top: 13vw;
     left: 0;
-    padding: 10vw;
+    padding: 3vw 10vw;
   }
   .linksBlock.visible {
     top: 13vw;
   }
+  .fifaIcon img {
+    width: 80%;
+  }
   .pages a {
     margin-top: 2vw;
-    font-size: 10vw;
+    font-size: 8vw;
+  }
+  .accountMobBtn {
+    font-size: 8vw;
   }
 }

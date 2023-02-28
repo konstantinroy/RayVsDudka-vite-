@@ -16,7 +16,6 @@
   display: flex;
   flex-direction: column;
   align-items: start;
-  color: #fff;
   font-size: 1.5vw;
 }
 
@@ -24,10 +23,6 @@
   margin: 0;
   margin-bottom: 1.5vw;
   font-size: 2vw;
-}
-
-.linksPCBlock a {
-  color: #fff;
 }
 
 .linksPCBlock a:hover {
@@ -42,7 +37,6 @@
 
 .footerCapText {
   margin-top: 2vw;
-  color: #fff;
   font-size: 1.6vw;
 }
 
@@ -64,10 +58,6 @@
   margin: 0;
 }
 
-.mainBlockMOB a {
-  color: #fff;
-}
-
 .linksBlockMOB {
   display: flex;
   flex-direction: column;
@@ -86,7 +76,6 @@
 
 .heading button {
   background: rgba(0, 170, 238, 0);
-  color: #fff;
   border: none;
   cursor: pointer;
 }
@@ -133,7 +122,6 @@
   .mainBlockMOB {
     display: flex;
     flex-direction: column;
-    color: #fff;
   }
   .linksBlockMOB__box {
     display: block;
