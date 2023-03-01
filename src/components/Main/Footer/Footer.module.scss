@@ -1,6 +1,6 @@
 .footerBlockStyles {
   padding: 7vw 7vw 3vw 7vw;
-  border-top: 2px solid #a1a1a1;
+  border-top: 2px solid var(--text-color);
 }
 
 .mainBlockPC {
@@ -9,7 +9,7 @@
   justify-content: space-between;
   align-items: start;
   padding-bottom: 5vw;
-  border-bottom: 1px solid #a1a1a1;
+  border-bottom: 1px solid var(--text-color);
 }
 
 .linksPCBlock {
@@ -61,7 +61,7 @@
 .linksBlockMOB {
   display: flex;
   flex-direction: column;
-  border: 1px solid #ffffff52;
+  border: 1px solid var(--text-color);
   border-radius: 5px;
   padding: 3vw 4vw;
   margin-bottom: 3vw;
@@ -133,7 +133,7 @@
     justify-content: space-between;
     text-align: center;
     padding: 5vw 0;
-    border-bottom: 1px solid #ffffff52;
+    border-bottom: 1px solid var(--text-color);
   }
 
   .icons img {

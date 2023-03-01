@@ -9,7 +9,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid var(--text-color);
   padding: 0.5vw 0vw;
   z-index: 100;
 }
@@ -148,7 +148,7 @@
     align-items: center;
     justify-content: flex-start;
     padding: 3vw 7vw;
-    border-right: 1px solid #fff;
+    // border-right: 1px solid #fff;
     // border-top: 1px solid #fff;
     opacity: 0;
     transition: ease-out 0.2s;
@@ -178,6 +178,10 @@
   }
   .accountMobBtn {
     display: flex;
+  }
+  .accountMobBtn a {
+    display: flex;
+    align-items: center;
   }
 }
 
