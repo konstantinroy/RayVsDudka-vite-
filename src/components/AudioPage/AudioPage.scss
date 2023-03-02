@@ -1,4 +1,4 @@
-@import '../../index.scss';
+@import "../../index.scss";
 
 .content {
   padding: 0;
@@ -46,7 +46,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 25vw;
+  height: 29vw;
+  padding-top: 4.5vw;
 }
 
 .audioName {
@@ -100,9 +101,22 @@
   }
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 912px) {
   .pagePhotoBlock {
     padding-top: 8vw;
+    height: 33vw;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .pagePhotoBlock {
+    padding-top: 8.5vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .pagePhotoBlock {
+    padding-top: 7vw;
     overflow: hidden;
     height: 35vw;
   }
@@ -137,10 +151,17 @@
   }
 }
 
+@media only screen and (max-width: 540px) {
+  .pagePhotoBlock {
+    padding-top: 7.5vw;
+    height: 37vw;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   .pagePhotoBlock {
-    padding-top: 14vw;
-    height: 45vw;
+    padding-top: 13vw;
+    height: 48vw;
   }
   .audioHeading img {
     width: 200%;
@@ -157,7 +178,7 @@
   .inputBlock {
     margin: 4vw 0;
     justify-content: space-evenly;
-}
+  }
   .inputBlock input {
     width: 60%;
     font-size: 4.5vw;

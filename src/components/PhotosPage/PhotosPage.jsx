@@ -1,11 +1,11 @@
 import React from "react";
-import Carousel from "../CommonComponents/Carousel/index.jsx";
-import Navbar from "../Main/Header/Navbar.jsx";
-import Footer from "../Main/Footer/Footer.jsx";
+import Navbar from "../Main/Header/Navbar";
+import Footer from "../Main/Footer/Footer";
 import BackToTopButton from "./../CommonComponents/BackToTopButton/BackToTopButton.jsx";
 import styles from "./PhotosPage.module.scss";
 import PhotoPagePhoto from "../../assets/img/PhotoPagePhoto.jpg";
 import PhotosArray from "./PhotosArray";
+import PhotoBlock from "./PhotoBlock.jsx";
 
 function PhotosPage() {
   return (
@@ -28,23 +28,11 @@ function PhotosPage() {
         {PhotosArray.map((post) => {
           return (
             <>
-              {Object.keys(post).length > 2 ? (
-                <div className={styles.photoBlock}>
-                  <div className={styles.carouselBlock}>
-                    <Carousel>
-                      <img src={post.photo1} alt="" />
-                      <img src={post.photo2} alt="" />
-                    </Carousel>
-                  </div>
-                </div>
-              ) : (
-                <div className={styles.photoBlock}>
-                  <img src={post.photo1} alt="" />
-                </div>
-              )}
+              <PhotoBlock key={post.id} post={post} />
             </>
           );
         })}
+
         <BackToTopButton />
       </div>
 

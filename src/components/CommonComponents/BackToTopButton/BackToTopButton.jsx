@@ -1,6 +1,5 @@
-import React from "react";
 import { useEffect, useState } from "react";
-import './BackToTopButton.css'
+import styles from "./BackToTopButton.module.scss";
 
 function BackToTopButton() {
   const [backToTopButton, setBackToTopButton] = useState(false);
@@ -25,10 +24,7 @@ function BackToTopButton() {
   return (
     <div>
       {backToTopButton && (
-        <button
-        className="btn"
-          onClick={scrollUp}
-        >
+        <button className={styles.btn} onClick={scrollUp}>
           ᐱ
         </button>
       )}

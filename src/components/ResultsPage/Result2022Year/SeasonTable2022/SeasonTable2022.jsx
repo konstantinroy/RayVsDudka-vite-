@@ -21,7 +21,9 @@ function SeasonTable2022() {
         <tbody>
           <tr class={styles.trWinner}>
             <td class={styles.tdPoints}>1</td>
-            <td class={styles.tdName}><p className={styles.playerName}>Константин</p>&nbsp;<p>Рай</p></td>
+            <td class={styles.tdName}>
+              <p className={styles.playerName}>Константин</p>&nbsp;<p>Рай</p>
+            </td>
             <td class={styles.tdPoints}>9</td>
             <td class={styles.tdPoints}>103</td>
             <td class={styles.tdPoints}>46</td>
@@ -32,7 +34,9 @@ function SeasonTable2022() {
           </tr>
           <tr class={styles.trLoser}>
             <td class={styles.tdPoints}>2</td>
-            <td class={styles.tdName}><p className={styles.playerName}>Никита</p>&nbsp;<p>Дудка</p></td>
+            <td class={styles.tdName}>
+              <p className={styles.playerName}>Никита</p>&nbsp;<p>Дудка</p>
+            </td>
             <td class={styles.tdPoints}>9</td>
             <td class={styles.tdPoints}>103</td>
             <td class={styles.tdPoints}>36</td>

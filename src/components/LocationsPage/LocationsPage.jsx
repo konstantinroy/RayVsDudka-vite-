@@ -58,7 +58,7 @@ function LocationsPage() {
         <div className={styles.locationInfoBlock}>
           <h1>Дома у родаков Никиты</h1>
           <div className={styles.locationPhotoBlock}>
-          <Carousel>
+            <Carousel>
               <img src={ParentsDudaHomePhoto} alt="" />
             </Carousel>
           </div>
@@ -67,7 +67,7 @@ function LocationsPage() {
         <div className={styles.locationInfoBlock}>
           <h1>Компьютерный клуб Syber X</h1>
           <div className={styles.locationPhotoBlock}>
-          <Carousel>
+            <Carousel>
               <img src={SyberXPhoto1} alt="" />
               <img src={SyberXPhoto2} alt="" />
               <img src={SyberXPhoto3} alt="" />
@@ -78,16 +78,13 @@ function LocationsPage() {
         <div className={styles.locationInfoBlock}>
           <h1>Компьютерный клуб Nintendo</h1>
           <div className={styles.locationPhotoBlock}>
-          <Carousel>
+            <Carousel>
               <img src={NintendoPhoto1} alt="" />
               <img src={NintendoPhoto2} alt="" />
               <img src={NintendoPhoto3} alt="" />
             </Carousel>
           </div>
         </div>
-
-
-
       </div>
 
       <Footer />

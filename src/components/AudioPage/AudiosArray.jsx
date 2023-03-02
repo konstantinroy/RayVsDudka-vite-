@@ -31,7 +31,7 @@ import Thirty from "./audio/30. Рекламный ролик Матч тв к �
 import Thirtyone from "./audio/31. Разговор Никиты с Максом.mp3";
 import Thirtytwo from "./audio/32. Каким будет день, когда Никита починит xbox.mp3";
 import Thirtythree from "./audio/33. Дуда сообщает Марку о результате катки.mp3";
-import Thirtyfour from "./audio/34. Документальный фильм 'Константин Рай против Никиты Дудки'.mp3"; 
+import Thirtyfour from "./audio/34. Документальный фильм 'Константин Рай против Никиты Дудки'.mp3";
 
 const AudiosArray = [
   {
@@ -208,6 +208,6 @@ const AudiosArray = [
   },
 ];
 
-AudiosArray.sort((prev, next) => next.id - prev.id)
+AudiosArray.sort((prev, next) => next.id - prev.id);
 
 export default AudiosArray;

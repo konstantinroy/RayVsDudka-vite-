@@ -20,7 +20,9 @@ function SeasonTable2023() {
         <tbody>
           <tr class={styles.trWinner}>
             <td class={styles.tdPoints}>1</td>
-            <td class={styles.tdName}><p className={styles.playerName}>Константин</p>&nbsp;<p>Рай</p></td>
+            <td class={styles.tdName}>
+              <p className={styles.playerName}>Константин</p>&nbsp;<p>Рай</p>
+            </td>
             <td class={styles.tdPoints}>2</td>
             <td class={styles.tdPoints}>24</td>
             <td class={styles.tdPoints}>17</td>
@@ -30,7 +32,9 @@ function SeasonTable2023() {
           </tr>
           <tr class={styles.trLoser}>
             <td class={styles.tdPoints}>2</td>
-            <td class={styles.tdName}><p className={styles.playerName}>Никита</p>&nbsp;<p>Дудка</p></td>
+            <td class={styles.tdName}>
+              <p className={styles.playerName}>Никита</p>&nbsp;<p>Дудка</p>
+            </td>
             <td class={styles.tdPoints}>2</td>
             <td class={styles.tdPoints}>24</td>
             <td class={styles.tdPoints}>7</td>

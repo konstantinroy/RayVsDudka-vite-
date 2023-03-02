@@ -4,6 +4,7 @@ import Footer from "../Main/Footer/Footer.jsx";
 import styles from "./QuotesPage.module.scss";
 import QuotesPagePhoto from "../../assets/img/QuotesPagePhoto.jpg";
 import QuotesArray from "./QuotesArray.jsx";
+import QuoteBlock from "./QuoteBlock.jsx";
 
 function QuotesPage() {
   return (
@@ -23,15 +24,9 @@ function QuotesPage() {
           </div>
         </div>
 
-        
-          {QuotesArray.map((item) => {
-            return (
-              <div className={styles.quotesBlock}>
-                <div>{item.quote}</div>
-                <div className={styles.quoteAuthor}>© {item.author}{item.date}</div>
-              </div>
-            );
-          })}
+        {QuotesArray.map((item) => {
+          return <QuoteBlock key={item.id} item={item} />;
+        })}
       </div>
 
       <Footer />

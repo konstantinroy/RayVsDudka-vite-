@@ -1,25 +1,19 @@
-import { VscColorMode } from 'react-icons/vsc';
-import { useSelector, useDispatch } from 'react-redux';
+import { VscColorMode } from "react-icons/vsc";
+import { useSelector, useDispatch } from "react-redux";
 import Navbar from "../Main/Header/Navbar";
 import Footer from "../Main/Footer/Footer";
 import styles from "./SettingsPage.module.scss";
 import RayAvatar from "../../assets/img/GoldenBallMob.jpg";
-import ToggleSwitchBtn from "./ToggleSwitchBtn/ToggleSwitchBtn"
-import { changeTheme } from '../../store/actions/user';
-import { getTheme } from '../../store/selectors/user';
+import ToggleSwitchBtn from "./ToggleSwitchBtn/ToggleSwitchBtn";
+import { changeTheme } from "../../store/actions/user";
+import { getTheme } from "../../store/selectors/user";
 
 function SettingsPage() {
   const dispatch = useDispatch();
   const theme = useSelector(getTheme);
 
-  console.log({
-    theme
-  })
-
   const onThemeChange = () => {
     dispatch(changeTheme());
-
-
   };
 
   return (
@@ -41,19 +35,16 @@ function SettingsPage() {
 
         <div className={styles.settingsBlock}>
           <div className={styles.settingsChapter}>
-          <div className={styles.chapterInfo}>
-            <div className={styles.chapterIcon}>
+            <div className={styles.chapterInfo}>
+              <div className={styles.chapterIcon}>
                 <VscColorMode />
-            </div>
-            <div className={styles.chapterText}>
+              </div>
+              <div className={styles.chapterText}>
                 <p>Изменить цветовую тему</p>
-            </div>
+              </div>
             </div>
             <div className={styles.chapterMakingChanges}>
-                <ToggleSwitchBtn
-                  value={theme}
-                  onChange={onThemeChange}
-                 />
+              <ToggleSwitchBtn value={theme} onChange={onThemeChange} />
             </div>
           </div>
           <div className={styles.settingsChapter}></div>

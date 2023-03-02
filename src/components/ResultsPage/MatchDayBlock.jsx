@@ -44,12 +44,10 @@ const MatchDayBlock = ({ data }) => {
             );
           })}
           <div className={styles.additionalInfo}>
-          <h3>
-            Кол-во матчей: {data.matchesQty}
-          </h3>
-          <h3>
-            Счёт голов: {data.dudaGoalsQty}-{data.rayGoalsQty}
-          </h3>
+            <h3>Кол-во матчей: {data.matchesQty}</h3>
+            <h3>
+              Счёт голов: {data.dudaGoalsQty}-{data.rayGoalsQty}
+            </h3>
           </div>
         </ul>
         <button

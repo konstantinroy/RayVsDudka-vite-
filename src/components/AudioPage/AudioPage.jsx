@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import Navbar from "../Main/Header/Navbar.jsx";
 import Footer from "../Main/Footer/Footer.jsx";
-import BackToTopButton from './../CommonComponents/BackToTopButton/BackToTopButton.jsx'
+import BackToTopButton from "./../CommonComponents/BackToTopButton/BackToTopButton.jsx";
 import AudiosArrayData from "./AudiosArray.jsx";
 import AudioList from "./AudioList.jsx";
 import "./AudioPage.scss";
-import CasseteAnimation from './CasseteAnimation/CasseteAnimation.jsx'
+import CasseteAnimation from "./CasseteAnimation/CasseteAnimation.jsx";
 // import AudioPagePhoto from "../../assets/img/AudioPagePhoto.jpg";
 import { useCallback } from "react";
 
@@ -31,7 +31,7 @@ function AudioPage() {
   );
   //////////////////////
 
-  const [sortType, setSortType] = useState('asc');
+  const [sortType, setSortType] = useState("asc");
   const [searchTerm, setSearchTerm] = useState("");
   const [audioList, setAudioList] = useState(AudiosArrayData);
 
@@ -48,11 +48,11 @@ function AudioPage() {
     setSortType(e.target.value);
 
     setAudioList((prevState) => {
-      if (e.target.value === 'asc') {
+      if (e.target.value === "asc") {
         return [...prevState.sort((prev, next) => next.id - prev.id)];
       }
-      
-      if (e.target.value === 'desc') {
+
+      if (e.target.value === "desc") {
         return [...prevState.sort((prev, next) => prev.id - next.id)];
       }
     });
@@ -64,7 +64,7 @@ function AudioPage() {
       <div className="content">
         <div className="audioHeading">
           <div className="pagePhotoBlock">
-          <CasseteAnimation />
+            <CasseteAnimation />
             {/* <img className="audioPagePhoto" src={AudioPagePhoto} alt=""></img> */}
           </div>
           <div className="headingText">
@@ -81,21 +81,9 @@ function AudioPage() {
             onChange={(e) => setSearchTerm(e.target.value)}
           />
 
-          <select
-            name="sort"
-            value={sortType}
-            onChange={onSortClick}
-          >
-            <option
-              value="asc"
-            >
-              Сортировка: самые последние
-            </option>
-            <option
-              value="desc"
-            >
-              Сортировка: самые ранние
-            </option>
+          <select name="sort" value={sortType} onChange={onSortClick}>
+            <option value="asc">Сортировка: самые последние</option>
+            <option value="desc">Сортировка: самые ранние</option>
           </select>
         </div>
 

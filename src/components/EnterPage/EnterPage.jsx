@@ -250,8 +250,7 @@ function EnterPage() {
                       usernameInput &&
                       regPasswordInput1 &&
                       regPasswordInput2 &&
-                      !passwordsMatchesError &&
-                       (
+                      !passwordsMatchesError && (
                         <p>
                           Нажимая на кнопку "ЗАРЕГИСТРИРОВАТЬСЯ" вы даёте
                           согласие на обработку персональных данных
@@ -267,7 +266,7 @@ function EnterPage() {
                 </div>
               ) : (
                 <div className={styles.inputsBlock}>
-                <div className={styles.errorTextBlock}>
+                  <div className={styles.errorTextBlock}>
                     <h1 className={styles.inputErrorText}>
                       {passwordsMatchesError}
                     </h1>

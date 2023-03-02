@@ -1,4 +1,4 @@
-@import '../../../index.scss';
+@import "../../../index.scss";
 @import url("https://fonts.googleapis.com/css?family=Baloo+Thambi");
 
 .mainBlock {
@@ -14,11 +14,11 @@
 }
 
 .text-container {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .text-container > span {
   text-transform: uppercase;
@@ -64,13 +64,13 @@
 }
 
 @media only screen and (max-width: 760px) {
-    .mainBlock {
-        font-size: 22vw;
-      }
+  .mainBlock {
+    font-size: 22vw;
+  }
 }
 
 @media only screen and (max-width: 480px) {
-    .mainBlock {
-        font-size: 27vw;
-      }
+  .mainBlock {
+    font-size: 27vw;
+  }
 }

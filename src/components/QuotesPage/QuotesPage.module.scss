@@ -1,4 +1,4 @@
-@import '../../index.scss';
+@import "../../index.scss";
 
 .content {
   padding: 0;
@@ -16,6 +16,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 4.5vw;
 }
 
 .quotesHeading {
@@ -25,8 +26,6 @@
 
 .quotesHeading img {
   width: 100%;
-  animation-name: animate-main-photo;
-  animation-duration: 3s;
 }
 
 .headingText {
@@ -36,34 +35,21 @@
   padding: 4vw 0;
 }
 
-.quotesBlock {
-  background-color: $infoBlockColor;
-  display: block;
-  padding: 2vw 10vw;
-  margin-bottom: 4vw;
-  cursor: context-menu;
-  font-size: 2.5vw;
-  font-weight: 900;
-  text-shadow: $infoBlockTextShadow;
-}
-
-.quoteAuthor {
-  margin-top: 1vw;
-  text-align: end;
-}
-
-@keyframes animate-main-photo {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 912px) {
   .pagePhotoBlock {
     padding-top: 8vw;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .pagePhotoBlock {
+    padding-top: 8.5vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .pagePhotoBlock {
+    padding-top: 7vw;
     overflow: hidden;
   }
   .quotesHeading img {
@@ -76,18 +62,17 @@
   .headingText {
     padding: 5vw 0;
   }
-  .quotesBlock {
-    padding: 3vw 5vw;
-    font-size: 3vw;
-  }
-  .quoteAuthor {
-    margin-right: 5vw;
+}
+
+@media only screen and (max-width: 540px) {
+  .pagePhotoBlock {
+    padding-top: 7.5vw;
   }
 }
 
 @media only screen and (max-width: 480px) {
   .pagePhotoBlock {
-    padding-top: 14vw;
+    padding-top: 13vw;
   }
   .quotesHeading img {
     width: 200%;
@@ -99,17 +84,5 @@
   .heading {
     font-size: 6vw;
     width: 60%;
-  }
-  .quotesBlock {
-    padding: 5vw 5vw;
-    margin-bottom: 10vw;
-    font-size: 4.5vw;
-  }
-  .quotesText {
-    text-align: inherit;
-  }
-  .quoteAuthor {
-    margin-right: 5vw;
-    margin-top: 5vw;
   }
 }

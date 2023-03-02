@@ -1,7 +1,7 @@
-@import '../../../index.scss';
+@import "../../../index.scss";
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap");
 .mainBlock {
-    width: 100%;
+  width: 100%;
 }
 
 .matchDayBlock {
@@ -239,7 +239,7 @@
 @media only screen and (max-width: 760px) {
   .matchDayBlock {
     padding: 4vw 0 2vw;
-}
+  }
   .dateBlock {
     width: 65%;
   }
@@ -276,7 +276,7 @@
   .inputIcon {
     width: 16%;
     height: 73%;
-}
+  }
   .resultTeamInput {
     height: 5vw;
     width: 30%;
@@ -313,11 +313,11 @@
   }
   .dateForm {
     flex-direction: column;
-}
+  }
   .dateInputsBlock {
     width: 100%;
     margin: 1vw 0 2vw;
-}
+  }
   .editBtn svg {
     font-size: 3vw;
     margin-left: 3vw;
@@ -352,7 +352,7 @@
   }
   .resultList {
     width: 100%;
-}
+  }
   .resultsInputs {
     flex-direction: column;
     width: 60%;
@@ -372,7 +372,7 @@
   }
   .scoreInputsBlock {
     margin: 3vw 0;
-}
+  }
   .resultScoreInput {
     height: 11vw;
   }

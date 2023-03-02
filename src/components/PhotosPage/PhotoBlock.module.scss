@@ -1,0 +1,42 @@
+@import "../../index.scss";
+
+.photoBlock {
+  background-color: $infoBlockColor;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2vw 30vw;
+  margin-bottom: 5vw;
+  cursor: context-menu;
+}
+
+.carouselBlock {
+  width: auto;
+}
+
+.carouselBlock img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media only screen and (max-width: 760px) {
+  .photoBlock {
+    padding: 5vw 20vw;
+    margin-bottom: 7vw;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .photoBlock {
+    padding: 5vw 15vw;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .photoBlock {
+    padding: 5vw 0;
+    margin-bottom: 5vw;
+  }
+}
