@@ -7,7 +7,7 @@ function PhotoBlock({ post }) {
       <div className={styles.carouselBlock}>
         <Carousel>
           {post.photos.map((photo) => {
-            return <img src={photo} alt="" />;
+            return <img key={post.id} src={photo} alt="" />;
           })}
         </Carousel>
       </div>

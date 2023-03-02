@@ -26,12 +26,13 @@
 
 .matchDayBlock {
   background-color: $infoBlockColor;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  padding: 2vw 0 0;
+  padding: 2vw 0;
   margin-bottom: 2vw;
   cursor: context-menu;
   text-shadow: 0px 0px 5px #545454;
@@ -76,7 +77,7 @@
     width: 70%;
   }
   .matchDayBlock {
-    padding: 6vw 0 2vw;
+    padding: 6vw;
   }
   .dateText {
     font-size: 3vw;
@@ -102,16 +103,16 @@
     font-size: 5.5vw;
   }
   .matchScoreText {
-    font-size: 6vw;
+    font-size: 8vw;
     width: 85%;
     margin: 2vw 0;
   }
   .matchDayBlock {
-    padding: 8vw 0 3vw;
+    padding: 8vw 0;
     margin-bottom: 5vw;
   }
   .dateText {
-    font-size: 4vw;
+    font-size: 5vw;
     width: 85%;
   }
   .viewResults {
@@ -124,7 +125,7 @@
     font-size: 4.5vw;
   }
   .goalsQuotes {
-    font-size: 3.8vw;
     margin-top: 8vw;
+    font-size: 5vw;
   }
 }
