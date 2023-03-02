@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@700&display=swap');
 @import "../../../index.scss";
 
 .navbar {
@@ -20,7 +22,7 @@
 }
 
 .logoBlock {
-  font-family: "Quantico", sans-serif;
+  font-family: 'Rubik Wet Paint', cursive;
   font-size: 3vw;
   margin-left: 4vw;
 }
@@ -31,6 +33,7 @@
   justify-content: space-between;
   align-items: center;
   margin-right: 4vw;
+  font-family: 'Jura', sans-serif;
 }
 
 .pages {
@@ -40,7 +43,7 @@
 }
 
 .pages a {
-  font-size: 1.2vw;
+  font-size: 1.4vw;
   margin: 0 0.5vw;
 }
 
@@ -106,7 +109,7 @@
     margin-right: 2vw;
   }
   .pages a {
-    font-size: 1.8vw;
+    font-size: 1.6vw;
   }
   .enterBtn button {
     padding: 0.8vw;
@@ -119,7 +122,7 @@
     font-size: 4vw;
   }
   .pages a {
-    font-size: 1.9vw;
+    font-size: 1.5vw;
   }
 }
 
@@ -148,10 +151,9 @@
     align-items: center;
     justify-content: flex-start;
     padding: 3vw 7vw;
-    // border-right: 1px solid #fff;
-    // border-top: 1px solid #fff;
     opacity: 0;
     transition: ease-out 0.2s;
+    font-family: 'Alumni Sans', sans-serif;
   }
   .linksBlock.visible {
     top: 7vw;
