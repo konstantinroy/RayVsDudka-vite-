@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
-import MainWindowPhoto from "../../assets/img/main-window-photo.jpg";
-import "./Main.css";
+import styles from "./Main.module.scss";
+import SpamPopup from "../CommonComponents/SpamPopup/SpamPopup";
 import Navbar from "./Header/Navbar.jsx";
 import MainPhoto from "./MainPhoto/MainPhoto.jsx";
 import Schedule from "./Schedule/Schedule.jsx";
@@ -12,54 +11,9 @@ import Quotes from "./Quotes/Quotes.jsx";
 import Footer from "./Footer/Footer.jsx";
 
 function Main() {
-  // const componentWillMount = () => {
-  //   document.body.style.overflow = "hidden";
-  // };
-  // const componentWillUnmount = () => {
-  //   document.body.style.overflow = "visible";
-  // };
-
-  // if (window) {
-  //   componentWillMount();
-  // }
-  // if (!window) {
-  //   componentWillUnmount();
-  // }
-  const [window, setWindow] = useState(true);
-  const [counter, setCounter] = useState(5);
-
-  const popupShowed = sessionStorage.getItem("popupShowed");
-
-  useEffect(() => {
-    const timer =
-      counter > 0 && setInterval(() => setCounter(counter - 1), 1000);
-    return () => clearInterval(timer);
-  }, [counter]);
-
-  const exitBtn = () => {
-    setWindow(false);
-    sessionStorage.setItem("popupShowed", false);
-  };
-
   return (
-    <div>
-      <div className={!popupShowed ? "main-window block" : "main-window none"}>
-        <img src={MainWindowPhoto} alt="" />
-        {counter > 0 ? (
-          <div className="hint">{counter}</div>
-        ) : (
-          <div>
-            <button className="exit-btn block" onClick={exitBtn}>
-              ×
-            </button>
-          </div>
-        )}
-        <div className="main-window_text">
-          <div className="photo-text">
-            <p>Константин Рай победитель сезона 2022 года!!!</p>
-          </div>
-        </div>
-      </div>
+    <div className={styles.mainBlock}>
+    <SpamPopup />
       <Navbar />
       <MainPhoto />
       <Schedule />
