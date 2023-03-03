@@ -37,6 +37,10 @@ button, input, select {
   color: var(--text-color);
 }
 
+::-webkit-input-placeholder {
+  color: var(--text-color);
+}
+
 li {
   list-style: none;
 }
