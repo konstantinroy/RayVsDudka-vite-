@@ -41,7 +41,7 @@ function Main() {
           src={GoldenBallMob}
           alt=""
         />
-        <p className={styles.resultsText}>Расписание ближайших туров</p>
+        <p className={styles.photoText}>Расписание ближайших туров</p>
       </div>
       <div className={styles.photoBlock}>
         <img
@@ -54,7 +54,7 @@ function Main() {
           src={ResultsMobPhoto}
           alt=""
         />
-        <p className={styles.resultsText}>Результаты<br /> всех матчей<br /> сезона</p>
+        <p className={styles.photoText}>Результаты<br /> всех матчей<br /> сезона</p>
       </div>
       <div className={styles.photoBlock}>
         <img
@@ -67,7 +67,7 @@ function Main() {
           src={LocationMobPhoto}
           alt=""
         />
-        <p className={styles.resultsText}>Места проведения каток</p>
+        <p className={styles.photoText}>Места проведения каток</p>
       </div>
       <div className={styles.photoBlock}>
         <img
@@ -80,7 +80,7 @@ function Main() {
           src={AudioMobPhoto}
           alt=""
         />
-        <p className={styles.resultsText}>Все аудио<br /> в одном<br /> месте</p>
+        <p className={styles.photoText}>Все аудио<br /> в одном<br /> месте</p>
       </div>
       <div className={styles.photoBlock}>
         <img
@@ -93,7 +93,7 @@ function Main() {
           src={PhotosMobPhoto}
           alt=""
         />
-        <p className={styles.resultsText}>Лучшие<br /> фоточки<br /> за всё время</p>
+        <p className={styles.photoText}>Лучшие<br /> фоточки<br /> за всё время</p>
       </div>
       <div className={styles.photoBlock}>
         <img
@@ -106,7 +106,7 @@ function Main() {
           src={QuotesMobPhoto}
           alt=""
         />
-        <p className={styles.resultsText}>Лучшие<br /> цитаты<br /> Рая и Дудки</p>
+        <p className={styles.photoText}>Лучшие<br /> цитаты<br /> Рая и Дудки</p>
       </div>
     </div>
     <Footer />

@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap');
+
 .mainBlock {
   display: flex;
   align-items: center;
@@ -14,6 +17,8 @@
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
+  font-family: 'Rubik Vinyl', cursive;
+  color: #fff;
 }
 
 .pcPhoto {
@@ -30,6 +35,7 @@
 .mainPhotoTextThree,
 .mainPhotoTextFour {
   display: none;
+  font-family: 'Raleway', sans-serif;
 }
 
 .mainPhotoTextOne {
@@ -41,30 +47,32 @@
 }
 
 .mainPhotoTextTwo {
-  color: white;
+  color: rgb(0, 0, 0);
   position: absolute;
   right: 3vw;
   top: 13%;
   font-size: 4.5vw;
+  font-weight: 600;
 }
 
 .mainPhotoTextThree {
   color: white;
   position: absolute;
   right: 62vw;
-  top: 80%;
+  top: 78%;
   font-size: 4.5vw;
 }
 
 .mainPhotoTextFour {
-  color: white;
+  color: rgb(0, 0, 0);
   position: absolute;
   right: 14vw;
-  top: 80%;
+  top: 78%;
   font-size: 4.5vw;
+  font-weight: 600;
 }
 
-.resultsText {
+.photoText {
   position: absolute;
   width: 80%;
   font-size: 10vw;
@@ -106,7 +114,7 @@
   .mainPhotoTextFour {
     display: block;
   }
-  .resultsText {
+  .photoText {
     position: absolute;
     width: 100%;
     font-size: 12vw;

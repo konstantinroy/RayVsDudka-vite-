@@ -21,6 +21,7 @@ function Navbar() {
         <div className={styles.logoBlock}>
           <Link to="/main">RayVsDudka</Link>
         </div>
+        
         <div
           className={`${styles.linksBlock}
         ${isMenuClicked ? styles.visible : ""}`}
@@ -41,6 +42,8 @@ function Navbar() {
             </Link>
           </div>
         </div>
+        
+        {isMenuClicked && <div className={styles.blackoutContentBlock}></div>}
         <div className={styles.accountMobBtn}>
           <Link to="/settings">
             <MdAccountCircle />
