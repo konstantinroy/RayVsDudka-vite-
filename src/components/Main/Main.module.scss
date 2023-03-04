@@ -19,6 +19,7 @@
   text-transform: uppercase;
   font-family: 'Rubik Vinyl', cursive;
   color: #fff;
+  overflow: hidden;
 }
 
 .pcPhoto {
@@ -102,6 +103,9 @@
   .mainBlock {
     padding-top: 7.5vw;
   }
+  .mainPhotoBlock {
+    margin-top: -10vw;
+  }
   .pcPhoto {
     display: none;
   }
@@ -126,5 +130,11 @@
 @media only screen and (max-width: 480px) {
   .mainBlock {
     padding-top: 13vw;
+  }
+  .mainPhotoBlock {
+    margin-top: 0;
+  }
+  .mainMobPhoto {
+    width: 120%;
   }
 }

@@ -22,9 +22,9 @@ function Main() {
     <>
     <Navbar />
     <div className={styles.mainBlock}>
-      <div className={styles.photoBlock}>
+      <div className={`${styles.photoBlock} ${styles.mainPhotoBlock}`}>
         <img className={styles.pcPhoto} src={PcMainPhoto} alt="" />
-        <img className={styles.mobPhoto} src={MobMainPhoto} alt="" />
+        <img className={`${styles.mobPhoto} ${styles.mainMobPhoto}`} src={MobMainPhoto} alt="" />
         <p className={styles.mainPhotoTextOne}>Величайшее</p>
         <p className={styles.mainPhotoTextTwo}>противостояние</p>
         <p className={styles.mainPhotoTextThree}>в истории</p>

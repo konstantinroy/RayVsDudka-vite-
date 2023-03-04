@@ -103,9 +103,13 @@
   justify-content: center;
   border-radius: 50%;
   overflow: hidden;
+  width: 3.8vw;
+  height: 3.8vw;
 }
 
 .themeIcon svg {
+  width: 100%;
+  height: 100%;
   color: #000000;
 }
 
@@ -152,6 +156,9 @@
   .settingsBlock {
     padding: 2vw;
   }
+  .themeBlock {
+    padding: 0 1vw;
+  }
   .themeText {
     font-size: 2.2vw;
   }
@@ -185,6 +192,10 @@
   }
   .userInfoBlock {
     width: 55%;
+  }
+  .themeIcon {
+    width: 4.5vw;
+    height: 4.5vw;
   }
   .themeText {
     font-size: 2.5vw;
@@ -235,11 +246,13 @@
   .settingsBlock h2 {
     font-size: 4.5vw;
   }
-  .themeIcon svg {
-    font-size: 7vw;
+  .themeIcon {
+    width: 6vw;
+    height: 6vw;
   }
   .themeText {
     font-size: 3.5vw;
+    margin: 0 2vw;
   }
   .themeText p {
     margin: 2vw 0;
