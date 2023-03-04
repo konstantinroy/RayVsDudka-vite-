@@ -39,10 +39,16 @@
 }
 
 .userPhoto {
+  // background-color: aliceblue;
   border-radius: 50%;
   height: 14vw;
   width: 14vw;
   overflow: hidden;
+}
+
+.userPhoto svg {
+  height: 100%;
+  width: 100%;
 }
 
 .userPhoto img {

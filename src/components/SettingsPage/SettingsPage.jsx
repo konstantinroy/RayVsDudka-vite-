@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
 import { VscColorMode } from "react-icons/vsc";
+import { MdAccountCircle } from "react-icons/md";
 import { useSelector, useDispatch } from "react-redux";
 import Navbar from "../Main/Header/Navbar";
 import Footer from "../Main/Footer/Footer";
@@ -28,7 +28,8 @@ function SettingsPage() {
         <div className={styles.userInfoBlock}>
           <div className={styles.userMainInfo}>
             <div className={styles.userPhoto}>
-              {/* <img src={RayAvatar} alt="" /> */}
+            <MdAccountCircle />
+              {/* <img src={MdAccountCircle} alt="" /> */}
             </div>
             <div className={styles.userInfo}>
               <h2>KonstantinRay</h2>
