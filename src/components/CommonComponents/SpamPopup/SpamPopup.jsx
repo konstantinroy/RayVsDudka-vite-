@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { RxCross2 } from 'react-icons/rx';
 import styles from "./SpamPopup.module.scss";
 import MainWindowPhoto from "../../../assets/img/main-window-photo.jpg";
 
@@ -19,7 +18,6 @@ function SpamPopup() {
   // }
   const [window, setWindow] = useState(true);
   const [counter, setCounter] = useState(5);
-
   const popupShowed = sessionStorage.getItem("popupShowed");
 
   useEffect(() => {

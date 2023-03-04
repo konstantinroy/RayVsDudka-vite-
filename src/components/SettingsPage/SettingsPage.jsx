@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import Navbar from "../Main/Header/Navbar";
 import Footer from "../Main/Footer/Footer";
 import styles from "./SettingsPage.module.scss";
-import RayAvatar from "../../assets/img/GoldenBallMob.jpg";
+// import RayAvatar from "../../assets/img/GoldenBallMob.jpg";
 import ToggleSwitchBtn from "./ToggleSwitchBtn/ToggleSwitchBtn";
 import { changeTheme } from "../../store/actions/user";
 import { getTheme } from "../../store/selectors/user";
@@ -28,7 +28,7 @@ function SettingsPage() {
         <div className={styles.userInfoBlock}>
           <div className={styles.userMainInfo}>
             <div className={styles.userPhoto}>
-              <img src={RayAvatar} alt="" />
+              {/* <img src={RayAvatar} alt="" /> */}
             </div>
             <div className={styles.userInfo}>
               <h2>KonstantinRay</h2>

@@ -1,29 +1,118 @@
 import styles from "./Main.module.scss";
-import SpamPopup from "../CommonComponents/SpamPopup/SpamPopup";
+// import SpamPopup from "../CommonComponents/SpamPopup/SpamPopup";
 import Navbar from "./Header/Navbar.jsx";
-import MainPhoto from "./MainPhoto/MainPhoto.jsx";
-import Schedule from "./Schedule/Schedule.jsx";
-import Results from "./Results/Results.jsx";
-import Locations from "./Locations/Locations.jsx";
-import Audio from "./Audio/Audio.jsx";
-import Photos from "./Photos/Photos.jsx";
-import Quotes from "./Quotes/Quotes.jsx";
 import Footer from "./Footer/Footer.jsx";
+import PcMainPhoto from "./img/PcMainPhoto.jpg";
+import MobMainPhoto from "./img/MobMainPhoto.jpg";
+import GoldenBallPc from "./img/1. GoldenBallPc.jpg";
+import GoldenBallMob from "./img/1. GoldenBallMob.jpg";
+import ResultsPcPhoto from "./img/2. ResultsPcPhoto.jpg";
+import ResultsMobPhoto from "./img/2. ResultsMobPhoto.jpg";
+import LocationPcPhoto from "./img/3. LocationPcPhoto.jpg";
+import LocationMobPhoto from "./img/3. LocationMobPhoto.jpg";
+import AudioPcPhoto from "./img/4. AudioPcPhoto.jpg";
+import AudioMobPhoto from "./img/4. AudioMobPhoto.jpg";
+import PhotosPcPhoto from "./img/5. PhotosPcPhoto.jpg";
+import PhotosMobPhoto from "./img/5. PhotosMobPhoto.jpg";
+import QuotesPcPhoto from "./img/6. QuotesPcPhoto.jpg";
+import QuotesMobPhoto from "./img/6. QuotesMobPhoto.jpg";
 
 function Main() {
   return (
+    <>
+    <Navbar />
     <div className={styles.mainBlock}>
-    <SpamPopup />
-      <Navbar />
-      <MainPhoto />
-      <Schedule />
-      <Results />
-      <Locations />
-      <Audio />
-      <Photos />
-      <Quotes />
-      <Footer />
+      <div className={styles.photoBlock}>
+        <img className={styles.pcPhoto} src={PcMainPhoto} alt="" />
+        <img className={styles.mobPhoto} src={MobMainPhoto} alt="" />
+        <p className={styles.mainPhotoTextOne}>Величайшее</p>
+        <p className={styles.mainPhotoTextTwo}>противостояние</p>
+        <p className={styles.mainPhotoTextThree}>в истории</p>
+        <p className={styles.mainPhotoTextFour}>спорта</p>
+      </div>
+      <div className={styles.photoBlock}>
+        <img
+          className={styles.pcPhoto}
+          src={GoldenBallPc}
+          alt=""
+        />
+        <img
+          className={styles.mobPhoto}
+          src={GoldenBallMob}
+          alt=""
+        />
+        <p className={styles.resultsText}>Расписание ближайших туров</p>
+      </div>
+      <div className={styles.photoBlock}>
+        <img
+          className={styles.pcPhoto}
+          src={ResultsPcPhoto}
+          alt=""
+        />
+        <img
+          className={styles.mobPhoto}
+          src={ResultsMobPhoto}
+          alt=""
+        />
+        <p className={styles.resultsText}>Результаты<br /> всех матчей<br /> сезона</p>
+      </div>
+      <div className={styles.photoBlock}>
+        <img
+          className={styles.pcPhoto}
+          src={LocationPcPhoto}
+          alt=""
+        />
+        <img
+          className={styles.mobPhoto}
+          src={LocationMobPhoto}
+          alt=""
+        />
+        <p className={styles.resultsText}>Места проведения каток</p>
+      </div>
+      <div className={styles.photoBlock}>
+        <img
+          className={styles.pcPhoto}
+          src={AudioPcPhoto}
+          alt=""
+        />
+        <img
+          className={styles.mobPhoto}
+          src={AudioMobPhoto}
+          alt=""
+        />
+        <p className={styles.resultsText}>Все аудио<br /> в одном<br /> месте</p>
+      </div>
+      <div className={styles.photoBlock}>
+        <img
+          className={styles.pcPhoto}
+          src={PhotosPcPhoto}
+          alt=""
+        />
+        <img
+          className={styles.mobPhoto}
+          src={PhotosMobPhoto}
+          alt=""
+        />
+        <p className={styles.resultsText}>Лучшие<br /> фоточки<br /> за всё время</p>
+      </div>
+      <div className={styles.photoBlock}>
+        <img
+          className={styles.pcPhoto}
+          src={QuotesPcPhoto}
+          alt=""
+        />
+        <img
+          className={styles.mobPhoto}
+          src={QuotesMobPhoto}
+          alt=""
+        />
+        <p className={styles.resultsText}>Лучшие<br /> цитаты<br /> Рая и Дудки</p>
+      </div>
     </div>
+    <Footer />
+      
+    </>
+
   );
 }
 
