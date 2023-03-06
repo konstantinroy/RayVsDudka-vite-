@@ -4,7 +4,7 @@ import { BsPencilFill } from "react-icons/bs";
 import { TfiGame } from "react-icons/tfi";
 import styles from "./AddResultComponent.module.scss";
 
-function AddResultComponent() {
+function AddResultComponent({deleteMatchResBlock}) {
   const [dayInput, setDayInput] = useState("1");
   const [monthInput, setMonthInput] = useState("января");
   const [tourInput, setTourInput] = useState("1");
@@ -143,10 +143,23 @@ function AddResultComponent() {
     setRayGoalQtyText(JSON.parse(localStorage.getItem("rayGoalsQty")));
   }, [rayGoalsQty]);
 
+  const deleteAddMatchResBlock = () => {
+    const a = `${localStorage.setItem('addMatchResWindow', JSON.stringify(false))}`
+    // deleteMatchResBlock(false);
+    localStorage.removeItem('dudkaScore');
+    localStorage.removeItem('rayScore');
+    localStorage.removeItem('dudkaGoalsQty');
+    localStorage.removeItem('rayGoalsQty');
+    localStorage.removeItem('matches');
+  }
+
   return (
     <div>
       <div className={styles.matchDayBlock}>
-      <button className={styles.deleteMatchDayResult}><RxCross2 /></button>
+      <button className={styles.deleteMatchDayResult}
+      onClick={deleteAddMatchResBlock}
+      // onClick={deleteAddResBlock}
+      ><RxCross2 /></button>
         {visDateInputs ? (
           <div className={styles.dateBlock}>
             <div className={styles.dateHeader}>

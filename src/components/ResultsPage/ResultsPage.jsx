@@ -15,14 +15,23 @@ function ResultsPage() {
   const [addMatchResVis, setAddMatchResVis] = useState(
     localStorage.getItem("addMatchResWindow") || false
   );
+  const [deleteAddMatchResBlock, setDeleteAddMatchResBlock] = useState(true);
   const [addResultBtnVis, setAddResultBtnVis] = useState(true);
   const addResultComp = () => {
     localStorage.setItem("addMatchResWindow", JSON.stringify(true));
     setAddResultBtnVis(false);
   };
+  const deleteAddResBlock = () => {
+    localStorage.removeItem("addMatchResWindow");
+    setAddMatchResVis(localStorage.getItem("addMatchResWindow"));
+  }
   useEffect(() => {
     setAddMatchResVis(localStorage.getItem("addMatchResWindow"));
   }, [addResultComp]);
+
+  
+
+  console.log(addMatchResVis)
 
   return (
     <div>
@@ -55,7 +64,7 @@ function ResultsPage() {
 
         {addMatchResVis ? (
           <div className={styles.resultsBlock}>
-            <AddResultComponent />
+            <AddResultComponent deleteMatchResBlock={() => setDeleteAddMatchResBlock(false)} />
           </div>
         ) : (
           <button className={styles.addResultBtn} onClick={addResultComp}>
