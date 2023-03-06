@@ -39,6 +39,18 @@
   text-shadow: $infoBlockTextShadow;
 }
 
+.addResultBtn {
+  background-color: $infoBlockColor;
+  border: none;
+  border-radius: 15px;
+  width: 5vw;
+  height: 5vw;
+  color: var(--text-color);
+  font-size: 3vw;
+  margin-bottom: 3vw;
+  cursor: pointer;
+}
+
 .resultsBlock {
   width: 100%;
   padding: 0vw 0 4vw;

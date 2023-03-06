@@ -1,181 +1,107 @@
 import React, { useState } from "react";
-import styles from "../Footer/Footer.module.scss";
-import AppStoreIcon from "../../../assets/img/AppStoreIcon.png";
-import GooglePlayIcon from "../../../assets/img/GooglePlayIcon.png";
+import styles from "./Footer.module.scss";
+import AppStoreIcon from "./img/AppStoreIcon.png";
+import GooglePlayIcon from "./img/GooglePlayIcon.png";
 
 function Footer() {
-  const [buttonText1, setButtonText1] = React.useState("▼");
-  const [buttonText2, setButtonText2] = React.useState("▼");
-  const [buttonText3, setButtonText3] = React.useState("▼");
-  const [isArrowClicked1, setIsArrowClicked1] = useState(false);
-  const [isArrowClicked2, setIsArrowClicked2] = useState(false);
-  const [isArrowClicked3, setIsArrowClicked3] = useState(false);
-
-  const onButtonClick1 = () => (
-    !isArrowClicked1 ? setButtonText1("▲") : setButtonText1("▼"),
-    setIsArrowClicked1(!isArrowClicked1)
-  );
-  const onButtonClick2 = () => (
-    !isArrowClicked2 ? setButtonText2("▲") : setButtonText2("▼"),
-    setIsArrowClicked2(!isArrowClicked2)
-  );
-  const onButtonClick3 = () => (
-    !isArrowClicked3 ? setButtonText3("▲") : setButtonText3("▼"),
-    setIsArrowClicked3(!isArrowClicked3)
-  );
-
+  const [company, setCompany] = useState(true);
+  const [support, setSupport] = useState(true);
+  const [rules, setRules] = useState(true);
+  const showLinks = (state, setState) => {
+    setState(!state);
+  };
+  const openPopupBtn = (state) => {
+    return state ? "▼" : "▲";
+  };
   return (
-    <div className={styles.footerBlockStyles}>
-      <div className={styles.mainBlockPC}>
-        <div className={styles.linksPCBlock}>
-          <h1>Компания</h1>
-          <ul className={styles.linksPC}>
-            <li>
-              <a href="/">О нас</a>
-            </li>
-            <li>
-              <a href="/">Блог</a>
-            </li>
-            <li>
-              <a href="/">Карьера</a>
-            </li>
-            <li>
-              <a href="/">Медиа о нас</a>
-            </li>
-            <li>
-              <a href="/">White paper</a>
-            </li>
-          </ul>
-        </div>
-
-        <div className={styles.linksPCBlock}>
-          <h1>Поддержка</h1>
-          <ul className={styles.linksPC}>
-            <li>
-              <a href="/">Контакты</a>
-            </li>
-            <li>
-              <a href="/">Партёрская программа</a>
-            </li>
-          </ul>
-        </div>
-
-        <div className={styles.linksPCBlock}>
-          <h1>Правила</h1>
-          <ul className={styles.linksPC}>
-            <li>
-              <a href="/">Пользовательские соглашения</a>
-            </li>
-            <li>
-              <a href="/">Политика использования данных</a>
-            </li>
-            <li>
-              <a href="/">Политика cookies</a>
-            </li>
-          </ul>
-        </div>
-
-        <div className={styles.icons}>
-          <a href="/">
-            <img src={AppStoreIcon} alt=""></img>
-          </a>
-          <a href="/">
-            <img src={GooglePlayIcon} alt=""></img>
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.mainBlockMOB}>
-        <div className={styles.linksBlockMOB__box}>
-          <div className={styles.linksBlockMOB}>
-            <div className={styles.heading} onClick={onButtonClick1}>
-              <h1>Компания</h1>
-              <button>{buttonText1}</button>
-            </div>
-            <div
-              style={{
-                maxHeight: !isArrowClicked1 ? "0" : "35vw",
-                overflow: !isArrowClicked1 ? "hidden" : "visible",
-                transition: !isArrowClicked1 ? "0.7s" : "0.2s",
-              }}
-            >
-              <ul className={styles.linksMOB}>
-                <li>
-                  <a href="/">О нас</a>
-                </li>
-                <li>
-                  <a href="/">Блог</a>
-                </li>
-                <li>
-                  <a href="/">Карьера</a>
-                </li>
-                <li>
-                  <a href="/">Медиа о нас</a>
-                </li>
-                <li>
-                  <a href="/">White paper</a>
-                </li>
-              </ul>
-            </div>
+    <div className={styles.mainBlock}>
+      <div className={styles.linksBox}>
+        <div
+          className={styles.linksBlock}
+          onClick={() => showLinks(company, setCompany)}
+        >
+          <div className={styles.linksBlockHeading}>
+            <h1>Компания</h1>
+            <button>{openPopupBtn(company)}</button>
           </div>
-          <div className={styles.linksBlockMOB}>
-            <div className={styles.heading} onClick={onButtonClick2}>
-              <h1>Поодержка</h1>
-              <button>{buttonText2}</button>
-            </div>
-            <div
-              style={{
-                maxHeight: !isArrowClicked2 ? "0" : "35vw",
-                overflow: !isArrowClicked2 ? "hidden" : "visible",
-                transition: !isArrowClicked2 ? "0.7s" : "0.2s",
-              }}
-            >
-              <ul className={styles.linksMOB}>
-                <li>
-                  <a href="/">Контакты</a>
-                </li>
-                <li>
-                  <a href="/">Партёрская программа</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className={styles.linksBlockMOB}>
-            <div className={styles.heading} onClick={onButtonClick3}>
-              <h1>Правила</h1>
-              <button>{buttonText3}</button>
-            </div>
-            <div
-              style={{
-                maxHeight: !isArrowClicked3 ? "0" : "35vw",
-                overflow: !isArrowClicked3 ? "hidden" : "visible",
-                transition: !isArrowClicked3 ? "0.7s" : "0.2s",
-              }}
-            >
-              <ul className={styles.linksMOB}>
-                <li>
-                  <a href="/">Пользовательские соглашения</a>
-                </li>
-                <li>
-                  <a href="/">Политика использования данных</a>
-                </li>
-                <li>
-                  <a href="/">Политика cookies</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className={styles.icons}>
+          <div
+            className={`${styles.linksList}
+            ${company ? styles.hidden : styles.visible}
+            `}
+          >
             <a href="/">
-              <img src={AppStoreIcon} alt=""></img>
+              <p>О нас</p>
             </a>
             <a href="/">
-              <img src={GooglePlayIcon} alt=""></img>
+              <p>Блог</p>
+            </a>
+            <a href="/">
+              <p>Карьера</p>
+            </a>
+            <a href="/">
+              <p>Медиа о нас</p>
+            </a>
+            <a href="/">
+              <p>White paper</p>
             </a>
           </div>
         </div>
-      </div>
 
+        <div
+          className={styles.linksBlock}
+          onClick={() => showLinks(support, setSupport)}
+        >
+          <div className={styles.linksBlockHeading}>
+            <h1>Поддержка</h1>
+            <button>{openPopupBtn(support)}</button>
+          </div>
+          <div
+            className={`${styles.linksList}
+            ${support ? styles.hidden : styles.visible}
+            `}
+          >
+            <a href="/">
+              <p>Контакты</p>
+            </a>
+            <a href="/">
+              <p>Партёрская программа</p>
+            </a>
+          </div>
+        </div>
+
+        <div
+          className={styles.linksBlock}
+          onClick={() => showLinks(rules, setRules)}
+        >
+          <div className={styles.linksBlockHeading}>
+            <h1>Правила</h1>
+            <button>{openPopupBtn(rules)}</button>
+          </div>
+          <div
+            className={`${styles.linksList}
+            ${rules ? styles.hidden : styles.visible}
+            `}
+          >
+            <a href="/">
+              <p>Пользовательские соглашения</p>
+            </a>
+            <a href="/">
+              <p>Политика использования данных</p>
+            </a>
+            <a href="/">
+              <p>Политика cookies</p>
+            </a>
+          </div>
+        </div>
+        <div className={`${styles.linksBlock} ${styles.mobImgLinks}`}>
+          <a href="/">
+            <img src={AppStoreIcon} alt="" />
+          </a>
+          <a href="/">
+            <img src={GooglePlayIcon} alt="" />
+          </a>
+        </div>
+      </div>
       <div className={styles.footerCapText}>© Ray vs Dudka 2022</div>
     </div>
   );

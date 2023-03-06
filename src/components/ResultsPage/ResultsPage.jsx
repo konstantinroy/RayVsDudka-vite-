@@ -41,9 +41,11 @@ function ResultsPage() {
           <h1>Результаты всех туров сезона</h1>
         </div>
 
-        <div className={styles.resultsBlock}>
+        <button className={styles.addResultBtn}>+</button>
+
+        {/* <div className={styles.resultsBlock}>
           <AddResultComponent />
-        </div>
+        </div> */}
 
         {ResultsArray.map((data) => {
           return <MatchDayBlock key={data.tour} data={data} />;

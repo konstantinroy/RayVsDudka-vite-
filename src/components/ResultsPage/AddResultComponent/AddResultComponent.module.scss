@@ -94,7 +94,7 @@
   top: 0;
   font-size: 1.3vw;
   margin-left: 1vw;
-  margin-top: 0.7vw;
+  margin-top: 2.2vw;
 }
 
 .editBtn button {
@@ -235,7 +235,7 @@
   }
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 768px) {
   .matchDayBlock {
     padding: 4vw 0 2vw;
   }
@@ -248,7 +248,7 @@
   .editBtn svg {
     font-size: 1.6vw;
     margin-left: 1vw;
-    margin-top: 1vw;
+    margin-top: 3vw;
   }
   .dateInput {
     height: 5vw;
@@ -320,7 +320,7 @@
   .editBtn svg {
     font-size: 3vw;
     margin-left: 3vw;
-    margin-top: 1.5vw;
+    margin-top: 5.5vw;
   }
   .dateHeaderText {
     font-size: 5vw;

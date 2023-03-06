@@ -12,7 +12,6 @@ import { getTheme } from "../../store/selectors/user";
 function SettingsPage() {
   const dispatch = useDispatch();
   const theme = useSelector(getTheme);
-  console.log(theme);
 
   const onThemeChange = () => {
     dispatch(changeTheme());

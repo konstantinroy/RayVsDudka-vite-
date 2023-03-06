@@ -1,147 +1,149 @@
-.footerBlockStyles {
-  padding: 7vw 7vw 3vw 7vw;
-  border-top: 2px solid var(--text-color);
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@700&display=swap');
+@import "../../../index.scss";
+
+.mainBlock {
+  color: var(--text-color);
+  padding: 7vw 8vw 3vw 8vw;
+  margin: 0;
+  border-top: 2px solid;
+  font-family: 'Jura', sans-serif;
 }
 
-.mainBlockPC {
-  padding: 0vw;
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
+.linksBox {
+  display: grid;
+  grid-template-columns: 21% 27% 38% 14%;
   padding-bottom: 5vw;
   border-bottom: 1px solid var(--text-color);
 }
 
-.linksPCBlock {
+.linksBlock {
   display: flex;
   flex-direction: column;
-  align-items: start;
-  font-size: 1.5vw;
 }
 
-.linksPCBlock h1 {
-  margin: 0;
-  margin-bottom: 1.5vw;
-  font-size: 2vw;
+.linksBlock h1 {
+  margin: 0 0 1vw 0;
+  font-size: 2.3vw;
 }
 
-.linksPCBlock a:hover {
-  text-decoration: underline;
-}
-
-.linksPC {
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-}
-
-.footerCapText {
-  margin-top: 2vw;
-  font-size: 1.6vw;
-}
-
-.icons {
-  width: 15%;
-}
-
-.icons img {
-  width: 100%;
-  margin-bottom: 0.5vw;
-}
-
-.mainBlockMOB {
+.linksBlockHeading button {
   display: none;
-}
-
-.mainBlockMOB h1 {
-  font-size: 5vw;
-  margin: 0;
-}
-
-.linksBlockMOB {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid var(--text-color);
-  border-radius: 5px;
-  padding: 3vw 4vw;
-  margin-bottom: 3vw;
-}
-
-.heading {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0;
-}
-
-.heading button {
   background: rgba(0, 170, 238, 0);
   border: none;
+  color: var(--text-color);
   cursor: pointer;
 }
 
-.menu {
-  padding-top: 10vw;
+.linksBlock a {
+  color: var(--text-color);
+  text-decoration: none;
 }
 
-.hidden {
-  display: none;
+.linksBlock a:hover {
+  text-decoration: underline;
 }
 
-.visible {
-  display: block;
+.linksBlock p {
+  font-size: 1.5vw;
+  margin: 0;
 }
 
-.linksMOB {
-  display: flex;
-  flex-direction: column;
-  margin-top: 2vw;
-  padding: 0;
+.linksBlock img {
+  width: 100%;
+  margin: 0.1vw 0;
 }
 
-.linksMOB li {
-  margin-bottom: 0.7vw;
-}
-
-@media only screen and (max-width: 760px) {
-  .linksPCBlock {
-    font-size: 2vw;
-}
-  .linksPCBlock h1 {
-    font-size: 2.5vw;
-}
 .footerCapText {
-  font-size: 2.6vw;
-}
+  font-size: 1.6vw;
+  margin-top: 2vw;
 }
 
-@media only screen and (max-width: 480px) {
-  .mainBlockPC {
-    display: none;
+@media only screen and (max-width: 912px) {
+  .linksBox {
+    grid-template-columns: 22% 28% 34% 16%;
   }
-  .mainBlockMOB {
-    display: flex;
-    flex-direction: column;
+  .linksBlock h1 {
+    font-size: 2.6vw;
+    margin: 0 0 2vw 0;
   }
-  .linksBlockMOB__box {
-    display: block;
-  }
-  .icons {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-    padding: 5vw 0;
-    border-bottom: 1px solid var(--text-color);
-  }
-
-  .icons img {
-    width: 80%;
-    margin-bottom: 0.5vw;
+  .linksBlock p {
+    font-size: 1.7vw;
   }
   .footerCapText {
-    font-size: 4.6vw;
+    font-size: 1.8vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .linksBox {
+    grid-template-columns: 22% 27% 33% 18%;
+  }
+  .linksBlock p {
+    max-width: 80%;
+    margin: 0 0 0.7vw 0;
+  }
+  .footerCapText {
+    font-size: 1.9vw;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .mainBlock {
+    padding: 7vw 8vw 4vw 8vw;
+  }
+  .linksBox {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0;
+  }
+  .linksBlock {
+    border: 1px solid var(--text-color);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3vw;
+    padding: 3vw 4vw;
+  }
+  .linksBlockHeading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .linksBlock h1 {
+    font-size: 5vw;
+    margin: 0;
+  }
+  .linksBlockHeading button {
+    display: block;
+  }
+  .hidden {
+    max-height: 0;
+    overflow: hidden;
+  }
+  .visible {
+    max-height: 100%;
+    width: 85%;
+    overflow: visible;
+    margin-top: 2vw;
+  }
+  .linksBlock p {
+    font-size: 3.5vw;
+  }
+  .linksBlock img {
+    width: 80%;
+  }
+  .mobImgLinks {
+    display: flex;
+    flex-direction: unset;
+    justify-content: center;
+    border: none;
+  }
+  .mobImgLinks a {
+    text-align: center;
+  }
+  .footerCapText {
+    font-size: 5vw;
+    margin-top: 4vw;
     text-align: center;
   }
 }
