@@ -4,7 +4,7 @@ import { BsPencilFill } from "react-icons/bs";
 import { TfiGame } from "react-icons/tfi";
 import styles from "./AddResultComponent.module.scss";
 
-function AddResultComponent({deleteMatchResBlock}) {
+function AddResultComponent() {
   const [dayInput, setDayInput] = useState("1");
   const [monthInput, setMonthInput] = useState("января");
   const [tourInput, setTourInput] = useState("1");
@@ -144,8 +144,6 @@ function AddResultComponent({deleteMatchResBlock}) {
   }, [rayGoalsQty]);
 
   const deleteAddMatchResBlock = () => {
-    const a = `${localStorage.setItem('addMatchResWindow', JSON.stringify(false))}`
-    // deleteMatchResBlock(false);
     localStorage.removeItem('dudkaScore');
     localStorage.removeItem('rayScore');
     localStorage.removeItem('dudkaGoalsQty');
