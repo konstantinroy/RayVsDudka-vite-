@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useEffect } from "react";
+import { RxCross2 } from 'react-icons/rx';
 import { BsPencilFill } from "react-icons/bs";
 import { TfiGame } from "react-icons/tfi";
 import styles from "./AddResultComponent.module.scss";
@@ -142,33 +143,10 @@ function AddResultComponent() {
     setRayGoalQtyText(JSON.parse(localStorage.getItem("rayGoalsQty")));
   }, [rayGoalsQty]);
 
-  // const resultsArray = [
-  //   {
-  //     tour: dateText.tour,
-  //     day: dateText.day,
-  //     month: dateText.month,
-  //     dudaMainScore: dudaMainScoreInfo,
-  //     rayMainScore: rayMainScoreInfo,
-  //     matches: [
-  //       {
-  //         matchNumber: 1,
-  //         team1Name: 'Бавария',
-  //         team2Name: 'ПСЖ',
-  //         team1Score: 2,
-  //         team2Score: 0,
-  //       }
-  //     ],
-  //     matchesQty: matchQty,
-  //     dudaGoalsQty: dudaGoalQtyText,
-  //     rayGoalsQty: rayGoalQtyText
-  //   }
-  // ]
-
-  // console.log(resultsArray[0].matches[0].team1Name)
-
   return (
     <div>
       <div className={styles.matchDayBlock}>
+      <button className={styles.deleteMatchDayResult}><RxCross2 /></button>
         {visDateInputs ? (
           <div className={styles.dateBlock}>
             <div className={styles.dateHeader}>

@@ -9,12 +9,14 @@ $infoBlockTextShadow: 0px 0px 5px #545454;
   --background-color: #ddcb9d;
   --text-color: #2e2e2e;
   --links-color: #2e2e2e;
+  --placeholder-color: rgba(32, 32, 32, 0.521);
 }
 
 :root[data-theme="dark"] {
   --background-color: #25161b;
   --text-color: #f1f1f1;
   --links-color: #f1f1f1;
+  --placeholder-color: rgba(255, 255, 255, 0.521);
 }
 
 body {
@@ -38,7 +40,7 @@ button, input, select {
 }
 
 ::-webkit-input-placeholder {
-  color: var(--text-color);
+  color: var(--placeholder-color);
 }
 
 li {

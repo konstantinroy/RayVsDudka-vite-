@@ -12,6 +12,12 @@ import AddResultComponent from "./AddResultComponent/AddResultComponent.jsx";
 import textCardPhoto from "./img/preSeasonImg.jpg";
 
 function ResultsPage() {
+  const [addMatchResVis, setAddMatchResVis] = useState(false);
+  const [addResultBtnVis, setAddResultBtnVis] = useState(true);
+  const addResultComp = () => {
+    setAddMatchResVis(true)
+    setAddResultBtnVis(false)
+  } 
   return (
     <div>
       <Navbar />
@@ -41,11 +47,13 @@ function ResultsPage() {
           <h1>Результаты всех туров сезона</h1>
         </div>
 
-        <button className={styles.addResultBtn}>+</button>
+        {addResultBtnVis && <button className={styles.addResultBtn}
+        onClick={addResultComp}
+        >+</button>}
 
-        {/* <div className={styles.resultsBlock}>
+        {addMatchResVis && <div className={styles.resultsBlock}>
           <AddResultComponent />
-        </div> */}
+        </div>}
 
         {ResultsArray.map((data) => {
           return <MatchDayBlock key={data.tour} data={data} />;
