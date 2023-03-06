@@ -41,7 +41,7 @@
 
 .addResultBtn {
   background-color: $infoBlockColor;
-  border: none;
+  border: 1px solid;
   border-radius: 15px;
   width: 5vw;
   height: 5vw;
@@ -53,7 +53,8 @@
 
 .resultsBlock {
   width: 100%;
-  padding: 0vw 0 4vw;
+  padding: 0;
+  margin-bottom: 3vw;
   border-top: 1px solid var(--text-color);
   border-bottom: 1px solid var(--text-color);
 }
@@ -246,6 +247,9 @@
     font-size: 7vw;
     margin-bottom: 4vw;
   }
+  .resultsBlock {
+    margin-bottom: 4vw;
+  }
   .prevSeasonCard {
     width: 70%;
     height: 35vw;
@@ -270,6 +274,9 @@
   .pagePhotoBlock {
     margin-top: 8vw;
   }
+  .resultsBlock {
+    margin: 0 0 4vw;
+}
 }
 
 @media only screen and (max-width: 480px) {
@@ -307,7 +314,7 @@
   }
   .resultsBlock {
     padding: 5vw 0;
-    margin: 5vw 0;
+    margin: 0 0 5vw;
   }
   .prevSeasonCard {
     width: 95%;

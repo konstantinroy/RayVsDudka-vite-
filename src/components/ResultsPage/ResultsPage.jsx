@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../Main/Header/Navbar.jsx";
 import Footer from "../Main/Footer/Footer.jsx";
@@ -12,12 +12,18 @@ import AddResultComponent from "./AddResultComponent/AddResultComponent.jsx";
 import textCardPhoto from "./img/preSeasonImg.jpg";
 
 function ResultsPage() {
-  const [addMatchResVis, setAddMatchResVis] = useState(false);
+  const [addMatchResVis, setAddMatchResVis] = useState(
+    localStorage.getItem("addMatchResWindow") || false
+  );
   const [addResultBtnVis, setAddResultBtnVis] = useState(true);
   const addResultComp = () => {
-    setAddMatchResVis(true)
-    setAddResultBtnVis(false)
-  } 
+    localStorage.setItem("addMatchResWindow", JSON.stringify(true));
+    setAddResultBtnVis(false);
+  };
+  useEffect(() => {
+    setAddMatchResVis(localStorage.getItem("addMatchResWindow"));
+  }, [addResultComp]);
+
   return (
     <div>
       <Navbar />
@@ -47,13 +53,15 @@ function ResultsPage() {
           <h1>Результаты всех туров сезона</h1>
         </div>
 
-        {addResultBtnVis && <button className={styles.addResultBtn}
-        onClick={addResultComp}
-        >+</button>}
-
-        {addMatchResVis && <div className={styles.resultsBlock}>
-          <AddResultComponent />
-        </div>}
+        {addMatchResVis ? (
+          <div className={styles.resultsBlock}>
+            <AddResultComponent />
+          </div>
+        ) : (
+          <button className={styles.addResultBtn} onClick={addResultComp}>
+            +
+          </button>
+        )}
 
         {ResultsArray.map((data) => {
           return <MatchDayBlock key={data.tour} data={data} />;
