@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from "react";
-import { RxCross2 } from 'react-icons/rx';
+import { RxCross2 } from "react-icons/rx";
 import { BsPencilFill } from "react-icons/bs";
 import { TfiGame } from "react-icons/tfi";
 import styles from "./AddResultComponent.module.scss";
@@ -31,6 +31,7 @@ function AddResultComponent() {
   const [rayGoalQtyText, setRayGoalQtyText] = useState(
     localStorage.setItem("rayGoalsQty", JSON.stringify("0"))
   );
+  const [delResPopup, setDelResPopup] = useState(false);
 
   const addTourDate = () => {
     const dateObj = {
@@ -144,6 +145,13 @@ function AddResultComponent() {
   }, [rayGoalsQty]);
 
   const deleteAddMatchResBlock = () => {
+    setDelResPopup(!delResPopup);
+  };
+  const exitPopupButton = () => {
+    setDelResPopup(!delResPopup);
+  }
+  const confirmRemoveResult = () => {
+    setDelResPopup(!delResPopup);
     localStorage.removeItem('dudkaScore');
     localStorage.removeItem('rayScore');
     localStorage.removeItem('dudkaGoalsQty');
@@ -154,10 +162,33 @@ function AddResultComponent() {
   return (
     <div>
       <div className={styles.matchDayBlock}>
-      <button className={styles.deleteMatchDayResult}
-      onClick={deleteAddMatchResBlock}
-      // onClick={deleteAddResBlock}
-      ><RxCross2 /></button>
+        <button
+          className={styles.deleteMatchDayResult}
+          onClick={deleteAddMatchResBlock}
+        >
+          <RxCross2 />
+        </button>
+        {delResPopup && (
+          <div className={styles.deleteResultPopup}>
+            <div className={styles.textWindow}>
+            <button className={styles.exitPopupBtn}
+            onClick={exitPopupButton}
+            ><RxCross2 /></button>
+              <div className={styles.askText}>
+                <p>В случае удаления вернуть данные будет невозможно!<br />
+                Вы действительно хотите удалить результат игрового дня?</p>
+              </div>
+              <div className={styles.yesNoButtons}>
+                <button
+                onClick={confirmRemoveResult}
+                >Да</button>
+                <button
+                onClick={exitPopupButton}
+                >Нет</button>
+              </div>
+            </div>
+          </div>
+        )}
         {visDateInputs ? (
           <div className={styles.dateBlock}>
             <div className={styles.dateHeader}>
