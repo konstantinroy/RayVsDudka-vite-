@@ -18,6 +18,7 @@ const useAddResultBlock = () => {
     if (addResultBlock) {
       localStorage.setItem("addResultBlock", "false");
       setAddResultBlock(false);
+      localStorage.removeItem("date");
       localStorage.removeItem("dudkaScore");
       localStorage.removeItem("rayScore");
       localStorage.removeItem("dudkaGoalsQty");

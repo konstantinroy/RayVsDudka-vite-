@@ -156,14 +156,6 @@ function AddResultComponent({removeAddResultBlock}) {
   const exitPopupButton = () => {
     setDelResPopup(!delResPopup);
   };
-  // const confirmRemoveResult = () => {
-  //   setDelResPopup(!delResPopup);
-  //   localStorage.removeItem("dudkaScore");
-  //   localStorage.removeItem("rayScore");
-  //   localStorage.removeItem("dudkaGoalsQty");
-  //   localStorage.removeItem("rayGoalsQty");
-  //   localStorage.removeItem("matches");
-  // };
 
   return (
     <div>

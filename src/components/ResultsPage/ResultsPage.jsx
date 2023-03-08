@@ -14,7 +14,7 @@ import textCardPhoto from "./img/preSeasonImg.jpg";
 
 function ResultsPage() {
   const { addResultBlock, toggleAddResultBlock, removeAddResultBlock } =
-  useAddResultBlock();
+    useAddResultBlock();
 
   return (
     <div>
@@ -50,7 +50,10 @@ function ResultsPage() {
             <AddResultComponent removeAddResultBlock={removeAddResultBlock} />
           </div>
         ) : (
-          <button className={styles.addResultBtn} onClick={toggleAddResultBlock}>
+          <button
+            className={styles.addResultBtn}
+            onClick={toggleAddResultBlock}
+          >
             +
           </button>
         )}
