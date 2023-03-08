@@ -1,7 +1,9 @@
+import styles from './Audio.module.scss'
+
 const Audio = ({ audioName, audioLink }) => {
   return (
-    <div className="audioBlock">
-      <h2 className="audioName">{audioName}</h2>
+    <div className={styles.audioBlock}>
+      <h2 className={styles.audioName}>{audioName}</h2>
       <audio src={audioLink} controls="controls"></audio>
     </div>
   );

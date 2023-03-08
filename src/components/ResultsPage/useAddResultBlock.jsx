@@ -11,7 +11,6 @@ const useAddResultBlock = () => {
       localStorage.setItem("addResultBlock", "false");
       setAddResultBlock(false);
     }
-    console.log("addResultBlock", addResultBlock);
   };
 
   const removeAddResultBlock = () => {
@@ -33,7 +32,6 @@ const useAddResultBlock = () => {
     if (localPopup == "true") {
       setAddResultBlock(localPopup);
     }
-    console.log("addResultBlock", addResultBlock);
   }, []);
   return {
     addResultBlock,

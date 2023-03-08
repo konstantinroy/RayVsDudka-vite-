@@ -4,7 +4,7 @@ import Footer from "../Main/Footer/Footer.jsx";
 import BackToTopButton from "./../CommonComponents/BackToTopButton/BackToTopButton.jsx";
 import AudiosArrayData from "./AudiosArray.jsx";
 import AudioList from "./AudioList.jsx";
-import "./AudioPage.scss";
+import styles from "./AudioPage.module.scss";
 import CasseteAnimation from "./CasseteAnimation/CasseteAnimation.jsx";
 // import AudioPagePhoto from "../../assets/img/AudioPagePhoto.jpg";
 import { useCallback } from "react";
@@ -34,15 +34,25 @@ function AudioPage() {
   const [sortType, setSortType] = useState("asc");
   const [searchTerm, setSearchTerm] = useState("");
   const [audioList, setAudioList] = useState(AudiosArrayData);
+  const [errorText, setErrorText] = useState("");
 
-  useEffect(() => {
-    const Debounce = setTimeout(() => {
-      const filteredAudios = filterAudios(searchTerm, AudiosArrayData);
-      setAudioList(filteredAudios);
-    }, 300);
+  useEffect(
+    () => {
+      const Debounce = setTimeout(() => {
+        const filteredAudios = filterAudios(searchTerm, AudiosArrayData);
+        setAudioList(filteredAudios);
+        console.log(audioList.length);
+        if (audioList.length < 1) {
+          setErrorText("По вашему запросу ничего не найдено");
+        } else {
+          setErrorText("");
+        }
+      }, 0);
 
-    return () => clearTimeout(Debounce);
-  }, [searchTerm]);
+      return () => clearTimeout(Debounce);
+    }
+    // , [searchTerm, errorText]
+  );
 
   const onSortClick = useCallback((e) => {
     setSortType(e.target.value);
@@ -61,18 +71,18 @@ function AudioPage() {
   return (
     <div>
       <Navbar />
-      <div className="content">
-        <div className="audioHeading">
-          <div className="pagePhotoBlock">
+      <div className={styles.content}>
+        <div className={styles.audioHeading}>
+          <div className={styles.pagePhotoBlock}>
             <CasseteAnimation />
             {/* <img className="audioPagePhoto" src={AudioPagePhoto} alt=""></img> */}
           </div>
-          <div className="headingText">
-            <h1 className="heading">Все аудио в одном месте</h1>
+          <div className={styles.headingText}>
+            <h1 className={styles.heading}>Все аудио в одном месте</h1>
           </div>
         </div>
 
-        <div className="inputBlock">
+        <div className={styles.inputBlock}>
           <input
             // autoFocus
             // type="text"
@@ -87,7 +97,11 @@ function AudioPage() {
           </select>
         </div>
 
-        <AudioList audioList={audioList} />
+        {errorText ? (
+          <div className={styles.errorText}>{errorText}</div>
+        ) : (
+          <AudioList audioList={audioList} />
+        )}
         <BackToTopButton />
       </div>
 
