@@ -32,6 +32,7 @@ function AddResultComponent() {
     localStorage.setItem("rayGoalsQty", JSON.stringify("0"))
   );
   const [delResPopup, setDelResPopup] = useState(false);
+  const [errorText, setErrorText] = useState('');
 
   const addTourDate = () => {
     const dateObj = {
@@ -69,20 +70,25 @@ function AddResultComponent() {
   }, []);
 
   const saveMatchResult = () => {
-    const obj = {
-      dudaTeam: dudaTeamInput,
-      dudaScore: dudaScoreInfo,
-      rayTeam: rayTeamInput,
-      rayScore: rayScoreInfo,
-    };
-    setMatchResultArr((prevState) => {
-      localStorage.setItem("matches", JSON.stringify([...prevState, obj]));
-      return [...prevState, obj];
-    });
-    setDudaTeamInput("");
-    setDudaScoreInfo(0);
-    setRayScoreInfo(0);
-    setRayTeamInput("");
+    if (dudaTeamInput === "" || rayTeamInput === "") {
+      setErrorText('Введите название команды');
+    } else {
+      setErrorText('');    
+      const obj = {
+        dudaTeam: dudaTeamInput,
+        dudaScore: dudaScoreInfo,
+        rayTeam: rayTeamInput,
+        rayScore: rayScoreInfo,
+      };
+      setMatchResultArr((prevState) => {
+        localStorage.setItem("matches", JSON.stringify([...prevState, obj]));
+        return [...prevState, obj];
+      });
+      setDudaTeamInput("");
+      setDudaScoreInfo(0);
+      setRayScoreInfo(0);
+      setRayTeamInput("");
+    }
   };
 
   const totalResult = matchResultArr.reduce(
@@ -149,15 +155,15 @@ function AddResultComponent() {
   };
   const exitPopupButton = () => {
     setDelResPopup(!delResPopup);
-  }
+  };
   const confirmRemoveResult = () => {
     setDelResPopup(!delResPopup);
-    localStorage.removeItem('dudkaScore');
-    localStorage.removeItem('rayScore');
-    localStorage.removeItem('dudkaGoalsQty');
-    localStorage.removeItem('rayGoalsQty');
-    localStorage.removeItem('matches');
-  }
+    localStorage.removeItem("dudkaScore");
+    localStorage.removeItem("rayScore");
+    localStorage.removeItem("dudkaGoalsQty");
+    localStorage.removeItem("rayGoalsQty");
+    localStorage.removeItem("matches");
+  };
 
   return (
     <div>
@@ -171,20 +177,19 @@ function AddResultComponent() {
         {delResPopup && (
           <div className={styles.deleteResultPopup}>
             <div className={styles.textWindow}>
-            <button className={styles.exitPopupBtn}
-            onClick={exitPopupButton}
-            ><RxCross2 /></button>
+              <button className={styles.exitPopupBtn} onClick={exitPopupButton}>
+                <RxCross2 />
+              </button>
               <div className={styles.askText}>
-                <p>В случае удаления вернуть данные будет невозможно!<br />
-                Вы действительно хотите удалить результат игрового дня?</p>
+                <p>
+                  В случае удаления вернуть данные будет невозможно!
+                  <br />
+                  Вы действительно хотите удалить результат игрового дня?
+                </p>
               </div>
               <div className={styles.yesNoButtons}>
-                <button
-                onClick={confirmRemoveResult}
-                >Да</button>
-                <button
-                onClick={exitPopupButton}
-                >Нет</button>
+                <button onClick={confirmRemoveResult}>Да</button>
+                <button onClick={exitPopupButton}>Нет</button>
               </div>
             </div>
           </div>
@@ -346,6 +351,9 @@ function AddResultComponent() {
             </div>
           </div>
 
+          {errorText && (
+            <div className={styles.errorText}>{errorText}</div>
+          )}
           <div>
             <button
               className={styles.saveMatchResultBtn}

@@ -251,6 +251,12 @@ select {
   width: 5vw;
 }
 
+.errorText {
+  color: red;
+  font-size: 2vw;
+  margin: 2vw 0 0;
+}
+
 .saveMatchResultBtn {
   background-color: rgb(0 0 0 / 14%);
   color: var(--text-color);
@@ -385,7 +391,7 @@ select {
     font-size: 5vw;
   }
   .resultsInputs {
-    margin-bottom: 1vw;
+    margin-bottom: 0;
   }
   .inputIcon {
     width: 16%;
@@ -403,6 +409,13 @@ select {
   }
   .resultScoreInput input {
     font-size: 3vw;
+  }
+  .errorText {
+    font-size: 3vw;
+    margin: 2vw 0 0;
+  }
+  .saveMatchResultBtn {
+    margin: 2vw 0;
   }
   .resultList ul {
     font-size: 3vw;
@@ -518,7 +531,6 @@ select {
   .resultsInputs {
     flex-direction: column;
     width: 60%;
-    margin-bottom: 4vw;
   }
   .inputIcon {
     width: 18%;
@@ -541,6 +553,13 @@ select {
   .resultScoreInput input {
     font-size: 5vw;
     width: 11vw;
+  }
+  .errorText {
+    font-size: 4.5vw;
+    margin: 4vw 0 0;
+  }
+  .saveMatchResultBtn {
+    margin: 4vw 0;
   }
   .resultList ul {
     font-size: 4.7vw;
