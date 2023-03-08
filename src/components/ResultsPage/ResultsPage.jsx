@@ -4,6 +4,7 @@ import Navbar from "../Main/Header/Navbar.jsx";
 import Footer from "../Main/Footer/Footer.jsx";
 import styles from "./ResultsPage.module.scss";
 import SeasonTable from "./SeasonTable2023/SeasonTable2023.jsx";
+import useAddResultBlock from "./useAddResultBlock.jsx";
 import ResultsArray from "./ResultsArray.jsx";
 import MatchDayBlock from "./MatchDayBlock.jsx";
 // import ResultsPagePhoto from "../../assets/img/ResultsPage-photo.jpg";
@@ -12,21 +13,8 @@ import AddResultComponent from "./AddResultComponent/AddResultComponent.jsx";
 import textCardPhoto from "./img/preSeasonImg.jpg";
 
 function ResultsPage() {
-  const [addMatchResVis, setAddMatchResVis] = useState(
-    localStorage.getItem("addMatchResWindow") || false
-  );
-  const [addResultBtnVis, setAddResultBtnVis] = useState(true);
-  const addResultComp = () => {
-    localStorage.setItem("addMatchResWindow", JSON.stringify(true));
-    setAddResultBtnVis(false);
-  };
-  const deleteAddResBlock = () => {
-    localStorage.removeItem("addMatchResWindow");
-    setAddMatchResVis(localStorage.getItem("addMatchResWindow"));
-  }
-  useEffect(() => {
-    setAddMatchResVis(localStorage.getItem("addMatchResWindow"));
-  }, [addResultComp]);
+  const { addResultBlock, toggleAddResultBlock, removeAddResultBlock } =
+  useAddResultBlock();
 
   return (
     <div>
@@ -57,12 +45,12 @@ function ResultsPage() {
           <h1>Результаты всех туров сезона</h1>
         </div>
 
-        {addMatchResVis ? (
+        {addResultBlock ? (
           <div className={styles.resultsBlock}>
-            <AddResultComponent />
+            <AddResultComponent removeAddResultBlock={removeAddResultBlock} />
           </div>
         ) : (
-          <button className={styles.addResultBtn} onClick={addResultComp}>
+          <button className={styles.addResultBtn} onClick={toggleAddResultBlock}>
             +
           </button>
         )}

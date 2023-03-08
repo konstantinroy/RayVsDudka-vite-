@@ -4,7 +4,7 @@ import { BsPencilFill } from "react-icons/bs";
 import { TfiGame } from "react-icons/tfi";
 import styles from "./AddResultComponent.module.scss";
 
-function AddResultComponent() {
+function AddResultComponent({removeAddResultBlock}) {
   const [dayInput, setDayInput] = useState("1");
   const [monthInput, setMonthInput] = useState("января");
   const [tourInput, setTourInput] = useState("1");
@@ -156,14 +156,14 @@ function AddResultComponent() {
   const exitPopupButton = () => {
     setDelResPopup(!delResPopup);
   };
-  const confirmRemoveResult = () => {
-    setDelResPopup(!delResPopup);
-    localStorage.removeItem("dudkaScore");
-    localStorage.removeItem("rayScore");
-    localStorage.removeItem("dudkaGoalsQty");
-    localStorage.removeItem("rayGoalsQty");
-    localStorage.removeItem("matches");
-  };
+  // const confirmRemoveResult = () => {
+  //   setDelResPopup(!delResPopup);
+  //   localStorage.removeItem("dudkaScore");
+  //   localStorage.removeItem("rayScore");
+  //   localStorage.removeItem("dudkaGoalsQty");
+  //   localStorage.removeItem("rayGoalsQty");
+  //   localStorage.removeItem("matches");
+  // };
 
   return (
     <div>
@@ -188,7 +188,7 @@ function AddResultComponent() {
                 </p>
               </div>
               <div className={styles.yesNoButtons}>
-                <button onClick={confirmRemoveResult}>Да</button>
+                <button onClick={removeAddResultBlock}>Да</button>
                 <button onClick={exitPopupButton}>Нет</button>
               </div>
             </div>
