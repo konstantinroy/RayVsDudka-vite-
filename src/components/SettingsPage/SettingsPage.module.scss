@@ -64,7 +64,6 @@
 .userInfo h2 {
   margin: 1vw 0;
   font-size: 2.5vw;
-  text-shadow: $infoBlockTextShadow;
 }
 
 .userInfo h3 {
@@ -125,16 +124,21 @@
 
 .settingsChapter {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 50% 50%;
   align-items: end;
   border-bottom: 1px solid var(--text-color);
   padding: 0 1vw;
   font-size: 1.5vw;
+  overflow: hidden;
 }
 
 .nameText {
   font-weight: 900;
+  margin-left: 4vw;
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
 }
 
 @media only screen and (max-width: 912px) {
@@ -213,51 +217,54 @@
     padding: 7vw 0;
   }
   .heading h1 {
-    font-size: 6vw;
+    font-size: 8vw;
   }
   .userInfoBlock {
-    padding: 7vw 0;
-    width: 80%;
+    padding: 10vw 0;
+    width: 95%;
   }
   .userMainInfo {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0px 5vw;
+    padding: 0px 3vw;
   }
   .userPhoto {
-    height: 20vw;
-    width: 20vw;
+    height: 25vw;
+    width: 25vw;
   }
   .userInfo {
     margin: 0 4vw;
-    width: 50%;
+    width: 60%;
   }
   .userInfo h2 {
     margin: 0;
-    font-size: 4.8vw;
+    font-size: 6vw;
   }
   .userInfo p {
-    font-size: 2.6vw;
+    font-size: 4vw;
   }
   .settingsBlock {
     padding: 2vw 7vw;
   }
   .settingsBlock h2 {
-    font-size: 4.5vw;
+    font-size: 7vw;
   }
+  .themeBlock {
+    padding: 1vw 1vw;
+}
   .themeIcon {
-    width: 6vw;
-    height: 6vw;
+    width: 7vw;
+    height: 7vw;
   }
   .themeText {
-    font-size: 3.5vw;
+    font-size: 4.5vw;
     margin: 0 2vw;
   }
   .themeText p {
     margin: 2vw 0;
   }
   .settingsChapter {
-    font-size: 3vw;
+    font-size: 4vw;
   }
 }

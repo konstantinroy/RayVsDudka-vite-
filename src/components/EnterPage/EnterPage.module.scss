@@ -17,7 +17,7 @@
 .pageIcon {
   width: 25%;
   height: 32%;
-  border: 3px solid $infoBlockColor;
+  border: 3px solid var(--text-color);
   border-radius: 50%;
   padding: 1vw;
   margin-bottom: 2vw;
@@ -28,7 +28,7 @@
 .pageIcon svg {
   width: 100%;
   height: 100%;
-  color: $infoBlockColor;
+  color: var(--text-color);
 }
 
 .formBlock {
@@ -46,7 +46,7 @@
 
 .registrButton button {
   background-color: rgba(255, 255, 255, 0);
-  color: #fff;
+  color: var(--text-color);
   font-size: 1.4vw;
   border: none;
   border-radius: 6px 6px 0px 0px;
@@ -85,7 +85,7 @@
   display: flex;
   align-items: center;
   margin-bottom: 1vw;
-  border: 1px solid $infoBlockColor;
+  border: 1px solid var(--text-color);
   border-radius: 6px;
   overflow: hidden;
 }
@@ -94,7 +94,7 @@
   position: absolute;
   right: 0;
   background-color: #ffffff00;
-  color: #ffffff94;
+  color: var(--text-color);
   width: 11%;
   height: 100%;
   padding-right: 1vw;
@@ -104,14 +104,14 @@
 .inputIcon {
   width: 17%;
   height: 65%;
-  color: $infoBlockColor;
+  color: var(--text-color);
 }
 
 .input input {
   width: 100%;
   height: 100%;
   background-color: $infoBlockColor;
-  color: #fff;
+  color: var(--text-color);
   padding: 1.5vw;
   font-family: "Montserrat", sans-serif;
   font-size: 1.5vw;
@@ -120,13 +120,13 @@
 
 .inputsBlock button {
   background-color: #d17ea500;
-  color: #fff;
+  color: var(--text-color);
   width: 100%;
   height: 4vw;
   margin-top: 1vw;
   font-family: "Montserrat", sans-serif;
   font-size: 1.5vw;
-  border: 1px solid $infoBlockColor;
+  border: 1px solid var(--text-color);
   border-radius: 6px;
   cursor: pointer;
 }
@@ -166,7 +166,7 @@
 }
 
 .successRegistrIcon {
-  color: $infoBlockColor;
+  color: var(--text-color);
   width: 35%;
   height: 50%;
   margin-bottom: 1vw;

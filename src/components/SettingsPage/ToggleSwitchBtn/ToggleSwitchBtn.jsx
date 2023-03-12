@@ -8,6 +8,7 @@ function ToggleSwitchBtn({ defaultValue, onChange }) {
   return (
     <>
       <input
+        className={styles.input}
         type="checkbox"
         id="switch"
         value={defaultValue}
