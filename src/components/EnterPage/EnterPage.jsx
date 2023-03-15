@@ -107,19 +107,18 @@ function EnterPage() {
 
             <div className={styles.formBlock}>
               <div className={styles.registrButton}>
-
-              {/* <button className={`${regBtn ? styles.activeBtn : ''}`}
-              onClick={registrButton}>Регистрация</button> */}
-
-
                 <button
-                  className={`${regBtn ? styles.activeBtn : styles.disactiveBtn}`}
+                  className={`${
+                    regBtn ? styles.activeBtn : styles.disactiveBtn
+                  }`}
                   onClick={registrButton}
                 >
                   Регистрация
                 </button>
                 <button
-                className={`${enterBtn ? styles.activeBtn : styles.disactiveBtn}`}
+                  className={`${
+                    enterBtn ? styles.activeBtn : styles.disactiveBtn
+                  }`}
                   onClick={enterButton}
                 >
                   Вход

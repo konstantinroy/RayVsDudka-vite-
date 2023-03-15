@@ -31,7 +31,7 @@ function SettingsPage() {
               {/* <img src={MdAccountCircle} alt="" /> */}
             </div>
             <div className={styles.userInfo}>
-              <h2>KonstantinRay</h2>
+              <h2>konstantinray</h2>
               <p>Чемпион фифы сезона 2022 года, король удачи и сын фифы...</p>
             </div>
           </div>
@@ -53,7 +53,7 @@ function SettingsPage() {
             </div>
             <div className={styles.settingsChapter}>
               <p>Логин:</p>
-              <p className={styles.nameText}>KonstantinRay</p>
+              <p className={styles.nameText}>konstantinray</p>
             </div>
             <div className={styles.settingsChapter}>
               <p>Имя:</p>
