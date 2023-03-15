@@ -8,7 +8,7 @@ import { FiEye, FiEyeOff } from "react-icons/fi";
 import { BsCheckCircleFill } from "react-icons/bs";
 
 function EnterPage() {
-  const [regBtn, setRegByn] = useState(true);
+  const [regBtn, setRegBtn] = useState(true);
   const [enterBtn, setEnterByn] = useState(false);
   const [emailInput, setEmailInput] = useState("");
   const [usernameInput, setUsernameInput] = useState("");
@@ -64,14 +64,14 @@ function EnterPage() {
   };
 
   const registrButton = () => {
-    setRegByn(true);
+    setRegBtn(true);
     setEnterByn(false);
     setRegPasswordInput1("");
     setRegPasswordInput2("");
     setEnterPasswordInput("");
   };
   const enterButton = () => {
-    setRegByn(false);
+    setRegBtn(false);
     setEnterByn(true);
     setRegPasswordInput1("");
     setRegPasswordInput2("");
@@ -167,27 +167,25 @@ function EnterPage() {
                     />
                     {!showPass ? (
                       <FiEye
-                        className={styles.passEye}
-                        style={
-                          !regPasswordInput1
-                            ? { display: "none" }
-                            : {
-                                display: "block",
-                              }
+                        className={`${styles.passEye}
+                        ${
+                          regPasswordInput1
+                            ? styles.passEyeActive
+                            : styles.passEyeDisactive
                         }
+                        `}
                         onClick={showPassBtn}
                       />
                     ) : (
                       <FiEyeOff
-                        className={styles.passEye}
-                        onClick={showPassBtn}
-                        style={
-                          !regPasswordInput1
-                            ? { display: "none" }
-                            : {
-                                display: "block",
-                              }
+                        className={`${styles.passEye}
+                        ${
+                          regPasswordInput1
+                            ? styles.passEyeActive
+                            : styles.passEyeDisactive
                         }
+                        `}
+                        onClick={showPassBtn}
                       />
                     )}
                   </div>
@@ -209,27 +207,25 @@ function EnterPage() {
                     />
                     {!showPass ? (
                       <FiEye
-                        className={styles.passEye}
-                        style={
-                          !regPasswordInput2
-                            ? { display: "none" }
-                            : {
-                                display: "block",
-                              }
+                        className={`${styles.passEye}
+                        ${
+                          regPasswordInput2
+                            ? styles.passEyeActive
+                            : styles.passEyeDisactive
                         }
+                        `}
                         onClick={showPassBtn}
                       />
                     ) : (
                       <FiEyeOff
-                        className={styles.passEye}
-                        onClick={showPassBtn}
-                        style={
-                          !regPasswordInput2
-                            ? { display: "none" }
-                            : {
-                                display: "block",
-                              }
+                        className={`${styles.passEye}
+                        ${
+                          regPasswordInput2
+                            ? styles.passEyeActive
+                            : styles.passEyeDisactive
                         }
+                        `}
+                        onClick={showPassBtn}
                       />
                     )}
                   </div>
@@ -280,27 +276,25 @@ function EnterPage() {
                     />
                     {!showPass ? (
                       <FiEye
-                        className={styles.passEye}
-                        style={
-                          !enterPasswordInput
-                            ? { display: "none" }
-                            : {
-                                display: "block",
-                              }
+                        className={`${styles.passEye}
+                        ${
+                          enterPasswordInput
+                            ? styles.passEyeActive
+                            : styles.passEyeDisactive
                         }
+                        `}
                         onClick={showPassBtn}
                       />
                     ) : (
                       <FiEyeOff
-                        className={styles.passEye}
-                        onClick={showPassBtn}
-                        style={
-                          !enterPasswordInput
-                            ? { display: "none" }
-                            : {
-                                display: "block",
-                              }
+                        className={`${styles.passEye}
+                        ${
+                          enterPasswordInput
+                            ? styles.passEyeActive
+                            : styles.passEyeDisactive
                         }
+                        `}
+                        onClick={showPassBtn}
                       />
                     )}
                   </div>
