@@ -107,30 +107,19 @@ function EnterPage() {
 
             <div className={styles.formBlock}>
               <div className={styles.registrButton}>
+
+              {/* <button className={`${regBtn ? styles.activeBtn : ''}`}
+              onClick={registrButton}>Регистрация</button> */}
+
+
                 <button
-                  className={styles.registrBtn}
-                  style={
-                    regBtn
-                      ? { backgroundColor: "#d9d9d96e" }
-                      : {
-                          backgroundColor: "rgba(255, 255, 255, 0)",
-                          color: "#d9d9d96e",
-                        }
-                  }
+                  className={`${regBtn ? styles.activeBtn : styles.disactiveBtn}`}
                   onClick={registrButton}
                 >
                   Регистрация
                 </button>
                 <button
-                  className={styles.enterBtn}
-                  style={
-                    enterBtn
-                      ? { backgroundColor: "#d9d9d96e" }
-                      : {
-                          backgroundColor: "rgba(255, 255, 255, 0)",
-                          color: "#d9d9d96e",
-                        }
-                  }
+                className={`${enterBtn ? styles.activeBtn : styles.disactiveBtn}`}
                   onClick={enterButton}
                 >
                   Вход

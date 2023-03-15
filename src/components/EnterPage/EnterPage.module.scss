@@ -45,17 +45,22 @@
 }
 
 .registrButton button {
-  background-color: rgba(255, 255, 255, 0);
-  color: var(--text-color);
   font-size: 1.4vw;
   border: none;
   border-radius: 6px 6px 0px 0px;
   padding: 1vw 0.7vw;
   cursor: pointer;
+  margin: 0 0.5vw;
 }
 
-.registrBtn {
-  margin-right: 1vw;
+.disactiveBtn {
+  background-color: #ffffff00;
+  color: var(--placeholder-color);
+}
+
+.activeBtn {
+  background-color: rgba(217, 217, 217, 0.431372549);
+  color: var(--text-color);
 }
 
 .inputsBlock {
@@ -235,7 +240,7 @@
     margin-right: 2vw;
   }
   .inputsBlock {
-    padding: 4vw 4vw;
+    padding: 2vw 4vw;
   }
   .inputErrorText {
     font-size: 5vw;
