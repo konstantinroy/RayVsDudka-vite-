@@ -165,29 +165,18 @@ function EnterPage() {
                       value={regPasswordInput1}
                       onChange={(e) => passwordErrorFn(e)}
                     />
-                    {!showPass ? (
-                      <FiEye
-                        className={`${styles.passEye}
-                        ${
-                          regPasswordInput1
-                            ? styles.passEyeActive
-                            : styles.passEyeDisactive
-                        }
-                        `}
-                        onClick={showPassBtn}
-                      />
-                    ) : (
-                      <FiEyeOff
-                        className={`${styles.passEye}
-                        ${
-                          regPasswordInput1
-                            ? styles.passEyeActive
-                            : styles.passEyeDisactive
-                        }
-                        `}
-                        onClick={showPassBtn}
-                      />
-                    )}
+                    {regPasswordInput1 != "" &&
+                      (!showPass ? (
+                        <FiEye
+                          className={styles.passEye}
+                          onClick={showPassBtn}
+                        />
+                      ) : (
+                        <FiEyeOff
+                          className={styles.passEye}
+                          onClick={showPassBtn}
+                        />
+                      ))}
                   </div>
                   <div className={styles.errorTextBlock}>
                     <h1 className={styles.inputErrorText}>
@@ -205,29 +194,18 @@ function EnterPage() {
                       value={regPasswordInput2}
                       onChange={(e) => matchPasswordErrorFn(e)}
                     />
-                    {!showPass ? (
-                      <FiEye
-                        className={`${styles.passEye}
-                        ${
-                          regPasswordInput2
-                            ? styles.passEyeActive
-                            : styles.passEyeDisactive
-                        }
-                        `}
-                        onClick={showPassBtn}
-                      />
-                    ) : (
-                      <FiEyeOff
-                        className={`${styles.passEye}
-                        ${
-                          regPasswordInput2
-                            ? styles.passEyeActive
-                            : styles.passEyeDisactive
-                        }
-                        `}
-                        onClick={showPassBtn}
-                      />
-                    )}
+                    {regPasswordInput2 != "" &&
+                      (!showPass ? (
+                        <FiEye
+                          className={styles.passEye}
+                          onClick={showPassBtn}
+                        />
+                      ) : (
+                        <FiEyeOff
+                          className={styles.passEye}
+                          onClick={showPassBtn}
+                        />
+                      ))}
                   </div>
                   <div className={styles.personalInfoText}>
                     {emailInput &&
@@ -274,29 +252,18 @@ function EnterPage() {
                       value={enterPasswordInput}
                       onChange={(e) => setEnterPasswordInput(e.target.value)}
                     />
-                    {!showPass ? (
-                      <FiEye
-                        className={`${styles.passEye}
-                        ${
-                          enterPasswordInput
-                            ? styles.passEyeActive
-                            : styles.passEyeDisactive
-                        }
-                        `}
-                        onClick={showPassBtn}
-                      />
-                    ) : (
-                      <FiEyeOff
-                        className={`${styles.passEye}
-                        ${
-                          enterPasswordInput
-                            ? styles.passEyeActive
-                            : styles.passEyeDisactive
-                        }
-                        `}
-                        onClick={showPassBtn}
-                      />
-                    )}
+                    {enterPasswordInput != "" &&
+                      (!showPass ? (
+                        <FiEye
+                          className={styles.passEye}
+                          onClick={showPassBtn}
+                        />
+                      ) : (
+                        <FiEyeOff
+                          className={styles.passEye}
+                          onClick={showPassBtn}
+                        />
+                      ))}
                   </div>
                   <div className={styles.rememberMeInput}>
                     <input type="checkbox" />
