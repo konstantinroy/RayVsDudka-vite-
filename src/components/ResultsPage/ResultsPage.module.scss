@@ -308,8 +308,8 @@
     font-size: 5.5vw;
   }
   .addResultBtn {
-    width: 60px;
-    height: 60px;
+    width: 16vw;
+    height: 16vw;
     font-size: 9vw;
     margin-bottom: 6vw;
   }
@@ -334,21 +334,5 @@
   }
   .textBlock p {
     font-size: 4vw;
-  }
-}
-
-@media only screen and (max-width: 390px) {
-  .addResultBtn {
-    width: 55px;
-    height: 55px;
-    font-size: 8vw;
-  }
-}
-
-@media only screen and (max-width: 330px) {
-  .addResultBtn {
-    width: 50px;
-    height: 50px;
-    font-size: 8vw;
   }
 }
