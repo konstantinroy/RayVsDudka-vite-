@@ -78,12 +78,8 @@
   .linksBox {
     grid-template-columns: 22% 27% 33% 18%;
   }
-  .linksBlock h1 {
-    text-transform: uppercase;
-  }
   .linksBlock p {
-    max-width: 80%;
-    margin: 0 0 0.7vw 0;
+    margin-bottom: 2vw;
   }
   .footerCapText {
     font-size: 1.9vw;
@@ -126,12 +122,12 @@
   }
   .visible {
     max-height: 100%;
-    width: 85%;
+    width: 100%;
     overflow: visible;
     margin-top: 2vw;
   }
   .linksBlock p {
-    font-size: 4.5vw;
+    font-size: 4vw;
   }
   .linksBlock img {
     width: 80%;
