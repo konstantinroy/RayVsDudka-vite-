@@ -2,9 +2,11 @@ import React, { useState, useMemo, useEffect } from "react";
 import { RxCross2 } from "react-icons/rx";
 import { BsPencilFill } from "react-icons/bs";
 import { TfiGame } from "react-icons/tfi";
+import { AiOutlineFileSearch } from "react-icons/ai";
 import styles from "./AddResultComponent.module.scss";
+import FinalResultsWindow from "./FinalResultsWindow/FinalResultsWindow";
 
-function AddResultComponent({removeAddResultBlock}) {
+function AddResultComponent({ removeAddResultBlock }) {
   const [dayInput, setDayInput] = useState("1");
   const [monthInput, setMonthInput] = useState("января");
   const [tourInput, setTourInput] = useState("1");
@@ -32,7 +34,8 @@ function AddResultComponent({removeAddResultBlock}) {
     localStorage.setItem("rayGoalsQty", JSON.stringify("0"))
   );
   const [delResPopup, setDelResPopup] = useState(false);
-  const [errorText, setErrorText] = useState('');
+  const [errorText, setErrorText] = useState("");
+  const [visFinalResults, setVisFinalResults] = useState(false);
 
   const addTourDate = () => {
     const dateObj = {
@@ -71,9 +74,9 @@ function AddResultComponent({removeAddResultBlock}) {
 
   const saveMatchResult = () => {
     if (dudaTeamInput === "" || rayTeamInput === "") {
-      setErrorText('Введите название команды');
+      setErrorText("Введите название команды");
     } else {
-      setErrorText('');    
+      setErrorText("");
       const obj = {
         dudaTeam: dudaTeamInput,
         dudaScore: dudaScoreInfo,
@@ -155,6 +158,10 @@ function AddResultComponent({removeAddResultBlock}) {
   };
   const exitPopupButton = () => {
     setDelResPopup(!delResPopup);
+  };
+
+  const viewFinalResults = () => {
+    setVisFinalResults(!visFinalResults);
   };
 
   return (
@@ -269,10 +276,7 @@ function AddResultComponent({removeAddResultBlock}) {
                 </div>
               </div>
               <div>
-                <button
-                  className={styles.saveMatchResultBtn}
-                  onClick={addTourDate}
-                >
+                <button className={styles.componentBtn} onClick={addTourDate}>
                   Добавить
                 </button>
               </div>
@@ -343,14 +347,9 @@ function AddResultComponent({removeAddResultBlock}) {
             </div>
           </div>
 
-          {errorText && (
-            <div className={styles.errorText}>{errorText}</div>
-          )}
+          {errorText && <div className={styles.errorText}>{errorText}</div>}
           <div>
-            <button
-              className={styles.saveMatchResultBtn}
-              onClick={saveMatchResult}
-            >
+            <button className={styles.componentBtn} onClick={saveMatchResult}>
               Добавить
             </button>
           </div>
@@ -360,6 +359,26 @@ function AddResultComponent({removeAddResultBlock}) {
           <h3 className={styles.goalsQuotes}>
             Счёт голов: {dudaGoalQtyText}-{rayGoalQtyText}
           </h3>
+          {!visFinalResults ? (
+            matchResultList.length > 0 && dateText && (
+              <AiOutlineFileSearch
+                className={styles.viewFinalResultsBtn}
+                onClick={viewFinalResults}
+              />
+            )
+          ) : (
+            <FinalResultsWindow
+              setVisFinalResults={setVisFinalResults}
+              visDateInputs={visDateInputs}
+              dateText={dateText}
+              dudaMainScoreInfo={dudaMainScoreInfo}
+              rayMainScoreInfo={rayMainScoreInfo}
+              matchResultList={matchResultList}
+              matchQty={matchQty}
+              dudaGoalQtyText={dudaGoalQtyText}
+              rayGoalQtyText={rayGoalQtyText}
+            />
+          )}
         </div>
       </div>
     </div>

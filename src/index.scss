@@ -43,6 +43,19 @@ button, input, select {
   color: var(--placeholder-color);
 }
 
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-color);
+  border: 1px solid var(--placeholder-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-color);
+}
+
 li {
   list-style: none;
 }
