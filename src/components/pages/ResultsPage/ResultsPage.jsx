@@ -7,7 +7,7 @@ import SeasonTable from "./SeasonTable2023/SeasonTable2023.jsx";
 import useAddResultBlock from "./useAddResultBlock.jsx";
 import ResultsArray from "./ResultsArray.jsx";
 import MatchDayBlock from "./MatchDayBlock.jsx";
-// import ResultsPagePhoto from "../../assets/img/ResultsPage-photo.jpg";
+// import ResultsPagePhoto from "./img/ResultsPage-photo.jpg";
 import FifaTextAnimation from "./FifaTextAnimation/FifaTextAnimation.jsx";
 import AddResultComponent from "./AddResultComponent/AddResultComponent.jsx";
 import textCardPhoto from "./img/preSeasonImg.jpg";

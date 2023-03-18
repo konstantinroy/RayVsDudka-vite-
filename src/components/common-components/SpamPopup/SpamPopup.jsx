@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./SpamPopup.module.scss";
-import MainWindowPhoto from "../../../assets/img/main-window-photo.jpg";
+import MainWindowPhoto from "./img/main-window-photo.jpg";
 
 function SpamPopup() {
   // const componentWillMount = () => {
