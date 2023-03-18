@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Navbar from "../Main/Header/Navbar.jsx";
-import Footer from "../Main/Footer/Footer.jsx";
+import Navbar from "../../Main/Header/Navbar.jsx";
+import Footer from "../../Main/Footer/Footer.jsx";
 import styles from "./EnterPage.module.scss";
 import { CiUser, CiMail } from "react-icons/ci";
 import { AiOutlineUnlock } from "react-icons/ai";

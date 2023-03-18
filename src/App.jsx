@@ -7,10 +7,10 @@ import Main from "../src/components/Main/Main.jsx";
 import Results from "../src/components/ResultsPage/ResultsPage.jsx";
 import Result2022Year from "../src/components/ResultsPage/Result2022Year/Result2022Year";
 import LocationsPage from "../src/components/pages/LocationsPage/LocationsPage";
-import AudioPage from "../src/components/AudioPage/AudioPage.jsx";
+import AudioPage from "../src/components/pages/AudioPage/AudioPage";
 import PhotoPage from "../src/components/pages/PhotosPage/PhotosPage";
 import QuotesPage from "../src/components/pages/QuotesPage/QuotesPage";
-import EnterPage from "../src/components/EnterPage/EnterPage";
+import EnterPage from "../src/components/pages/EnterPage/EnterPage";
 import SettingsPage from "../src/components/SettingsPage/SettingsPage"
 import { getTheme } from './store/selectors/user';
 

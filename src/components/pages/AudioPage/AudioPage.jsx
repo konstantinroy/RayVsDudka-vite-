@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
-import Navbar from "../Main/Header/Navbar.jsx";
-import Footer from "../Main/Footer/Footer.jsx";
-import BackToTopButton from "./../CommonComponents/BackToTopButton/BackToTopButton.jsx";
+import Navbar from "../../Main/Header/Navbar.jsx";
+import Footer from "../../Main/Footer/Footer.jsx";
+import BackToTopButton from "./../../CommonComponents/BackToTopButton/BackToTopButton.jsx";
 import AudiosArrayData from "./AudiosArray.jsx";
 import AudioList from "./AudioList.jsx";
 import styles from "./AudioPage.module.scss";
 import CasseteAnimation from "./CasseteAnimation/CasseteAnimation.jsx";
-// import AudioPagePhoto from "../../assets/img/AudioPagePhoto.jpg";
+// import AudioPagePhoto from "./img/AudioPagePhoto.jpg";
 import { useCallback } from "react";
 
 const filterAudios = (searchText, listOfAudios) => {
@@ -41,7 +41,6 @@ function AudioPage() {
       const Debounce = setTimeout(() => {
         const filteredAudios = filterAudios(searchTerm, AudiosArrayData);
         setAudioList(filteredAudios);
-        console.log(audioList.length);
         if (audioList.length < 1) {
           setErrorText("По вашему запросу ничего не найдено");
         } else {
