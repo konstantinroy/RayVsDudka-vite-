@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../Main/Header/Navbar.jsx";
 import Footer from "../Main/Footer/Footer";
 import styles from "./LocationsPage.module.scss";
-import Carousel from "../../CommonComponents/Carousel/index";
+import Carousel from "../../common-components/Carousel/index";
 import LocationsPagePhoto from "./img/LocationsPagePhoto.jpg";
 import DudaHomePhoto1 from "./img/photo_2022-11-29_23-26-45.jpg";
 import DudaHomePhoto2 from "./img/photo_2022-11-29_23-26-52.jpg";

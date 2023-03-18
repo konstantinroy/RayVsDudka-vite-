@@ -1,4 +1,4 @@
-import Carousel from "../../CommonComponents/Carousel/index.jsx";
+import Carousel from "../../common-components/Carousel/index.jsx";
 import styles from "./PhotoBlock.module.scss";
 
 function PhotoBlock({ post }) {

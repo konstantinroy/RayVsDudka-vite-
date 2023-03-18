@@ -2,7 +2,7 @@ import { HashRouter, Routes, Route } from "react-router-dom";
 import { useEffect } from 'react';
 import { useStore } from './store/store';
 import { Provider, useSelector } from 'react-redux';
-import ScrollToTop from "../src/components/CommonComponents/ReactScrollToTop/ScrollToTop";
+import ScrollToTop from "../src/components/common-components/ReactScrollToTop/ScrollToTop";
 import Main from "../src/components/pages/Main/Main";
 import Results from "../src/components/pages/ResultsPage/ResultsPage.jsx";
 import Result2022Year from "../src/components/pages/ResultsPage/Result2022Year/Result2022Year";
