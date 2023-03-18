@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import Navbar from "../../Main/Header/Navbar.jsx";
-import Footer from "../../Main/Footer/Footer.jsx";
+import Navbar from "../Main/Header/Navbar.jsx";
+import Footer from "../Main/Footer/Footer.jsx";
 import BackToTopButton from "./../../CommonComponents/BackToTopButton/BackToTopButton.jsx";
 import AudiosArrayData from "./AudiosArray.jsx";
 import AudioList from "./AudioList.jsx";

@@ -3,15 +3,15 @@ import { useEffect } from 'react';
 import { useStore } from './store/store';
 import { Provider, useSelector } from 'react-redux';
 import ScrollToTop from "../src/components/CommonComponents/ReactScrollToTop/ScrollToTop";
-import Main from "../src/components/Main/Main.jsx";
-import Results from "../src/components/ResultsPage/ResultsPage.jsx";
-import Result2022Year from "../src/components/ResultsPage/Result2022Year/Result2022Year";
+import Main from "../src/components/pages/Main/Main";
+import Results from "../src/components/pages/ResultsPage/ResultsPage.jsx";
+import Result2022Year from "../src/components/pages/ResultsPage/Result2022Year/Result2022Year";
 import LocationsPage from "../src/components/pages/LocationsPage/LocationsPage";
 import AudioPage from "../src/components/pages/AudioPage/AudioPage";
 import PhotoPage from "../src/components/pages/PhotosPage/PhotosPage";
 import QuotesPage from "../src/components/pages/QuotesPage/QuotesPage";
 import EnterPage from "../src/components/pages/EnterPage/EnterPage";
-import SettingsPage from "../src/components/SettingsPage/SettingsPage"
+import SettingsPage from "../src/components/pages/SettingsPage/SettingsPage"
 import { getTheme } from './store/selectors/user';
 
 const Links = () => {

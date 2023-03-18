@@ -6,8 +6,8 @@ import Footer from "../Main/Footer/Footer";
 import styles from "./SettingsPage.module.scss";
 // import RayAvatar from "../../assets/img/GoldenBallMob.jpg";
 import ToggleSwitchBtn from "./ToggleSwitchBtn/ToggleSwitchBtn";
-import { changeTheme } from "../../store/actions/user";
-import { getTheme } from "../../store/selectors/user";
+import { changeTheme } from "../../../store/actions/user";
+import { getTheme } from "../../../store/selectors/user";
 
 function SettingsPage() {
   const dispatch = useDispatch();

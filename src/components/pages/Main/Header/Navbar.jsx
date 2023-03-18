@@ -4,7 +4,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { RxCross2 } from "react-icons/rx";
 import { MdAccountCircle } from "react-icons/md";
 import styles from "./Navbar.module.scss";
-import FifaIcon from "../../../assets/img/Fifa.png";
+import FifaIcon from "./img/Fifa.png";
 
 function Navbar() {
   const [isMenuClicked, setIsMenuClicked] = useState(false);

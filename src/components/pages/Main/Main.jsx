@@ -1,5 +1,5 @@
 import styles from "./Main.module.scss";
-// import SpamPopup from "../CommonComponents/SpamPopup/SpamPopup";
+// import SpamPopup from "../../CommonComponents/SpamPopup/SpamPopup";
 import Navbar from "./Header/Navbar.jsx";
 import Footer from "./Footer/Footer.jsx";
 import PcMainPhoto from "./img/PcMainPhoto.jpg";
