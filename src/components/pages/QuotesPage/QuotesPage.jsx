@@ -1,8 +1,8 @@
 import React from "react";
-import Navbar from "../Main/Header/Navbar.jsx";
-import Footer from "../Main/Footer/Footer.jsx";
+import Navbar from "../../Main/Header/Navbar.jsx";
+import Footer from "../../Main/Footer/Footer";
 import styles from "./QuotesPage.module.scss";
-import QuotesPagePhoto from "../../assets/img/QuotesPagePhoto.jpg";
+import QuotesPagePhoto from "../../../assets/img/QuotesPagePhoto.jpg";
 import QuotesArray from "./QuotesArray.jsx";
 import QuoteBlock from "./QuoteBlock.jsx";
 

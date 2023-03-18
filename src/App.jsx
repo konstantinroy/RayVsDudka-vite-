@@ -8,8 +8,8 @@ import Results from "../src/components/ResultsPage/ResultsPage.jsx";
 import Result2022Year from "../src/components/ResultsPage/Result2022Year/Result2022Year";
 import LocationsPage from "../src/components/LocationsPage/LocationsPage.jsx";
 import AudioPage from "../src/components/AudioPage/AudioPage.jsx";
-import PhotoPage from "../src/components/PhotosPage/PhotosPage.jsx";
-import QuotesPage from "../src/components/QuotesPage/QuotesPage.jsx";
+import PhotoPage from "../src/components/pages/PhotosPage/PhotosPage";
+import QuotesPage from "../src/components/pages/QuotesPage/QuotesPage";
 import EnterPage from "../src/components/EnterPage/EnterPage";
 import SettingsPage from "../src/components/SettingsPage/SettingsPage"
 import { getTheme } from './store/selectors/user';

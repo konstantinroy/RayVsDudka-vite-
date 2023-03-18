@@ -1,4 +1,4 @@
-@import "../../index.scss";
+@import "../../../index.scss";
 
 .content {
   padding: 0;
@@ -9,7 +9,7 @@
   font-size: 4vw;
   font-weight: 900;
   margin: 0;
-  width: 45%;
+  width: 70%;
 }
 
 .pagePhotoBlock {
@@ -19,15 +19,13 @@
   padding-top: 4.5vw;
 }
 
-.photoHeading {
+.quotesHeading {
   text-align: center;
   padding: 0;
 }
 
-.photoHeading img {
+.quotesHeading img {
   width: 100%;
-  animation-name: animate-main-photo;
-  animation-duration: 3s;
 }
 
 .headingText {
@@ -35,15 +33,6 @@
   align-items: center;
   justify-content: center;
   padding: 4vw 0;
-}
-
-@keyframes animate-main-photo {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 @media only screen and (max-width: 912px) {
@@ -63,9 +52,12 @@
     padding-top: 7vw;
     overflow: hidden;
   }
-  .photoHeading img {
+  .quotesHeading img {
     width: 150%;
     margin-left: 20vw;
+  }
+  .heading {
+    font-size: 6vw;
   }
   .headingText {
     padding: 5vw 0;
@@ -82,15 +74,15 @@
   .pagePhotoBlock {
     padding-top: 13vw;
   }
-  .photoHeading img {
+  .quotesHeading img {
     width: 200%;
-    margin-left: 40vw;
+    margin-left: 20vw;
   }
   .headingText {
     padding: 10vw 0;
   }
   .heading {
     font-size: 6vw;
-    width: 55%;
+    width: 60%;
   }
 }
