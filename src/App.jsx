@@ -2,7 +2,6 @@ import { HashRouter, Routes, Route } from "react-router-dom";
 import { useEffect } from 'react';
 import { useStore } from './store/store';
 import { Provider, useSelector } from 'react-redux';
-import ScrollToTop from "../src/components/common-components/ReactScrollToTop/ScrollToTop";
 import Main from "../src/components/pages/Main/Main";
 import Results from "../src/components/pages/ResultsPage/ResultsPage.jsx";
 import Result2022Year from "../src/components/pages/ResultsPage/Result2022Year/Result2022Year";
@@ -23,7 +22,6 @@ const Links = () => {
   }, [ theme ])
 
   return (
-    <ScrollToTop>
     <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/main" element={<Main />} />
@@ -37,7 +35,6 @@ const Links = () => {
         <Route path="/account" element={<EnterPage />} />
         <Route path="/settings" element={<SettingsPage />} />
       </Routes>
-      </ScrollToTop>
   )
 }
 
