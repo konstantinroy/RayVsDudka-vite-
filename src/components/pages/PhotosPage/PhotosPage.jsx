@@ -3,7 +3,7 @@ import Navbar from "../../Main/Header/Navbar";
 import Footer from "../../Main/Footer/Footer";
 import BackToTopButton from "./../../CommonComponents/BackToTopButton/BackToTopButton.jsx";
 import styles from "./PhotosPage.module.scss";
-import PhotoPagePhoto from "../../../assets/img/PhotoPagePhoto.jpg";
+import PhotoPagePhoto from "./img/PhotoPagePhoto.jpg";
 import PhotosArray from "./PhotosArray";
 import PhotoBlock from "./PhotoBlock.jsx";
 

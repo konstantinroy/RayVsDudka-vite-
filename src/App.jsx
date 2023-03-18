@@ -6,7 +6,7 @@ import ScrollToTop from "../src/components/CommonComponents/ReactScrollToTop/Scr
 import Main from "../src/components/Main/Main.jsx";
 import Results from "../src/components/ResultsPage/ResultsPage.jsx";
 import Result2022Year from "../src/components/ResultsPage/Result2022Year/Result2022Year";
-import LocationsPage from "../src/components/LocationsPage/LocationsPage.jsx";
+import LocationsPage from "../src/components/pages/LocationsPage/LocationsPage";
 import AudioPage from "../src/components/AudioPage/AudioPage.jsx";
 import PhotoPage from "../src/components/pages/PhotosPage/PhotosPage";
 import QuotesPage from "../src/components/pages/QuotesPage/QuotesPage";
