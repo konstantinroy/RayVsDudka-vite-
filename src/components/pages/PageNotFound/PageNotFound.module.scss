@@ -1,0 +1,93 @@
+.pagePhoto {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10.5vw 0 2vw;
+}
+
+.pagePhoto img {
+  width: 20%;
+}
+
+.pageText {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8vw;
+}
+
+.pageText h1 {
+  width: 50%;
+  font-size: 4vw;
+  text-align: center;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 912px) {
+  .pagePhoto {
+    padding: 12.5vw 0 4vw;
+  }
+  .pageText h1 {
+    font-size: 3.5vw;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .pagePhoto {
+    padding: 19.5vw 0 6vw;
+  }
+  .pagePhoto img {
+    width: 30%;
+  }
+  .pageText {
+    margin-bottom: 13vw;
+  }
+  .pageText h1 {
+    width: 60%;
+    font-size: 5vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .pagePhoto {
+    padding: 17vw 0 5vw;
+  }
+  .pageText {
+    margin-bottom: 10vw;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .pagePhoto {
+    padding: 23vw 0 6vw;
+  }
+  .pagePhoto img {
+    width: 40%;
+  }
+  .pageText {
+    margin-bottom: 15vw;
+  }
+  .pageText h1 {
+    width: 85%;
+    font-size: 7vw;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .pagePhoto {
+    padding: 27vw 0 6vw;
+  }
+  .pagePhoto img {
+    width: 45%;
+  }
+  .pageText {
+    margin-bottom: 15vw;
+  }
+  .pageText h1 {
+    width: 90%;
+    font-size: 9vw;
+  }
+}
