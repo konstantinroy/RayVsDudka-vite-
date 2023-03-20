@@ -11,7 +11,7 @@ function PageNotFound() {
             <img src={PageNotFoundPagePhoto} alt='' />
             </div>
             <div className={styles.pageText}>
-                <h1>Ой...такой страницы не существует</h1>
+                <h1>Ой...такой страницы не существует!!!</h1>
             </div>
             <Footer />
         </>
