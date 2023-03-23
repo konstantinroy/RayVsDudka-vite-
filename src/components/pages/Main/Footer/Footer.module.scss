@@ -120,12 +120,14 @@
   .hidden {
     max-height: 0;
     overflow: hidden;
+    transition: 0.1s;
   }
   .visible {
     max-height: 100%;
     width: 100%;
     overflow: visible;
     margin-top: 2vw;
+    transition: 0.1s;
   }
   .linksBlock p {
     font-size: 4vw;

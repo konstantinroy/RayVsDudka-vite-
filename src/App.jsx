@@ -2,6 +2,8 @@ import { HashRouter, Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 import { useStore } from "./store/store";
 import { Provider, useSelector } from "react-redux";
+//Скролл страницы на верх при переходе
+import ScrollToTop from "../src/components/common-components/PagesScrollToTop/ScrollToTop";
 import Main from "../src/components/pages/Main/Main";
 import Results from "../src/components/pages/ResultsPage/ResultsPage.jsx";
 import Result2022Year from "../src/components/pages/ResultsPage/Result2022Year/Result2022Year";
@@ -23,6 +25,7 @@ const Links = () => {
   }, [theme]);
 
   return (
+    <ScrollToTop>
     <Routes>
       <Route path="/" element={<Main />} />
       <Route path="/main" element={<Main />} />
@@ -37,6 +40,7 @@ const Links = () => {
       <Route path="/settings" element={<SettingsPage />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
+    </ScrollToTop>
   );
 };
 

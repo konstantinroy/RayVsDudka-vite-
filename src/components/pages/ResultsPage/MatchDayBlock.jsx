@@ -19,21 +19,16 @@ const MatchDayBlock = ({ data }) => {
       </h1>
       <div className={styles.resultList}>
         <h3
-          className={styles.viewResults}
-          style={{
-            maxHeight: !isArrowClicked ? "35vw" : "0",
-            overflow: !isArrowClicked ? "visible" : "hidden",
-            transition: !isArrowClicked ? "0.2s" : "0s",
-          }}
+          className={`${styles.detInfoText}
+          ${isArrowClicked ? styles.detInfoTextHidden : ""}
+          `}
         >
           Подробная информация
         </h3>
         <ul
-          style={{
-            maxHeight: !isArrowClicked ? "0" : "200vw",
-            overflow: !isArrowClicked ? "hidden" : "visible",
-            transition: !isArrowClicked ? "0.7s" : "0.2s",
-          }}
+          className={`${
+            isArrowClicked ? styles.resultsVisible : styles.resultsHidden
+          }`}
         >
           {data.matches.map((match) => {
             return (
@@ -51,10 +46,10 @@ const MatchDayBlock = ({ data }) => {
           </div>
         </ul>
         <button
+          className={`${
+            isArrowClicked ? styles.buttonClicked : styles.buttonUnclicked
+          }`}
           onClick={onButtonClick}
-          style={{
-            marginTop: !isArrowClicked ? "0" : "2vw",
-          }}
         >
           {buttonText}
         </button>
