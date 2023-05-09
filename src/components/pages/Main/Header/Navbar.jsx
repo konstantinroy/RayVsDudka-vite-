@@ -1,10 +1,11 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import { AiOutlineMenu } from "react-icons/ai";
-import { RxCross2 } from "react-icons/rx";
-import { MdAccountCircle } from "react-icons/md";
-import styles from "./Navbar.module.scss";
-import FifaIcon from "./img/Fifa.png";
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { AiOutlineMenu } from 'react-icons/ai';
+import { RxCross2 } from 'react-icons/rx';
+import { MdAccountCircle } from 'react-icons/md';
+
+import styles from './Navbar.module.scss';
+import FifaIcon from './img/Fifa.png';
 
 function Navbar() {
   const [isMenuClicked, setIsMenuClicked] = useState(false);
@@ -24,7 +25,7 @@ function Navbar() {
         
         <div
           className={`${styles.linksBlock}
-        ${isMenuClicked ? styles.visible : ""}`}
+        ${isMenuClicked ? styles.visible : ''}`}
         >
           <div className={styles.pages}>
             <div className={styles.fifaIcon}>

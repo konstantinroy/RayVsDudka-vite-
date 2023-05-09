@@ -1,10 +1,12 @@
-import React from "react";
-import Navbar from "../../Main/Header/Navbar.jsx";
-import Footer from "../../Main/Footer/Footer";
-import SeasonTable from "./SeasonTable2022/SeasonTable2022";
-import styles from "./Result2022Year.module.scss";
-import Results2022Array from "./Results2022Array.jsx";
-import MatchDayBlock from "./MatchDayBlock.jsx";
+import React from 'react';
+
+import Navbar from '../../Main/Header/Navbar.jsx';
+import Footer from '../../Main/Footer/Footer';
+
+import SeasonTable from './SeasonTable2022/SeasonTable2022';
+import styles from './Result2022Year.module.scss';
+import Results2022Array from './Results2022Array.jsx';
+import MatchDayBlock from './MatchDayBlock.jsx';
 
 function Result2022Year() {
   return (

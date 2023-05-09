@@ -1,7 +1,8 @@
-import React, { useState } from "react";
-import styles from "./Footer.module.scss";
-import AppStoreIcon from "./img/AppStoreIcon.png";
-import GooglePlayIcon from "./img/GooglePlayIcon.png";
+import React, { useState } from 'react';
+
+import styles from './Footer.module.scss';
+import AppStoreIcon from './img/AppStoreIcon.png';
+import GooglePlayIcon from './img/GooglePlayIcon.png';
 
 function Footer() {
   const [company, setCompany] = useState(true);
@@ -11,7 +12,7 @@ function Footer() {
     setState(!state);
   };
   const openPopupBtn = (state) => {
-    return state ? "▼" : "▲";
+    return state ? '▼' : '▲';
   };
   return (
     <div className={styles.mainBlock}>

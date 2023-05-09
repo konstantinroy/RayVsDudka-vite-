@@ -1,5 +1,5 @@
 export const changeTheme = () => {
-    return {
-      type: 'SET_THEME',
-    }
-  }
+  return {
+    type: 'SET_THEME',
+  };
+};

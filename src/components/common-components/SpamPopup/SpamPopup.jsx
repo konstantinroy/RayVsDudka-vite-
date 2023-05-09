@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
-import styles from "./SpamPopup.module.scss";
-import MainWindowPhoto from "./img/main-window-photo.jpg";
+import React, { useState, useEffect } from 'react';
+
+import styles from './SpamPopup.module.scss';
+import MainWindowPhoto from './img/main-window-photo.jpg';
 
 function SpamPopup() {
   // const componentWillMount = () => {
@@ -18,7 +19,7 @@ function SpamPopup() {
   // }
   const [window, setWindow] = useState(true);
   const [counter, setCounter] = useState(5);
-  const popupShowed = sessionStorage.getItem("popupShowed");
+  const popupShowed = sessionStorage.getItem('popupShowed');
 
   useEffect(() => {
     const timer =
@@ -28,7 +29,7 @@ function SpamPopup() {
 
   const exitBtn = () => {
     setWindow(false);
-    sessionStorage.setItem("popupShowed", false);
+    sessionStorage.setItem('popupShowed', false);
   };
   return (
     <div

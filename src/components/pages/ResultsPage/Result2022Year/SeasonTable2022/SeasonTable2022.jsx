@@ -1,5 +1,6 @@
-import React from "react";
-import styles from "./SeasonTable2022.module.scss";
+import React from 'react';
+
+import styles from './SeasonTable2022.module.scss';
 
 function SeasonTable2022() {
   return (

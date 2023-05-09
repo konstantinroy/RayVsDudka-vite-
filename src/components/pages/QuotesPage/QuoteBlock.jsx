@@ -1,4 +1,4 @@
-import styles from "./QuoteBlock.module.scss";
+import styles from './QuoteBlock.module.scss';
 
 function QuoteBlock({ item }) {
   return (

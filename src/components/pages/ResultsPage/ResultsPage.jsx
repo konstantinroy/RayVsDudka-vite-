@@ -1,16 +1,18 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import Navbar from "../Main/Header/Navbar.jsx";
-import Footer from "../Main/Footer/Footer.jsx";
-import styles from "./ResultsPage.module.scss";
-import SeasonTable from "./SeasonTable2023/SeasonTable2023.jsx";
-import useAddResultBlock from "./useAddResultBlock.jsx";
-import ResultsArray from "./ResultsArray.jsx";
-import MatchDayBlock from "./MatchDayBlock.jsx";
+// import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+
+import Navbar from '../Main/Header/Navbar.jsx';
+import Footer from '../Main/Footer/Footer.jsx';
+
+import styles from './ResultsPage.module.scss';
+import SeasonTable from './SeasonTable2023/SeasonTable2023.jsx';
+import useAddResultBlock from './useAddResultBlock.jsx';
+import ResultsArray from './ResultsArray.jsx';
+import MatchDayBlock from './MatchDayBlock.jsx';
 // import ResultsPagePhoto from "./img/ResultsPage-photo.jpg";
-import FifaTextAnimation from "./FifaTextAnimation/FifaTextAnimation.jsx";
-import AddResultComponent from "./AddResultComponent/AddResultComponent.jsx";
-import textCardPhoto from "./img/preSeasonImg.jpg";
+import FifaTextAnimation from './FifaTextAnimation/FifaTextAnimation.jsx';
+import AddResultComponent from './AddResultComponent/AddResultComponent.jsx';
+import textCardPhoto from './img/preSeasonImg.jpg';
 
 function ResultsPage() {
   const { addResultBlock, toggleAddResultBlock, removeAddResultBlock } =

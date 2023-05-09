@@ -1,11 +1,13 @@
-import React from "react";
-import Navbar from "../Main/Header/Navbar";
-import Footer from "../Main/Footer/Footer";
-import BackToTopButton from "./../../common-components/BackToTopButton/BackToTopButton.jsx";
-import styles from "./PhotosPage.module.scss";
-import PhotoPagePhoto from "./img/PhotoPagePhoto.jpg";
-import PhotosArray from "./PhotosArray";
-import PhotoBlock from "./PhotoBlock.jsx";
+import React from 'react';
+
+import Navbar from '../Main/Header/Navbar';
+import Footer from '../Main/Footer/Footer';
+
+import BackToTopButton from './../../common-components/BackToTopButton/BackToTopButton.jsx';
+import styles from './PhotosPage.module.scss';
+import PhotoPagePhoto from './img/PhotoPagePhoto.jpg';
+import PhotosArray from './PhotosArray';
+import PhotoBlock from './PhotoBlock.jsx';
 
 function PhotosPage() {
   return (

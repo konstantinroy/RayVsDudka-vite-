@@ -1,3 +1,3 @@
 export const getTheme = (state) => {
-    return state.user.theme;
-  }
+  return state.user.theme;
+};

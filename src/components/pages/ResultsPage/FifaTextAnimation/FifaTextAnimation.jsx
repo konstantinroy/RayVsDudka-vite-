@@ -1,10 +1,11 @@
-import React from "react";
-import styles from "./FifaTextAnimation.module.scss";
+import React from 'react';
+
+import styles from './FifaTextAnimation.module.scss';
 
 function FifaTextAnimation() {
   return (
     <div className={styles.mainBlock}>
-      <div className={styles["text-container"]}>
+      <div className={styles['text-container']}>
         <span>F</span>
         <span>I</span>
         <span>F</span>

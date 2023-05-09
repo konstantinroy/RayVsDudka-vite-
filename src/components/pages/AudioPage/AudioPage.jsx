@@ -1,13 +1,16 @@
-import { useState, useEffect } from "react";
-import Navbar from "../Main/Header/Navbar.jsx";
-import Footer from "../Main/Footer/Footer.jsx";
-import BackToTopButton from "./../../common-components/BackToTopButton/BackToTopButton.jsx";
-import AudiosArrayData from "./AudiosArray.jsx";
-import AudioList from "./AudioList.jsx";
-import styles from "./AudioPage.module.scss";
-import CasseteAnimation from "./CasseteAnimation/CasseteAnimation.jsx";
+import { useState, useEffect } from 'react';
+
+import { useCallback } from 'react';
+
+import Navbar from '../Main/Header/Navbar.jsx';
+import Footer from '../Main/Footer/Footer.jsx';
+
+import BackToTopButton from './../../common-components/BackToTopButton/BackToTopButton.jsx';
+import AudiosArrayData from './AudiosArray.jsx';
+import AudioList from './AudioList.jsx';
+import styles from './AudioPage.module.scss';
+import CasseteAnimation from './CasseteAnimation/CasseteAnimation.jsx';
 // import AudioPagePhoto from "./img/AudioPagePhoto.jpg";
-import { useCallback } from "react";
 
 const filterAudios = (searchText, listOfAudios) => {
   if (!searchText) {
@@ -21,9 +24,9 @@ const filterAudios = (searchText, listOfAudios) => {
 function AudioPage() {
   // Функция для того, чтобы на странице проигрывалась только одна аудио-дорожка одновременно
   document.addEventListener(
-    "play",
+    'play',
     (event) => {
-      const audios = [...document.getElementsByTagName("audio")];
+      const audios = [...document.getElementsByTagName('audio')];
 
       audios.forEach((audio) => audio !== event.target && audio.pause());
     },
@@ -31,10 +34,10 @@ function AudioPage() {
   );
   //////////////////////
 
-  const [sortType, setSortType] = useState("asc");
-  const [searchTerm, setSearchTerm] = useState("");
+  const [sortType, setSortType] = useState('asc');
+  const [searchTerm, setSearchTerm] = useState('');
   const [audioList, setAudioList] = useState(AudiosArrayData);
-  const [errorText, setErrorText] = useState("");
+  const [errorText, setErrorText] = useState('');
 
   useEffect(
     () => {
@@ -42,9 +45,9 @@ function AudioPage() {
         const filteredAudios = filterAudios(searchTerm, AudiosArrayData);
         setAudioList(filteredAudios);
         if (audioList.length < 1) {
-          setErrorText("По вашему запросу ничего не найдено");
+          setErrorText('По вашему запросу ничего не найдено');
         } else {
-          setErrorText("");
+          setErrorText('');
         }
       }, 0);
 
@@ -57,11 +60,11 @@ function AudioPage() {
     setSortType(e.target.value);
 
     setAudioList((prevState) => {
-      if (e.target.value === "asc") {
+      if (e.target.value === 'asc') {
         return [...prevState.sort((prev, next) => next.id - prev.id)];
       }
 
-      if (e.target.value === "desc") {
+      if (e.target.value === 'desc') {
         return [...prevState.sort((prev, next) => prev.id - next.id)];
       }
     });

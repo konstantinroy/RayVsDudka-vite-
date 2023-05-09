@@ -1,40 +1,41 @@
-import React, { useState, useMemo, useEffect } from "react";
-import { RxCross2 } from "react-icons/rx";
-import { BsPencilFill } from "react-icons/bs";
-import { TfiGame } from "react-icons/tfi";
-import { AiOutlineFileSearch } from "react-icons/ai";
-import styles from "./AddResultComponent.module.scss";
-import FinalResultsWindow from "./FinalResultsWindow/FinalResultsWindow";
+import React, { useState, useMemo, useEffect } from 'react';
+import { RxCross2 } from 'react-icons/rx';
+import { BsPencilFill } from 'react-icons/bs';
+import { TfiGame } from 'react-icons/tfi';
+import { AiOutlineFileSearch } from 'react-icons/ai';
+
+import styles from './AddResultComponent.module.scss';
+import FinalResultsWindow from './FinalResultsWindow/FinalResultsWindow';
 
 function AddResultComponent({ removeAddResultBlock }) {
-  const [dayInput, setDayInput] = useState("1");
-  const [monthInput, setMonthInput] = useState("января");
-  const [tourInput, setTourInput] = useState("1");
-  const [dateText, setDateText] = useState("");
+  const [dayInput, setDayInput] = useState('1');
+  const [monthInput, setMonthInput] = useState('января');
+  const [tourInput, setTourInput] = useState('1');
+  const [dateText, setDateText] = useState('');
   const [visDateInputs, setVisDateInputs] = useState(true);
 
   const [matchResultArr, setMatchResultArr] = useState([]);
 
   const [dudaMainScoreInfo, setDudaMainScoreInfo] = useState(
-    localStorage.setItem("dudkaScore", JSON.stringify("0"))
+    localStorage.setItem('dudkaScore', JSON.stringify('0'))
   );
   const [rayMainScoreInfo, setRayMainScoreInfo] = useState(
-    localStorage.setItem("rayScore", JSON.stringify("0"))
+    localStorage.setItem('rayScore', JSON.stringify('0'))
   );
 
-  const [dudaTeamInput, setDudaTeamInput] = useState("");
-  const [rayTeamInput, setRayTeamInput] = useState("");
+  const [dudaTeamInput, setDudaTeamInput] = useState('');
+  const [rayTeamInput, setRayTeamInput] = useState('');
   const [dudaScoreInfo, setDudaScoreInfo] = useState(0);
   const [rayScoreInfo, setRayScoreInfo] = useState(0);
 
   const [dudaGoalQtyText, setDudaGoalQtyText] = useState(
-    localStorage.setItem("dudkaGoalsQty", JSON.stringify("0"))
+    localStorage.setItem('dudkaGoalsQty', JSON.stringify('0'))
   );
   const [rayGoalQtyText, setRayGoalQtyText] = useState(
-    localStorage.setItem("rayGoalsQty", JSON.stringify("0"))
+    localStorage.setItem('rayGoalsQty', JSON.stringify('0'))
   );
   const [delResPopup, setDelResPopup] = useState(false);
-  const [errorText, setErrorText] = useState("");
+  const [errorText, setErrorText] = useState('');
   const [visFinalResults, setVisFinalResults] = useState(false);
 
   const addTourDate = () => {
@@ -44,12 +45,12 @@ function AddResultComponent({ removeAddResultBlock }) {
       tour: tourInput,
     };
     setVisDateInputs(false);
-    localStorage.setItem("date", JSON.stringify(dateObj));
-    setDateText(JSON.parse(localStorage.getItem("date")));
+    localStorage.setItem('date', JSON.stringify(dateObj));
+    setDateText(JSON.parse(localStorage.getItem('date')));
   };
 
   useEffect(() => {
-    setDateText(JSON.parse(localStorage.getItem("date")));
+    setDateText(JSON.parse(localStorage.getItem('date')));
   }, []);
 
   useEffect(() => {
@@ -65,7 +66,7 @@ function AddResultComponent({ removeAddResultBlock }) {
   useEffect(() => {
     if (localStorage.matches) {
       const matchesFromLocalStorage = JSON.parse(
-        localStorage.getItem("matches")
+        localStorage.getItem('matches')
       );
 
       setMatchResultArr(matchesFromLocalStorage);
@@ -73,10 +74,10 @@ function AddResultComponent({ removeAddResultBlock }) {
   }, []);
 
   const saveMatchResult = () => {
-    if (dudaTeamInput === "" || rayTeamInput === "") {
-      setErrorText("Введите название команды");
+    if (dudaTeamInput === '' || rayTeamInput === '') {
+      setErrorText('Введите название команды');
     } else {
-      setErrorText("");
+      setErrorText('');
       const obj = {
         dudaTeam: dudaTeamInput,
         dudaScore: dudaScoreInfo,
@@ -84,13 +85,13 @@ function AddResultComponent({ removeAddResultBlock }) {
         rayScore: rayScoreInfo,
       };
       setMatchResultArr((prevState) => {
-        localStorage.setItem("matches", JSON.stringify([...prevState, obj]));
+        localStorage.setItem('matches', JSON.stringify([...prevState, obj]));
         return [...prevState, obj];
       });
-      setDudaTeamInput("");
+      setDudaTeamInput('');
       setDudaScoreInfo(0);
       setRayScoreInfo(0);
-      setRayTeamInput("");
+      setRayTeamInput('');
     }
   };
 
@@ -98,11 +99,11 @@ function AddResultComponent({ removeAddResultBlock }) {
     (acc, currValue) => {
       if (currValue.dudaScore > currValue.rayScore) {
         acc.dudka += 1;
-        localStorage.setItem("dudkaScore", JSON.stringify(acc.dudka));
+        localStorage.setItem('dudkaScore', JSON.stringify(acc.dudka));
       }
       if (currValue.rayScore > currValue.dudaScore) {
         acc.ray += 1;
-        localStorage.setItem("rayScore", JSON.stringify(acc.ray));
+        localStorage.setItem('rayScore', JSON.stringify(acc.ray));
       }
       return acc;
     },
@@ -113,10 +114,10 @@ function AddResultComponent({ removeAddResultBlock }) {
   );
 
   useEffect(() => {
-    setDudaMainScoreInfo(JSON.parse(localStorage.getItem("dudkaScore")));
+    setDudaMainScoreInfo(JSON.parse(localStorage.getItem('dudkaScore')));
   }, [totalResult]);
   useEffect(() => {
-    setRayMainScoreInfo(JSON.parse(localStorage.getItem("rayScore")));
+    setRayMainScoreInfo(JSON.parse(localStorage.getItem('rayScore')));
   }, [totalResult]);
 
   const matchResultList = useMemo(() => {
@@ -132,25 +133,25 @@ function AddResultComponent({ removeAddResultBlock }) {
   const dudaGoalsQty = matchResultArr.reduce(
     (acc, currValue) => {
       acc.dudka += Number(currValue.dudaScore);
-      localStorage.setItem("dudkaGoalsQty", JSON.stringify(acc.dudka));
+      localStorage.setItem('dudkaGoalsQty', JSON.stringify(acc.dudka));
       return acc;
     },
     { dudka: 0 }
   );
   useEffect(() => {
-    setDudaGoalQtyText(JSON.parse(localStorage.getItem("dudkaGoalsQty")));
+    setDudaGoalQtyText(JSON.parse(localStorage.getItem('dudkaGoalsQty')));
   }, [dudaGoalsQty]);
 
   const rayGoalsQty = matchResultArr.reduce(
     (acc, currValue) => {
       acc.ray += Number(currValue.rayScore);
-      localStorage.setItem("rayGoalsQty", JSON.stringify(acc.ray));
+      localStorage.setItem('rayGoalsQty', JSON.stringify(acc.ray));
       return acc;
     },
     { ray: 0 }
   );
   useEffect(() => {
-    setRayGoalQtyText(JSON.parse(localStorage.getItem("rayGoalsQty")));
+    setRayGoalQtyText(JSON.parse(localStorage.getItem('rayGoalsQty')));
   }, [rayGoalsQty]);
 
   const deleteAddMatchResBlock = () => {

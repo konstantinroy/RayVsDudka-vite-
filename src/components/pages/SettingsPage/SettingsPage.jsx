@@ -1,13 +1,17 @@
-import { VscColorMode } from "react-icons/vsc";
-import { MdAccountCircle } from "react-icons/md";
-import { useSelector, useDispatch } from "react-redux";
-import Navbar from "../Main/Header/Navbar";
-import Footer from "../Main/Footer/Footer";
-import styles from "./SettingsPage.module.scss";
+import { VscColorMode } from 'react-icons/vsc';
+import { MdAccountCircle } from 'react-icons/md';
+import { useSelector, useDispatch } from 'react-redux';
+
+import Navbar from '../Main/Header/Navbar';
+import Footer from '../Main/Footer/Footer';
+
+import { changeTheme } from '../../../store/actions/user';
+
+import { getTheme } from '../../../store/selectors/user';
+
+import styles from './SettingsPage.module.scss';
 // import RayAvatar from "../../assets/img/GoldenBallMob.jpg";
-import ToggleSwitchBtn from "./ToggleSwitchBtn/ToggleSwitchBtn";
-import { changeTheme } from "../../../store/actions/user";
-import { getTheme } from "../../../store/selectors/user";
+import ToggleSwitchBtn from './ToggleSwitchBtn/ToggleSwitchBtn';
 
 function SettingsPage() {
   const dispatch = useDispatch();
@@ -27,7 +31,7 @@ function SettingsPage() {
         <div className={styles.userInfoBlock}>
           <div className={styles.userMainInfo}>
             <div className={styles.userPhoto}>
-            <MdAccountCircle />
+              <MdAccountCircle />
               {/* <img src={MdAccountCircle} alt="" /> */}
             </div>
             <div className={styles.userInfo}>
@@ -44,7 +48,7 @@ function SettingsPage() {
                   <VscColorMode />
                 </div>
                 <div className={styles.themeText}>
-                  <p>Цветовая тема: {theme === "dark" ? "Dark" : "Light"}</p>
+                  <p>Цветовая тема: {theme === 'dark' ? 'Dark' : 'Light'}</p>
                 </div>
               </div>
               <div className={styles.themeToggleBtn}>
@@ -60,16 +64,16 @@ function SettingsPage() {
               <p className={styles.nameText}>Константин</p>
             </div>
             <div className={styles.settingsChapter}>
-            <p>Фамилия:</p>
-            <p className={styles.nameText}>Рой</p>
+              <p>Фамилия:</p>
+              <p className={styles.nameText}>Рой</p>
             </div>
             <div className={styles.settingsChapter}>
-            <p>Email:</p>
-            <p className={styles.nameText}>konstantin.roy9977@gmail.com</p>
+              <p>Email:</p>
+              <p className={styles.nameText}>konstantin.roy9977@gmail.com</p>
             </div>
             <div className={styles.settingsChapter}>
-            <p>Телефон:</p>
-            <p className={styles.nameText}>8-964-921-07-07</p>
+              <p>Телефон:</p>
+              <p className={styles.nameText}>8-964-921-07-07</p>
             </div>
           </div>
         </div>

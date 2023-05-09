@@ -1,11 +1,12 @@
-import { useEffect, useState } from "react";
-import styles from "./BackToTopButton.module.scss";
+import { useEffect, useState } from 'react';
+
+import styles from './BackToTopButton.module.scss';
 
 function BackToTopButton() {
   const [backToTopButton, setBackToTopButton] = useState(false);
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
+    window.addEventListener('scroll', () => {
       if (window.scrollY > 1200) {
         setBackToTopButton(true);
       } else {
@@ -17,7 +18,7 @@ function BackToTopButton() {
   const scrollUp = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   };
 

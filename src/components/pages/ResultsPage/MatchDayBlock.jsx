@@ -1,11 +1,12 @@
-import { useState } from "react";
-import styles from "./MatchDayBlock.module.scss";
+import { useState } from 'react';
+
+import styles from './MatchDayBlock.module.scss';
 
 const MatchDayBlock = ({ data }) => {
-  const [buttonText, setButtonText] = useState("ᐯ");
+  const [buttonText, setButtonText] = useState('ᐯ');
   const [isArrowClicked, setIsArrowClicked] = useState(false);
   const onButtonClick = () => {
-    !isArrowClicked ? setButtonText("ᐱ") : setButtonText("ᐯ");
+    !isArrowClicked ? setButtonText('ᐱ') : setButtonText('ᐯ');
     setIsArrowClicked(!isArrowClicked);
   };
 
@@ -20,7 +21,7 @@ const MatchDayBlock = ({ data }) => {
       <div className={styles.resultList}>
         <h3
           className={`${styles.detInfoText}
-          ${isArrowClicked ? styles.detInfoTextHidden : ""}
+          ${isArrowClicked ? styles.detInfoTextHidden : ''}
           `}
         >
           Подробная информация
@@ -33,7 +34,7 @@ const MatchDayBlock = ({ data }) => {
           {data.matches.map((match) => {
             return (
               <li>
-                {match.team1Name} {match.team1Score}-{match.team2Score}{" "}
+                {match.team1Name} {match.team1Score}-{match.team2Score}{' '}
                 {match.team2Name}
               </li>
             );

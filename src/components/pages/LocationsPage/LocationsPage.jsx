@@ -1,24 +1,27 @@
-import React from "react";
-import Navbar from "../Main/Header/Navbar.jsx";
-import Footer from "../Main/Footer/Footer";
-import styles from "./LocationsPage.module.scss";
-import Carousel from "../../common-components/Carousel/index";
-import LocationsPagePhoto from "./img/LocationsPagePhoto.jpg";
-import DudaHomePhoto1 from "./img/photo_2022-11-29_23-26-45.jpg";
-import DudaHomePhoto2 from "./img/photo_2022-11-29_23-26-52.jpg";
-import DudaHomePhoto3 from "./img/photo_2022-11-29_23-27-05.jpg";
-import DudaHomePhoto5 from "./img/photo_2022-11-29_23-27-18.jpg";
-import DudaHomePhoto6 from "./img/photo_2022-11-29_23-27-21.jpg";
-import DudaHomePhoto7 from "./img/photo_2022-11-29_23-27-25.jpg";
-import DudaHomePhoto8 from "./img/photo_2022-11-29_23-27-28.jpg";
-import DudaHomePhoto9 from "./img/photo_2022-11-29_23-27-31.jpg";
-import ParentsDudaHomePhoto from "./img/perents-home.jpg";
-import SyberXPhoto1 from "./img/S.jpg";
-import SyberXPhoto2 from "./img/S2.jpg";
-import SyberXPhoto3 from "./img/S3.jpg";
-import NintendoPhoto1 from "./img/N.jpg";
-import NintendoPhoto2 from "./img/N2.jpg";
-import NintendoPhoto3 from "./img/N3.jpg";
+import React from 'react';
+
+import Navbar from '../Main/Header/Navbar.jsx';
+import Footer from '../Main/Footer/Footer';
+
+import Carousel from '../../common-components/Carousel/index';
+
+import styles from './LocationsPage.module.scss';
+import LocationsPagePhoto from './img/LocationsPagePhoto.jpg';
+import DudaHomePhoto1 from './img/photo_2022-11-29_23-26-45.jpg';
+import DudaHomePhoto2 from './img/photo_2022-11-29_23-26-52.jpg';
+import DudaHomePhoto3 from './img/photo_2022-11-29_23-27-05.jpg';
+import DudaHomePhoto5 from './img/photo_2022-11-29_23-27-18.jpg';
+import DudaHomePhoto6 from './img/photo_2022-11-29_23-27-21.jpg';
+import DudaHomePhoto7 from './img/photo_2022-11-29_23-27-25.jpg';
+import DudaHomePhoto8 from './img/photo_2022-11-29_23-27-28.jpg';
+import DudaHomePhoto9 from './img/photo_2022-11-29_23-27-31.jpg';
+import ParentsDudaHomePhoto from './img/perents-home.jpg';
+import SyberXPhoto1 from './img/S.jpg';
+import SyberXPhoto2 from './img/S2.jpg';
+import SyberXPhoto3 from './img/S3.jpg';
+import NintendoPhoto1 from './img/N.jpg';
+import NintendoPhoto2 from './img/N2.jpg';
+import NintendoPhoto3 from './img/N3.jpg';
 
 function LocationsPage() {
   return (

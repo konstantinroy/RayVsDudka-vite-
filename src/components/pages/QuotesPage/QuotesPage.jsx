@@ -1,10 +1,12 @@
-import React from "react";
-import Navbar from "../Main/Header/Navbar.jsx";
-import Footer from "../Main/Footer/Footer";
-import styles from "./QuotesPage.module.scss";
-import QuotesPagePhoto from "./img/QuotesPagePhoto.jpg";
-import QuotesArray from "./QuotesArray.jsx";
-import QuoteBlock from "./QuoteBlock.jsx";
+import React from 'react';
+
+import Navbar from '../Main/Header/Navbar.jsx';
+import Footer from '../Main/Footer/Footer';
+
+import styles from './QuotesPage.module.scss';
+import QuotesPagePhoto from './img/QuotesPagePhoto.jpg';
+import QuotesArray from './QuotesArray.jsx';
+import QuoteBlock from './QuoteBlock.jsx';
 
 function QuotesPage() {
   return (

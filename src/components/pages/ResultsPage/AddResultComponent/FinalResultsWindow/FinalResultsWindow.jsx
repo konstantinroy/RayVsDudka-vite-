@@ -1,8 +1,9 @@
-import React, {useState, useRef} from "react";
-import { RxCross2 } from "react-icons/rx";
+import React, {useState, useRef} from 'react';
+import { RxCross2 } from 'react-icons/rx';
 import { CSSTransition } from 'react-transition-group';
-import styles from "./FinalResultsWindow.module.scss";
-import './CSSTransition.scss'
+
+import styles from './FinalResultsWindow.module.scss';
+import './CSSTransition.scss';
 
 function FinalResultsWindow({
   setVisFinalResults,
@@ -15,18 +16,18 @@ function FinalResultsWindow({
   dudaGoalQtyText,
   rayGoalQtyText,
 }) {
-  const [copyTextPopupSt, setCopyTextPopupSt] = useState(false)
+  const [copyTextPopupSt, setCopyTextPopupSt] = useState(false);
   const resultsText = useRef(null);
   
   const exitPopupButton = () => {
     setVisFinalResults(false);
   };
   const copyText = () => {
-    setCopyTextPopupSt(true)
-    navigator.clipboard.writeText(resultsText.current.innerText)
-  }
+    setCopyTextPopupSt(true);
+    navigator.clipboard.writeText(resultsText.current.innerText);
+  };
   if (copyTextPopupSt) {
-    setTimeout(() => setCopyTextPopupSt(false), 3500)
+    setTimeout(() => setCopyTextPopupSt(false), 3500);
   }
   return (
     <div className={styles.finalResultsPopup}>
@@ -56,18 +57,18 @@ function FinalResultsWindow({
           </p>
         </div>
         <CSSTransition
-        in={copyTextPopupSt}
-        timeout={100}
-        classNames="alert"
-        unmountOnExit
-      >
-        <div className={styles.copyTextPopup}>
+          in={copyTextPopupSt}
+          timeout={100}
+          classNames="alert"
+          unmountOnExit
+        >
+          <div className={styles.copyTextPopup}>
           Результат игрового дня скопирован в буфер обмена
-        </div>
+          </div>
         </CSSTransition>
         <div className={styles.copyTextBtn}>
           <button className={styles.componentBtn}
-          onClick={copyText}
+            onClick={copyText}
           >Скопировать</button>
         </div>
       </div>

@@ -1,22 +1,23 @@
-import { Link } from "react-router-dom";
-import styles from "./Main.module.scss";
+import { Link } from 'react-router-dom';
+
+import styles from './Main.module.scss';
 // import SpamPopup from "../../common-components/SpamPopup/SpamPopup";
-import Navbar from "./Header/Navbar.jsx";
-import Footer from "./Footer/Footer.jsx";
-import PcMainPhoto from "./img/PcMainPhoto.jpg";
-import MobMainPhoto from "./img/MobMainPhoto.jpg";
-import GoldenBallPc from "./img/1. GoldenBallPc.jpg";
-import GoldenBallMob from "./img/1. GoldenBallMob.jpg";
-import ResultsPcPhoto from "./img/2. ResultsPcPhoto.jpg";
-import ResultsMobPhoto from "./img/2. ResultsMobPhoto.jpg";
-import LocationPcPhoto from "./img/3. LocationPcPhoto.jpg";
-import LocationMobPhoto from "./img/3. LocationMobPhoto.jpg";
-import AudioPcPhoto from "./img/4. AudioPcPhoto.jpg";
-import AudioMobPhoto from "./img/4. AudioMobPhoto.jpg";
-import PhotosPcPhoto from "./img/5. PhotosPcPhoto.jpg";
-import PhotosMobPhoto from "./img/5. PhotosMobPhoto.jpg";
-import QuotesPcPhoto from "./img/6. QuotesPcPhoto.jpg";
-import QuotesMobPhoto from "./img/6. QuotesMobPhoto.jpg";
+import Navbar from './Header/Navbar.jsx';
+import Footer from './Footer/Footer.jsx';
+import PcMainPhoto from './img/PcMainPhoto.jpg';
+import MobMainPhoto from './img/MobMainPhoto.jpg';
+import GoldenBallPc from './img/1. GoldenBallPc.jpg';
+import GoldenBallMob from './img/1. GoldenBallMob.jpg';
+import ResultsPcPhoto from './img/2. ResultsPcPhoto.jpg';
+import ResultsMobPhoto from './img/2. ResultsMobPhoto.jpg';
+import LocationPcPhoto from './img/3. LocationPcPhoto.jpg';
+import LocationMobPhoto from './img/3. LocationMobPhoto.jpg';
+import AudioPcPhoto from './img/4. AudioPcPhoto.jpg';
+import AudioMobPhoto from './img/4. AudioMobPhoto.jpg';
+import PhotosPcPhoto from './img/5. PhotosPcPhoto.jpg';
+import PhotosMobPhoto from './img/5. PhotosMobPhoto.jpg';
+import QuotesPcPhoto from './img/6. QuotesPcPhoto.jpg';
+import QuotesMobPhoto from './img/6. QuotesMobPhoto.jpg';
 
 function Main() {
   return (

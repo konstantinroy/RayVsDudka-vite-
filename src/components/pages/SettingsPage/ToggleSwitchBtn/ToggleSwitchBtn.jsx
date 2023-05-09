@@ -1,4 +1,4 @@
-import styles from "./ToggleSwitchBtn.module.scss";
+import styles from './ToggleSwitchBtn.module.scss';
 
 function ToggleSwitchBtn({ defaultValue, onChange }) {
   const onStateChange = (val) => {
