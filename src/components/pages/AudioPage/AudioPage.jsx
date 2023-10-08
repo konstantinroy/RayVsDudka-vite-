@@ -92,7 +92,7 @@ const AudioPage = () => {
         {errorText ? (
           <div className={styles.errorText}>{errorText}</div>
         ) : (
-          <AudioList data={data} setData={setData} />
+          <AudioList data={data} setData={setData} sortType={sortType} />
         )}
         <BackToTopButton />
       </div>
