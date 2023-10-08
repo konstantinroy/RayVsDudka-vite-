@@ -51,13 +51,13 @@ function App() {
   const store = useStore();
 
   return (
-    <div className="App">
+    <>
       <Provider store={store}>
         <HashRouter>
           <Links />
         </HashRouter>
       </Provider>
-    </div>
+    </>
   );
 }
 

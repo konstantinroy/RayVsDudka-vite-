@@ -7,7 +7,7 @@ import Footer from '../Main/Footer/Footer.jsx';
 
 import BackToTopButton from './../../common-components/BackToTopButton/BackToTopButton.jsx';
 import AudiosArrayData from './AudiosArray.jsx';
-import AudioList from './AudioList.jsx';
+import AudioList from './AudioList/index.jsx';
 import styles from './AudioPage.module.scss';
 import CasseteAnimation from './CasseteAnimation/CasseteAnimation.jsx';
 // import AudioPagePhoto from "./img/AudioPagePhoto.jpg";
@@ -22,29 +22,19 @@ const filterAudios = (searchText, listOfAudios) => {
 };
 
 function AudioPage() {
-  // Функция для того, чтобы на странице проигрывалась только одна аудио-дорожка одновременно
-  document.addEventListener(
-    'play',
-    (event) => {
-      const audios = [...document.getElementsByTagName('audio')];
-
-      audios.forEach((audio) => audio !== event.target && audio.pause());
-    },
-    true
-  );
-  //////////////////////
-
   const [sortType, setSortType] = useState('asc');
   const [searchTerm, setSearchTerm] = useState('');
-  const [audioList, setAudioList] = useState(AudiosArrayData);
+
+  //// Массив всех аудио
+  const [data, setData] = useState(AudiosArrayData);
   const [errorText, setErrorText] = useState('');
 
   useEffect(
     () => {
       const Debounce = setTimeout(() => {
         const filteredAudios = filterAudios(searchTerm, AudiosArrayData);
-        setAudioList(filteredAudios);
-        if (audioList.length < 1) {
+        setData(filteredAudios);
+        if (data.length < 1) {
           setErrorText('По вашему запросу ничего не найдено');
         } else {
           setErrorText('');
@@ -59,7 +49,7 @@ function AudioPage() {
   const onSortClick = useCallback((e) => {
     setSortType(e.target.value);
 
-    setAudioList((prevState) => {
+    setData((prevState) => {
       if (e.target.value === 'asc') {
         return [...prevState.sort((prev, next) => next.id - prev.id)];
       }
@@ -102,7 +92,7 @@ function AudioPage() {
         {errorText ? (
           <div className={styles.errorText}>{errorText}</div>
         ) : (
-          <AudioList audioList={audioList} />
+          <AudioList data={data} setData={setData} />
         )}
         <BackToTopButton />
       </div>
