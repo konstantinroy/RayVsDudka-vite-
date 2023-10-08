@@ -1,6 +1,6 @@
 .audioBlock {
   width: 100%;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--background-color);
   border-radius: 0px;
   position: fixed;
   bottom: 0;
@@ -12,8 +12,8 @@
   height: 3px;
   background-color: rgb(104, 104, 104);
   position: relative;
-  border-top: 1px solid #444;
-  border-bottom: 1px solid #444;
+  border-top: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--text-color)
 }
 .blueLine {
   position: absolute;
@@ -53,6 +53,7 @@
 .audioInfo {
 }
 .audioName {
+  
   font-size: 12px;
   font-weight: 600;
   margin: 10px 0;

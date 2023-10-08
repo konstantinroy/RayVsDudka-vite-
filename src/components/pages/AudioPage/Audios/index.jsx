@@ -1,9 +1,9 @@
-import { useRef } from 'react';
-import { BsMusicNote } from 'react-icons/bs';
+import { useRef } from "react";
+import { BsMusicNote } from "react-icons/bs";
 // import { FaPlay } from "react-icons/fa";
 // import { FaPause } from "react-icons/fa";
-import MusicWaves from '../MusicWaves/index';
-import styles from './styles.module.scss';
+import MusicWaves from "../MusicWaves/index";
+import styles from "./styles.module.scss";
 
 const Index = ({
   id,
@@ -27,18 +27,16 @@ const Index = ({
   //// Реф играющего аудио
   const audioElem = useRef();
 
-
-
   //// Функция включения аудио
-  const playAudio = () => {  
+  const playAudio = () => {
     let count = 0;
     // audioElem.current.currentTime = 0;
     if (count === 0) {
       audioElem.current.play();
 
       audioElem.current.volume =
-        JSON.parse(localStorage.getItem('volume')) ||
-        localStorage.setItem('volume', JSON.stringify('1'));
+        JSON.parse(localStorage.getItem("volume")) ||
+        localStorage.setItem("volume", JSON.stringify("1"));
 
       setCurrentAudio(audioElem.current);
       setPlayPauseBtnState(true);
@@ -51,7 +49,7 @@ const Index = ({
         ...activeAudioId,
         active: true,
       });
-      
+
       setBottomAudioPopup(true);
       setWavesState(true);
       if (activeAudio.active && activeAudio.id === id) {
@@ -64,13 +62,18 @@ const Index = ({
     }
   };
 
+  //// Функция для укорачивания названия аудио
+  const length = 35;
+  const trimmedString =
+  audioName.length > length ? audioName.substring(0, length - 3) + "..." : audioName;
+
   return (
     <>
       <div className={styles.audioPlayer} onClick={playAudio}>
         <div
           style={{
             backgroundColor:
-              activeAudio.id === id && activeAudio.active ? '#9191916e' : '',
+              activeAudio.id === id && activeAudio.active ? "#9191916e" : "",
           }}
           className={styles.audioBlock}
         >
@@ -93,7 +96,7 @@ const Index = ({
           </div>
           <div className={styles.audioInfoContainer}>
             <div className={styles.audioInfo}>
-              <div className={styles.audioName}>{audioName}</div>
+              <div className={styles.audioName}>{trimmedString}</div>
               <div className={styles.authorName}>{audioAuthor}</div>
             </div>
             <div className={styles.audioDuration}>2:11</div>

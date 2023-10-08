@@ -1,12 +1,16 @@
+@import "../../../../index.scss";
+
 .fullScreenAudioPopup {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   height: 99vh;
   width: 100%;
-  background-color: rgb(255, 255, 255);
+  // background-color: rgb(255, 255, 255);
+  background-color: var(--background-color);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  color: var(--text-color);
   z-index: 100;
   animation: fullScreenAudioPopupAnimation 0.2s ease;
 }
@@ -21,7 +25,7 @@
   height: 5px;
   border: none;
   border-radius: 10px;
-  background-color: rgb(114, 114, 114);
+  background-color: var(--text-color);
   margin-top: 10px;
 }
 .audioImageBlock {
@@ -38,7 +42,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: var(--text-color) 0px 5px 15px;
 }
 .audioImg {
   font-size: 90px;
@@ -127,7 +131,7 @@
   justify-content: space-between;
   align-items: center;
   font-size: 20px;
-  color: rgb(114, 114, 114);
+  color: var(--text-color);
 }
 .inputRange {
   width: 80%;
@@ -162,10 +166,12 @@
   align-items: center;
 }
 .closePlayerButton button {
+  background-color: var(--background-color);
   font-size: 14px;
-  border: 1px solid rgb(114, 114, 114);
+  border-bottom: 1px solid var(--text-color);
   border-radius: 20px;
   padding: 10px;
+  color: var(--text-color);
 }
 
 @keyframes fullScreenAudioPopupAnimation {
