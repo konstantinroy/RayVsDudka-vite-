@@ -1,16 +1,17 @@
 .audioPlayer {
     width: 99%;
     // height: 50px;
-    margin-bottom: 10px;
-    border-radius: 10px;
-    border: 1px solid #e1e1e1;
+    // border: 1px solid #e1e1e1;
+    // margin-bottom: 10px;
+    // border-radius: 10px;
+    margin-bottom: 0px;
     font-family: "Montserrat", sans-serif;
   }
   .audioBlock {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 2% 3%;
+    padding: 1.5% 3%;
     height: 100%;
   }
   // .playPauseBtn {
