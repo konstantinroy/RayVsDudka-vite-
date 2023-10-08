@@ -40,9 +40,9 @@ const Index = ({
               </div>
               <div className={styles.audioInfo}>
                 <div className={styles.audioName}>{activeAudio.audioName}</div>
-                <div className={styles.audioAuthor}>
+                {/* <div className={styles.audioAuthor}>
                   {activeAudio.audioAuthor}
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
