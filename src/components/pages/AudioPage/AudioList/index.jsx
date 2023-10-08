@@ -78,7 +78,7 @@ const AudioList = ({ data, setData }) => {
     }
   }, [audioProgress]);
 
-  console.log(activeAudio);
+  // console.log(activeAudio);
 
   return (
     <>

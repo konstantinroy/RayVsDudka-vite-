@@ -16,8 +16,8 @@ const filterAudios = (searchText, listOfAudios) => {
   if (!searchText) {
     return listOfAudios;
   }
-  return listOfAudios.filter(({ audio_name }) =>
-    audio_name.toLowerCase().includes(searchText.toLowerCase())
+  return listOfAudios.filter(({ audioName }) =>
+    audioName.toLowerCase().includes(searchText.toLowerCase())
   );
 };
 
