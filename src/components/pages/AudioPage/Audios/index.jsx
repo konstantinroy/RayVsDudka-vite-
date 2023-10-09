@@ -60,12 +60,20 @@ const Index = ({
     if (count !== 0) {
       setFullScreenAudioPopup(true);
     }
+    console.log(count)
   };
+
+  //// Ширина экрана
+  const pageWidth = document.documentElement.scrollWidth;
 
   //// Функция для укорачивания названия аудио
   const length = 35;
-  const trimmedString =
-  audioName.length > length ? audioName.substring(0, length - 3) + "..." : audioName;
+  const shortAudioName =
+    audioName.length > length
+      ? audioName.substring(0, length - 3) + "..."
+      : audioName;
+
+  const adaptiveAudioName = pageWidth < 480 ? shortAudioName : audioName;
 
   return (
     <>
@@ -96,7 +104,7 @@ const Index = ({
           </div>
           <div className={styles.audioInfoContainer}>
             <div className={styles.audioInfo}>
-              <div className={styles.audioName}>{trimmedString}</div>
+              <div className={styles.audioName}>{adaptiveAudioName}</div>
               <div className={styles.authorName}>{audioAuthor}</div>
             </div>
             <div className={styles.audioDuration}>2:11</div>

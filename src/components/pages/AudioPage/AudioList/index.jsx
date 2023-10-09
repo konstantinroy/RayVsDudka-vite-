@@ -81,8 +81,6 @@ const AudioList = ({ data, setData, sortType }) => {
     }
   }, [audioProgress]);
 
-  console.log(activeAudio);
-
   return (
     <>
       <div className={styles.container}>
