@@ -24,14 +24,16 @@ const Index = ({
   setWavesState,
   setFullScreenAudioPopup,
 }) => {
+  const audios = [...document.getElementsByTagName("audio")];
+
   //// Реф играющего аудио
   const audioElem = useRef();
 
   //// Функция включения аудио
   const playAudio = () => {
-    let count = 0;
+    let click = 0;
     // audioElem.current.currentTime = 0;
-    if (count === 0) {
+    if (click === 0) {
       audioElem.current.play();
 
       audioElem.current.volume =
@@ -53,23 +55,25 @@ const Index = ({
       setBottomAudioPopup(true);
       setWavesState(true);
       if (activeAudio.active && activeAudio.id === id) {
-        count++;
+        click++;
       }
-      setPlayBtnClickQty(count);
+      setPlayBtnClickQty(click);
     }
-    if (count !== 0) {
+    if (click !== 0) {
       setFullScreenAudioPopup(true);
     }
-    console.log(count)
   };
 
   //// Ширина экрана
   const pageWidth = document.documentElement.scrollWidth;
 
   //// Функция для укорачивания названия аудио
-  const length = 35;
+  const length = 
+    // (pageWidth < 380) ? 33 : 
+    35;
+
   const shortAudioName =
-    audioName.length > length
+    (audioName.length > length)
       ? audioName.substring(0, length - 3) + "..."
       : audioName;
 

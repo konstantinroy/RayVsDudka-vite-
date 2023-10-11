@@ -75,6 +75,10 @@ const AudioPage = () => {
         </div>
 
         <div className={styles.inputBlock}>
+        <select name="sort" value={sortType} onChange={onSortClick}>
+            <option value="asc">Сортировка: самые последние</option>
+            <option value="desc">Сортировка: самые ранние</option>
+          </select>
           <input
             // autoFocus
             // type="text"
@@ -82,11 +86,6 @@ const AudioPage = () => {
             placeholder="Поиск по аудио"
             onChange={(e) => setSearchTerm(e.target.value)}
           />
-
-          <select name="sort" value={sortType} onChange={onSortClick}>
-            <option value="asc">Сортировка: самые последние</option>
-            <option value="desc">Сортировка: самые ранние</option>
-          </select>
         </div>
 
         {errorText ? (

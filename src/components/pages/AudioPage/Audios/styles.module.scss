@@ -50,6 +50,7 @@
   font-weight: 600;
   margin-bottom: 5px;
   margin-right: 15px;
+  white-space: nowrap;
 }
 .authorName {
   font-size: 13px;
@@ -122,4 +123,44 @@
   .audioDuration {
     font-size: 12px;
   }
+}
+
+@media only screen and (max-width: 410px) {
+  .audioBlock {
+    padding: 1.5% 2%;
+  }
+  .audioPicture {
+    height: 46px;
+    width: 46px;
+    font-size: 24px;
+    margin-right: 11px;
+  }
+  .audioName {
+    font-size: 13px;
+    margin-right: 11px;
+  }
+  .authorName {
+    font-size: 12px;
+  }
+  .audioDuration {
+    font-size: 11px;
+}
+}
+
+@media only screen and (max-width: 360px) {
+  .audioPicture {
+    height: 44px;
+    width: 44px;
+    font-size: 22px;
+    margin-right: 11px;
+  }
+  .audioName {
+    font-size: 12px;
+  }
+  .authorName {
+    font-size: 11px;
+  }
+  .audioDuration {
+    font-size: 10px;
+}
 }

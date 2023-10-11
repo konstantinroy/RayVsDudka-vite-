@@ -32,7 +32,7 @@
   width: 19%;
   font-size: 1.5vw;
   color: var(--text-color);
-  padding: 2vw 0.5vw;
+  padding: 1.5vw 0.5vw;
 }
 
 .errorText {
@@ -117,7 +117,7 @@
   .inputBlock {
     padding: 0vw 10vw;
     margin-bottom: 4vw;
-}
+  }
   .inputBlock input {
     width: 40%;
     font-size: 2.5vw;
@@ -164,13 +164,13 @@
   .inputBlock {
     margin: 4vw 0;
     padding: 0 2vw;
-    justify-content: space-evenly;
+    justify-content: space-around;
   }
   .inputBlock input {
     width: 60%;
     font-size: 4.5vw;
     padding: 4vw 2vw;
-    margin: 0 4vw 0 0vw;
+    margin: 0;
   }
   .inputBlock select {
     width: 28%;
@@ -179,5 +179,17 @@
   .errorText {
     font-size: 5.5vw;
     padding: 3vw 19vw 8vw;
+  }
+}
+
+@media only screen and (max-width: 410px) {
+  .inputBlock select {
+    padding: 0 0.5vw;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .inputBlock input {
+    font-size: 4vw;
   }
 }
