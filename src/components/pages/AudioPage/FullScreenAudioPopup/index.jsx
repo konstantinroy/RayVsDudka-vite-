@@ -40,8 +40,6 @@ const Index = ({
       localStorage.setItem("volume", JSON.stringify("1"))
   );
 
-  const audioAuthorRef = useRef();
-
   //// Функция для сворачивания полноэкранного аудиоплеера
   const hideFullScreenAudioPopup = () => {
     setFullScreenAudioPopup(false);
@@ -118,15 +116,15 @@ const Index = ({
     currentAudio.currentTime = (divprogress / 100) * currentAudio.duration;
   };
 
+  //// Фильтр аудио по автору
   const filterAudiosByAuthor = () => {
     const dataCopy = [...data]
     const filterData = dataCopy.filter((audio) => {
       return audio.audioAuthor === activeAudio.audioAuthor;
     });
-
     setData(filterData);
+    console.log(filterData)
     setFullScreenAudioPopup(false);
-    
   };
 
   //// Звук играющего аудио
@@ -219,7 +217,6 @@ const Index = ({
           <div className={styles.audioName}>{activeAudio.audioName}</div>
           <div
             className={styles.authorName}
-            ref={audioAuthorRef}
             onClick={filterAudiosByAuthor}
           >
             {activeAudio.audioAuthor}

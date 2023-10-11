@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { BsMusicNote } from "react-icons/bs";
 // import { FaPlay } from "react-icons/fa";
 // import { FaPause } from "react-icons/fa";
@@ -24,7 +24,6 @@ const Index = ({
   setWavesState,
   setFullScreenAudioPopup,
 }) => {
-  const audios = [...document.getElementsByTagName("audio")];
 
   //// Реф играющего аудио
   const audioElem = useRef();
@@ -68,12 +67,10 @@ const Index = ({
   const pageWidth = document.documentElement.scrollWidth;
 
   //// Функция для укорачивания названия аудио
-  const length = 
-    // (pageWidth < 380) ? 33 : 
-    35;
+  const length = 35;
 
   const shortAudioName =
-    (audioName.length > length)
+    audioName.length > length
       ? audioName.substring(0, length - 3) + "..."
       : audioName;
 
@@ -115,6 +112,7 @@ const Index = ({
           </div>
         </div>
         <audio
+          id="audio"
           src={audioLink}
           ref={audioElem}
           onTimeUpdate={seekBarProgress}

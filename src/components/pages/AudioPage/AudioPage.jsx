@@ -27,6 +27,7 @@ const AudioPage = () => {
 
   //// Массив всех аудио
   const [data, setData] = useState(AudiosArrayData);
+  
   const [errorText, setErrorText] = useState("");
 
   useEffect(
