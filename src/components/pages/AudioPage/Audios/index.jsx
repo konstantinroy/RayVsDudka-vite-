@@ -1,9 +1,9 @@
-import { useEffect, useRef } from "react";
-import { BsMusicNote } from "react-icons/bs";
+import { useEffect, useRef } from 'react';
+import { BsMusicNote } from 'react-icons/bs';
 // import { FaPlay } from "react-icons/fa";
 // import { FaPause } from "react-icons/fa";
-import MusicWaves from "../MusicWaves/index";
-import styles from "./styles.module.scss";
+import MusicWaves from '../MusicWaves/index';
+import styles from './styles.module.scss';
 
 const Index = ({
   id,
@@ -37,8 +37,8 @@ const Index = ({
       audioElem.current.play();
 
       audioElem.current.volume =
-        JSON.parse(localStorage.getItem("volume")) ||
-        localStorage.setItem("volume", JSON.stringify("1"));
+        JSON.parse(localStorage.getItem('volume')) ||
+        localStorage.setItem('volume', JSON.stringify('1'));
 
       setCurrentAudio(audioElem.current);
       setPlayPauseBtnState(true);
@@ -72,7 +72,7 @@ const Index = ({
 
   const shortAudioName =
     audioName.length > length
-      ? audioName.substring(0, length - 3) + "..."
+      ? audioName.substring(0, length - 3) + '...'
       : audioName;
 
   const adaptiveAudioName = pageWidth < 480 ? shortAudioName : audioName;
@@ -83,7 +83,7 @@ const Index = ({
         <div
           style={{
             backgroundColor:
-              activeAudio.id === id && activeAudio.active ? "#9191916e" : "",
+              activeAudio.id === id && activeAudio.active ? '#9191916e' : '',
           }}
           className={styles.audioBlock}
         >
@@ -95,9 +95,9 @@ const Index = ({
             )}
           </div> */}
           <div className={styles.audioPicture}>
-            {audioImage !== "" ?
+            {audioImage !== '' ?
               <img className={styles.audioIamge} src={audioImage} alt="" /> :
-               <BsMusicNote />}
+              <BsMusicNote />}
             {activeAudio.id === id && activeAudio.active && (
               <MusicWaves
                 wavesState={wavesState}

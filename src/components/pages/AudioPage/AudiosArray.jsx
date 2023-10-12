@@ -169,7 +169,7 @@ const AudiosArray = [
     audioAuthor: 'Константин Рай',
     audioName:
       'Интервью Никиты Дудки после победы в финале Чемпионата мира по фифе',
-      audioImage: '',
+    audioImage: '',
     audioLink: Nineteen,
   },
   {
@@ -191,7 +191,7 @@ const AudiosArray = [
     audioAuthor: 'Константин Рай',
     audioName:
       'Никита после того, как впервые за долгое время проиграл Косте в фифу',
-      audioImage: '',
+    audioImage: '',
     audioLink: Twentytwo,
   },
   {

@@ -30,15 +30,15 @@ const Index = ({
           <div className={styles.audioBlockBox}>
             <div className={styles.artistInfo}>
               <div className={styles.audioPicture}>
-              {activeAudio.audioImage !== "" ? (
-              <img
-                className={styles.audioIamge}
-                src={activeAudio.audioImage}
-                alt=""
-              />
-            ) : (
-              <BsMusicNote className={styles.audioImg} />
-            )}
+                {activeAudio.audioImage !== '' ? (
+                  <img
+                    className={styles.audioIamge}
+                    src={activeAudio.audioImage}
+                    alt=""
+                  />
+                ) : (
+                  <BsMusicNote className={styles.audioImg} />
+                )}
                 <MusicWaves
                   activeAudio={activeAudio}
                   wavesState={wavesState}
