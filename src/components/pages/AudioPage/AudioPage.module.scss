@@ -93,11 +93,17 @@
     padding-top: 8vw;
     height: 33vw;
   }
+  .authorAudioQtyText {
+    font-size: 2.2vw;
+  }
 }
 
 @media only screen and (max-width: 820px) {
   .pagePhotoBlock {
     padding-top: 8.5vw;
+  }
+  .authorAudioQtyText {
+    font-size: 2.3vw;
   }
 }
 
@@ -127,6 +133,10 @@
     width: 17%;
     font-size: 2vw;
   }
+  .authorAudioQtyText {
+    padding: 0vw 10vw;
+    font-size: 2.4vw;
+  }
   .errorText {
     font-size: 3vw;
     padding: 3vw 0 6vw;
@@ -137,6 +147,11 @@
   .pagePhotoBlock {
     padding-top: 7.5vw;
     height: 37vw;
+  }
+  .authorAudioQtyText {
+    font-size: 3.2vw;
+    margin-bottom: 5vw;
+    margin-top: 7vw;
   }
   .errorText {
     font-size: 4vw;
@@ -176,9 +191,21 @@
     width: 28%;
     font-size: 3.5vw;
   }
+  .authorAudioQtyText {
+    font-size: 4vw;
+    text-align: center;
+    padding: 0 20vw;
+  }
   .errorText {
     font-size: 5.5vw;
     padding: 3vw 19vw 8vw;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .authorAudioQtyText {
+    font-size: 4.5vw;
+    padding: 0 15vw;
   }
 }
 

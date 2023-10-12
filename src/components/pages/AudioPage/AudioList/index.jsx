@@ -1,15 +1,15 @@
-import { useEffect, useState } from 'react';
-import FullScreenAudioPopup from '../FullScreenAudioPopup/index';
-import BottomAudioPopup from '../BottomAudioPopup/index';
-import Audios from '../Audios/index';
-import styles from './styles.module.scss';
+import { useEffect, useState } from "react";
+import FullScreenAudioPopup from "../FullScreenAudioPopup/index";
+import BottomAudioPopup from "../BottomAudioPopup/index";
+import Audios from "../Audios/index";
+import styles from "./styles.module.scss";
 
 const AudioList = ({ data, setData, sortType }) => {
-  const audios = [...document.getElementsByTagName('audio')];
+  const audios = [...document.getElementsByTagName("audio")];
 
   //// Функция для того, чтобы на странице проигрывалась только одна аудио-дорожка одновременно
   document.addEventListener(
-    'play',
+    "play",
     (event) => {
       audios.forEach((audio) => audio !== event.target && audio.pause());
     },
@@ -36,10 +36,10 @@ const AudioList = ({ data, setData, sortType }) => {
   const [wavesState, setWavesState] = useState(false);
 
   //// Длительность активного аудио
-  const [audioDuration, setAudioDuration] = useState('');
+  const [audioDuration, setAudioDuration] = useState("");
 
   //// Сколько времени уже играет аудио
-  const [audioСurrentTime, setAudioСurrentTime] = useState('');
+  const [audioСurrentTime, setAudioСurrentTime] = useState("");
 
   //// Видимость полноэкранного аудиоплеера
   const [fullScreenAudioPopup, setFullScreenAudioPopup] = useState(false);
@@ -60,7 +60,7 @@ const AudioList = ({ data, setData, sortType }) => {
     const audioSecondsDuration = Math.round(
       currentAudio.duration - audioMinutesDuration * 60
     );
-    setAudioDuration(audioMinutesDuration + ':' + audioSecondsDuration);
+    setAudioDuration(audioMinutesDuration + ":" + audioSecondsDuration);
   };
 
   //// Автоматический переход к следующему аудио
@@ -68,7 +68,9 @@ const AudioList = ({ data, setData, sortType }) => {
     if (audioProgress === 100) {
       if (activeAudio.id !== data.length) {
         const activeAudioId = data.find((audio) => {
-          return sortType === 'asc' ? audio.id === activeAudio.id - 1 : audio.id === activeAudio.id + 1;
+          return sortType === "asc"
+            ? audio.id === activeAudio.id - 1
+            : audio.id === activeAudio.id + 1;
         });
         currentAudio.src = activeAudioId.audioLink;
         currentAudio.play();
@@ -81,9 +83,20 @@ const AudioList = ({ data, setData, sortType }) => {
     }
   }, [audioProgress]);
 
+  const sortedByDudka = data.every((audio) => {
+    return audio.audioAuthor === 'Никита Дудка'
+  })
+  const sortedByRay = data.every((audio) => {
+    return audio.audioAuthor === 'Константин Рай'
+  })
+  console.log(sortedByDudka, sortedByRay)
+
   return (
     <>
-      <div className={styles.container}>
+      {sortedByDudka || sortedByRay ? <div className={styles.authorAudioQtyText}>
+        От автора "{activeAudio.audioAuthor}" найдено {data.length} аудио
+      </div> : ""}
+      <div className={styles.audioContainer}>
         {data.map((audio) => {
           return (
             <Audios
