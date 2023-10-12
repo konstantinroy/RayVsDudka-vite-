@@ -27,25 +27,22 @@ const AudioPage = () => {
 
   //// Массив всех аудио
   const [data, setData] = useState(AudiosArrayData);
-  
+
   const [errorText, setErrorText] = useState("");
 
-  useEffect(
-    () => {
-      const Debounce = setTimeout(() => {
-        const filteredAudios = filterAudios(searchTerm, AudiosArrayData);
-        setData(filteredAudios);
-        if (data.length < 1) {
-          setErrorText("По вашему запросу ничего не найдено");
-        } else {
-          setErrorText("");
-        }
-      }, 0);
+  useEffect(() => {
+    const Debounce = setTimeout(() => {
+      const filteredAudios = filterAudios(searchTerm, AudiosArrayData);
+      setData(filteredAudios);
+      if (data.length < 1) {
+        setErrorText("По вашему запросу ничего не найдено");
+      } else {
+        setErrorText("");
+      }
+    }, 0);
 
-      return () => clearTimeout(Debounce);
-    }
-    // , [searchTerm, errorText]
-  );
+    return () => clearTimeout(Debounce);
+  }, [searchTerm, errorText]);
 
   const onSortClick = useCallback((e) => {
     setSortType(e.target.value);
@@ -76,7 +73,7 @@ const AudioPage = () => {
         </div>
 
         <div className={styles.inputBlock}>
-        <select name="sort" value={sortType} onChange={onSortClick}>
+          <select name="sort" value={sortType} onChange={onSortClick}>
             <option value="asc">Сортировка: самые последние</option>
             <option value="desc">Сортировка: самые ранние</option>
           </select>

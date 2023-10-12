@@ -17,6 +17,7 @@ const Index = ({
   setPlayPauseBtnState,
   audioName,
   audioAuthor,
+  audioImage,
   audioLink,
   audioProgress,
   setBottomAudioPopup,
@@ -94,7 +95,9 @@ const Index = ({
             )}
           </div> */}
           <div className={styles.audioPicture}>
-            <BsMusicNote />
+            {audioImage !== "" ?
+              <img className={styles.audioIamge} src={audioImage} alt="" /> :
+               <BsMusicNote />}
             {activeAudio.id === id && activeAudio.active && (
               <MusicWaves
                 wavesState={wavesState}

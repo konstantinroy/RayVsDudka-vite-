@@ -102,6 +102,7 @@ const AudioList = ({ data, setData, sortType }) => {
               setPlayPauseBtnState={setPlayPauseBtnState}
               audioName={audio.audioName}
               audioAuthor={audio.audioAuthor}
+              audioImage={audio.audioImage}
               audioLink={audio.audioLink}
               audioProgress={audioProgress}
               wavesState={wavesState}

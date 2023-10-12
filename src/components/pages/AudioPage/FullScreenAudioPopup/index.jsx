@@ -118,12 +118,16 @@ const Index = ({
 
   //// Фильтр аудио по автору
   const filterAudiosByAuthor = () => {
-    const dataCopy = [...data]
-    const filterData = dataCopy.filter((audio) => {
-      return audio.audioAuthor === activeAudio.audioAuthor;
-    });
+    const dataCopy = [...data];
+    const filterData =
+      activeAudio.audioAuthor === "Никита Дудка"
+        ? dataCopy.filter((audio) => {
+            return audio.audioAuthor === "Никита Дудка";
+          })
+        : dataCopy.filter((audio) => {
+            return audio.audioAuthor === "Константин Рай";
+          });
     setData(filterData);
-    console.log(filterData)
     setFullScreenAudioPopup(false);
   };
 
@@ -188,7 +192,15 @@ const Index = ({
         </div>
         <div className={styles.audioImageBlock}>
           <div className={styles.audioImgBlock}>
-            <BsMusicNote className={styles.audioImg} />
+            {activeAudio.audioImage !== "" ? (
+              <img
+                className={styles.audioIamge}
+                src={activeAudio.audioImage}
+                alt=""
+              />
+            ) : (
+              <BsMusicNote className={styles.audioImg} />
+            )}
           </div>
         </div>
         <div className={styles.audioProgressLineBlock}>
@@ -214,11 +226,14 @@ const Index = ({
       </div>
       <div className={styles.bottomBlock}>
         <div className={styles.audioInfo}>
-          <div className={styles.audioName}>{activeAudio.audioName}</div>
           <div
-            className={styles.authorName}
-            onClick={filterAudiosByAuthor}
+            className={`${styles.audioName}
+      ${activeAudio.audioName.length > 30 ? styles.animateAudioName : ""}
+      `}
           >
+            {activeAudio.audioName}
+          </div>
+          <div className={styles.authorName} onClick={filterAudiosByAuthor}>
             {activeAudio.audioAuthor}
           </div>
         </div>

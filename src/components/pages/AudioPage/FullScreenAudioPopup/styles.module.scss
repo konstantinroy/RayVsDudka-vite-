@@ -50,6 +50,12 @@
     align-items: center;
     border-radius: 10px;
     box-shadow: var(--text-color) 0px 5px 15px;
+    overflow: hidden;
+  }
+  .audioIamge {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   .audioImg {
     font-size: 25vw;
@@ -88,11 +94,20 @@
   }
   .audioInfo {
     margin-bottom: 50px;
+    overflow: hidden;
   }
   .audioName {
+    white-space: nowrap;
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 5px;
+  }
+  .animateAudioName {
+    animation-delay: 2s;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-name: audioNameAnimation;
+    animation-iteration-count: infinite;
   }
   .authorName {
     font-size: 16px;
@@ -193,6 +208,21 @@
     }
     to {
       bottom: 0;
+    }
+  }
+
+  @keyframes audioNameAnimation {
+    0% {
+      transform: translate(0, 0);
+    }
+    15% {
+      transform: translate(0, 0);
+    }
+    90% {
+      transform: translate(-140%, 0%);
+    }
+    100% {
+      transform: translate(-140%, 0%);
     }
   }
 }
