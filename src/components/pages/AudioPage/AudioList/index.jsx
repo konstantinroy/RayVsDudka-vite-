@@ -83,6 +83,7 @@ const AudioList = ({ data, setData, sortType }) => {
     }
   }, [audioProgress]);
 
+  //// Функции для сортировки аудио по автору, возвращают true или false
   const sortedByDudka = data.every((audio) => {
     return audio.audioAuthor === 'Никита Дудка'
   })

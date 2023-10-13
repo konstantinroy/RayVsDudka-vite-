@@ -31,7 +31,7 @@ const Index = ({
   //// Реф контроллера звука аудио
   const volumeRangeRef = useRef();
 
-  //// Реф контроллера прогресса играющего аудио
+  //// Реф контроллера-ползунка прогресса играющего аудио
   const audioProgressLine = useRef();
 
   //// Состояние уровня звука играющего аудио
@@ -119,14 +119,11 @@ const Index = ({
   //// Фильтр аудио по автору
   const filterAudiosByAuthor = () => {
     const dataCopy = [...data];
-    const filterData =
-      activeAudio.audioAuthor === "Никита Дудка"
-        ? dataCopy.filter((audio) => {
-            return audio.audioAuthor === "Никита Дудка";
-          })
-        : dataCopy.filter((audio) => {
-            return audio.audioAuthor === "Константин Рай";
-          });
+    const filterData = dataCopy.filter((audio) => {
+      return activeAudio.audioAuthor === "Никита Дудка"
+        ? audio.audioAuthor === "Никита Дудка"
+        : audio.audioAuthor === "Константин Рай";
+    });
     setData(filterData);
     setFullScreenAudioPopup(false);
     window.scrollTo(0, 0);

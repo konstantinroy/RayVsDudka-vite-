@@ -68,11 +68,9 @@ const Index = ({
   const pageWidth = document.documentElement.scrollWidth;
 
   //// Функция для укорачивания названия аудио
-  const length = 35;
-
   const shortAudioName =
-    audioName.length > length
-      ? audioName.substring(0, length - 3) + '...'
+    audioName.length > 35
+      ? audioName.substring(0, 35 - 3) + '...'
       : audioName;
 
   const adaptiveAudioName = pageWidth < 480 ? shortAudioName : audioName;
