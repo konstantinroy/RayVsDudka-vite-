@@ -129,6 +129,7 @@ const Index = ({
           });
     setData(filterData);
     setFullScreenAudioPopup(false);
+    window.scrollTo(0, 0);
   };
 
   //// Звук играющего аудио

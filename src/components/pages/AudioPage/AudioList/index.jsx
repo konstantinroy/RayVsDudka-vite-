@@ -89,7 +89,6 @@ const AudioList = ({ data, setData, sortType }) => {
   const sortedByRay = data.every((audio) => {
     return audio.audioAuthor === 'Константин Рай'
   })
-  console.log(sortedByDudka, sortedByRay)
 
   return (
     <>

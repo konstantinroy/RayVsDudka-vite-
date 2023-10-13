@@ -59,7 +59,7 @@ const AudioPage = () => {
   }, []);
 
   return (
-    <div>
+    <>
       <Navbar />
       <div className={styles.content}>
         <div className={styles.audioHeading}>
@@ -95,7 +95,7 @@ const AudioPage = () => {
       </div>
 
       <Footer />
-    </div>
+    </>
   );
 };
 
