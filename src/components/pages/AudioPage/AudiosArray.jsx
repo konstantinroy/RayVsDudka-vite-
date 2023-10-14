@@ -8,7 +8,7 @@ import Four from './audio/4. Предатель должен умереть.mp3'
 import Five from './audio/5. Талантливый Никита Дудка.mp3';
 import Six from './audio/6. Мысли Дудки.mp3';
 import Seven from './audio/7. Наемник-Дудка.mp3';
-import ImageSeven from './audio/7. Наемник-Дудка.jpeg';
+import ImageSeven from './audio/7. Наемник-Дудка.jpg';
 import Eight from './audio/8. Фифа.mp3';
 import Nine from './audio/9. Откровение Дудки.mp3';
 import Ten from './audio/10. День твоей смерти.mp3';
