@@ -4,7 +4,7 @@ import BottomAudioPopup from "../BottomAudioPopup/index";
 import Audios from "../Audios/index";
 import styles from "./styles.module.scss";
 
-const AudioList = ({ data, setData, sortType }) => {
+const AudioList = ({ data, setData, searchTerm, sortType }) => {
   const audios = [...document.getElementsByTagName("audio")];
 
   //// Функция для того, чтобы на странице проигрывалась только одна аудио-дорожка одновременно
@@ -34,9 +34,6 @@ const AudioList = ({ data, setData, sortType }) => {
 
   //// Эффект волн нижнего попапа при проигрывании аудио
   const [wavesState, setWavesState] = useState(false);
-
-  //// Длительность активного аудио
-  const [audioDuration, setAudioDuration] = useState("");
 
   //// Сколько времени уже играет аудио
   const [audioСurrentTime, setAudioСurrentTime] = useState("");
@@ -96,9 +93,9 @@ const AudioList = ({ data, setData, sortType }) => {
 
   return (
     <>
-      {sortedByDudka || sortedByRay ? <div className={styles.authorAudioQtyText}>
+      {!searchTerm && (sortedByDudka || sortedByRay ? <div className={styles.authorAudioQtyText}>
         От автора "{activeAudio.audioAuthor}" найдено {data.length} аудио
-      </div> : ""}
+      </div> : "")}
       <div className={styles.audioContainer}>
         {data.map((audio) => {
           return (
