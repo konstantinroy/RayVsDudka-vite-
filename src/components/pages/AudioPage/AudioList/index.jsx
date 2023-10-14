@@ -57,9 +57,15 @@ const AudioList = ({ data, setData, searchTerm, sortType }) => {
     const audioSecondsDuration = Math.round(
       currentAudio.duration - audioMinutesDuration * 60
     );
+    const audioDurationText =
+      audioMinutesDuration +
+      ":" +
+      (audioSecondsDuration > 9
+        ? audioSecondsDuration
+        : "0" + audioSecondsDuration);
     setActiveAudio({
       ...activeAudio,
-      duration: audioMinutesDuration + ":" + audioSecondsDuration,
+      duration: audioDurationText,
     });
   };
 
@@ -85,17 +91,22 @@ const AudioList = ({ data, setData, searchTerm, sortType }) => {
 
   //// Функции для сортировки аудио по автору, возвращают true или false
   const sortedByDudka = data.every((audio) => {
-    return audio.audioAuthor === 'Никита Дудка'
-  })
+    return audio.audioAuthor === "Никита Дудка";
+  });
   const sortedByRay = data.every((audio) => {
-    return audio.audioAuthor === 'Константин Рай'
-  })
+    return audio.audioAuthor === "Константин Рай";
+  });
 
   return (
     <>
-      {!searchTerm && (sortedByDudka || sortedByRay ? <div className={styles.authorAudioQtyText}>
-        От автора "{activeAudio.audioAuthor}" найдено {data.length} аудио
-      </div> : "")}
+      {!searchTerm &&
+        (sortedByDudka || sortedByRay ? (
+          <div className={styles.authorAudioQtyText}>
+            От автора "{activeAudio.audioAuthor}" найдено {data.length} аудио
+          </div>
+        ) : (
+          ""
+        ))}
       <div className={styles.audioContainer}>
         {data.map((audio) => {
           return (
