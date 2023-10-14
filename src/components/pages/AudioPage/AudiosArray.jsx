@@ -25,6 +25,7 @@ import Twenteen from './audio/20. Переговоры Рая и Куца.mp3';
 import Twentyone from './audio/21. Поздравление Никиты с днём рождения.mp3';
 import Twentytwo from './audio/22. Никита после того, как впервые за долгое время проиграл Косте в фифу.mp3';
 import Twentythree from './audio/23. Никита «не орёт», когда играет в фифу.mp3';
+import ImageTwentythree from './audio/23. Никита не орёт, когда играет в фифу.jpg';
 import Twentyfour from './audio/24. Welcome to the party.mp3';
 import Twentyfive from './audio/25. Как Никита придумывает правила игры в фифу....mp3';
 import Twentysix from './audio/26. Хорошее настроение Никиты после победы над Костей.mp3';
@@ -36,6 +37,7 @@ import Thirtyone from './audio/31. Разговор Никиты с Максом
 import Thirtytwo from './audio/32. Каким будет день, когда Никита починит xbox.mp3';
 import Thirtythree from './audio/33. Дуда сообщает Марку о результате катки.mp3';
 import Thirtyfour from './audio/34. Документальный фильм \'Константин Рай против Никиты Дудки\'.mp3';
+import ImageThirtyfour from './audio/34. Документальный фильм.jpg';
 
 const AudiosArray = [
   {
@@ -198,7 +200,7 @@ const AudiosArray = [
     id: 23,
     audioAuthor: 'Константин Рай',
     audioName: 'Никита «не орёт», когда играет в фифу',
-    audioImage: '',
+    audioImage: ImageTwentythree,
     audioLink: Twentythree,
   },
   {
@@ -275,7 +277,7 @@ const AudiosArray = [
     id: 34,
     audioAuthor: 'Константин Рай',
     audioName: 'Документальный фильм \'Константин Рай против Никиты Дудки\'',
-    audioImage: '',
+    audioImage: ImageThirtyfour,
     audioLink: Thirtyfour,
   },
 ];

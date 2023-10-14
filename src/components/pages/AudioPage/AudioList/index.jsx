@@ -60,7 +60,10 @@ const AudioList = ({ data, setData, sortType }) => {
     const audioSecondsDuration = Math.round(
       currentAudio.duration - audioMinutesDuration * 60
     );
-    setAudioDuration(audioMinutesDuration + ":" + audioSecondsDuration);
+    setActiveAudio({
+      ...activeAudio,
+      duration: audioMinutesDuration + ":" + audioSecondsDuration,
+    });
   };
 
   //// Автоматический переход к следующему аудио
@@ -139,7 +142,6 @@ const AudioList = ({ data, setData, sortType }) => {
           setPlayBtnClickQty={setPlayBtnClickQty}
           audioProgress={audioProgress}
           seekBarProgress={seekBarProgress}
-          audioDuration={audioDuration}
           audioСurrentTime={audioСurrentTime}
           setBottomAudioPopup={setBottomAudioPopup}
           wavesState={wavesState}

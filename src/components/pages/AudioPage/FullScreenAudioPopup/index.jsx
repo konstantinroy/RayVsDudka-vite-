@@ -20,7 +20,6 @@ const Index = ({
   audioProgress,
   audioСurrentTime,
   seekBarProgress,
-  audioDuration,
   setBottomAudioPopup,
   setWavesState,
   setFullScreenAudioPopup,
@@ -220,7 +219,7 @@ const Index = ({
             <div className={styles.currentTime}>
               {currentTimeFn(audioСurrentTime)}
             </div>
-            <div className={styles.duration}>{audioDuration}</div>
+            <div className={styles.duration}>{activeAudio.duration}</div>
           </div>
         </div>
       </div>
