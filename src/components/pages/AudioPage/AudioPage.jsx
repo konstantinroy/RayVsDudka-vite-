@@ -42,7 +42,7 @@ const AudioPage = () => {
     }, 0);
 
     return () => clearTimeout(Debounce);
-  }, [searchTerm, errorText]);
+  }, [searchTerm, errorText, data]);
 
   const onSortClick = useCallback((e) => {
     setSortType(e.target.value);

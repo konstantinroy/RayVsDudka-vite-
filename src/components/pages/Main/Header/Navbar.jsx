@@ -6,12 +6,14 @@ import { MdAccountCircle } from 'react-icons/md';
 
 import styles from './Navbar.module.scss';
 import FifaIcon from './img/Fifa.png';
+import FifaBlcakIcon from './img/Fifa-black.png';
 
 function Navbar() {
   const [isMenuClicked, setIsMenuClicked] = useState(false);
   const updateMenu = () => {
     setIsMenuClicked(!isMenuClicked);
   };
+  const theme = localStorage.getItem("theme");
 
   return (
     <>
@@ -29,7 +31,8 @@ function Navbar() {
         >
           <div className={styles.pages}>
             <div className={styles.fifaIcon}>
-              <img src={FifaIcon} alt=""></img>
+              {theme === 'dark' ? <img src={FifaIcon} alt=""></img> :
+              <img src={FifaBlcakIcon} alt=""></img>}
             </div>
             <Link to="/results">Результаты</Link>
             <Link to="/locations">Локации</Link>
