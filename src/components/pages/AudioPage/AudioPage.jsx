@@ -63,7 +63,7 @@ const AudioPage = () => {
     });
   }, []);
 
-  console.log(errorText, 'errorText', data, 'data')
+  // console.log(errorText, 'errorText', data, 'data')
 
   return (
     <>
