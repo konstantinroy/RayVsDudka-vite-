@@ -61,12 +61,18 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10vw 4vw 4vw;
+    padding: 6vw 4vw 4vw;
     font-size: 26px;
     z-index: 101;
   }
-  .photosText {
-    font-size: 20px;
+  .backArrowBtn,
+  .additionalFeatures {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .photosCount {
+    font-size: 18px;
   }
   .instrumentsBottom {
     position: absolute;

@@ -1,18 +1,17 @@
-import { AiOutlineEllipsis } from "react-icons/ai";
-import { AiOutlineHeart } from "react-icons/ai";
-import { AiFillHeart } from "react-icons/ai";
+import { IoIosArrowBack } from "react-icons/io";
+import { AiOutlineEllipsis, AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { GoComment } from "react-icons/go";
 import { PiShareFatLight } from "react-icons/pi";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Carousel from "../../common-components/Carousel/index.jsx";
 import PhotosArray from "./PhotosArray.jsx";
 
 import styles from "./PhotoBlock.module.scss";
-import { useEffect } from "react";
 
 const PhotoBlock = ({ post }) => {
   const [activePostPhotos, setActivePostPhotos] = useState([]);
   const [popup, setPopup] = useState(false);
+  const [activePhotoIndex, setActivePhotoIndex] = useState(0);
   const [instruments, setInstruments] = useState(true);
   const [likeBtnState, setLikeBtnState] = useState(false);
 
@@ -42,14 +41,22 @@ const PhotoBlock = ({ post }) => {
     setLikeBtnState((prevState) => !prevState);
   };
 
-  useEffect(() => {}, [activePostPhotos]);
+  const sliderParams = {
+    slideIndex: activePhotoIndex,
+  };
+
+  useEffect(() => {}, [activePostPhotos, activePhotoIndex]);
 
   return (
     <>
       {!popup && pageWidth < 480 ? (
         <div className={styles.photoBlock} onClick={openPhoto}>
           <div className={styles.carouselBlock}>
-            <Carousel>
+            <Carousel
+            withoutControls={(post.photos.length > 1) ? false : true}
+              {...sliderParams}
+              afterSlide={(currentIndex) => setActivePhotoIndex(currentIndex)}
+            >
               {post.photos.map((photo) => {
                 return <img key={post.id} src={photo} alt="" />;
               })}
@@ -61,10 +68,10 @@ const PhotoBlock = ({ post }) => {
           {instruments && (
             <div className={styles.instrumentsTop}>
               <div className={styles.backArrowBtn} onClick={closePhoto}>
-                ❮
+                <IoIosArrowBack />
               </div>
-              <div className={styles.photosText}>
-                1 из {activePostPhotos.length}
+              <div className={styles.photosCount}>
+                {activePhotoIndex + 1} из {activePostPhotos.length}
               </div>
               <div
                 className={styles.additionalFeatures}
@@ -74,10 +81,14 @@ const PhotoBlock = ({ post }) => {
               </div>
             </div>
           )}
-          <div className={styles.carouselBlock} onClick={clickOnPhoto}>
-            <Carousel>
-              {activePostPhotos.map((photo) => {
-                return <img src={photo} alt="" />;
+          <div className={styles.carouselBlock}>
+            <Carousel
+              withoutControls={true}
+              {...sliderParams}
+              afterSlide={(currentIndex) => setActivePhotoIndex(currentIndex)}
+            >
+              {activePostPhotos.map((photo, index) => {
+                return <img onClick={clickOnPhoto} src={photo} alt="" />;
               })}
             </Carousel>
           </div>
