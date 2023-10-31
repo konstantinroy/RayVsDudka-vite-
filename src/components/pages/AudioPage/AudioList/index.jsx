@@ -1,15 +1,15 @@
-import { useEffect, useState } from "react";
-import FullScreenAudioPopup from "../FullScreenAudioPopup/index";
-import BottomAudioPopup from "../BottomAudioPopup/index";
-import Audios from "../Audios/index";
-import styles from "./styles.module.scss";
+import { useEffect, useState } from 'react';
+import FullScreenAudioPopup from '../FullScreenAudioPopup/index';
+import BottomAudioPopup from '../BottomAudioPopup/index';
+import Audios from '../Audios/index';
+import styles from './styles.module.scss';
 
 const AudioList = ({ data, setData, searchTerm, sortType }) => {
-  const audios = [...document.getElementsByTagName("audio")];
+  const audios = [...document.getElementsByTagName('audio')];
 
   //// Функция для того, чтобы на странице проигрывалась только одна аудио-дорожка одновременно
   document.addEventListener(
-    "play",
+    'play',
     (event) => {
       audios.forEach((audio) => audio !== event.target && audio.pause());
     },
@@ -36,7 +36,7 @@ const AudioList = ({ data, setData, searchTerm, sortType }) => {
   const [wavesState, setWavesState] = useState(false);
 
   //// Сколько времени уже играет аудио
-  const [audioСurrentTime, setAudioСurrentTime] = useState("");
+  const [audioСurrentTime, setAudioСurrentTime] = useState('');
 
   //// Видимость полноэкранного аудиоплеера
   const [fullScreenAudioPopup, setFullScreenAudioPopup] = useState(false);
@@ -59,10 +59,10 @@ const AudioList = ({ data, setData, searchTerm, sortType }) => {
     );
     const audioDurationText =
       audioMinutesDuration +
-      ":" +
+      ':' +
       (audioSecondsDuration > 9
         ? audioSecondsDuration
-        : "0" + audioSecondsDuration);
+        : '0' + audioSecondsDuration);
     setActiveAudio({
       ...activeAudio,
       duration: audioDurationText,
@@ -74,7 +74,7 @@ const AudioList = ({ data, setData, searchTerm, sortType }) => {
     if (audioProgress === 100) {
       if (activeAudio.id !== data.length) {
         const activeAudioId = data.find((audio) => {
-          return sortType === "asc"
+          return sortType === 'asc'
             ? audio.id === activeAudio.id - 1
             : audio.id === activeAudio.id + 1;
         });
@@ -91,10 +91,10 @@ const AudioList = ({ data, setData, searchTerm, sortType }) => {
 
   //// Функции для сортировки аудио по автору, возвращают true или false
   const sortedByDudka = data.every((audio) => {
-    return audio.audioAuthor === "Никита Дудка";
+    return audio.audioAuthor === 'Никита Дудка';
   });
   const sortedByRay = data.every((audio) => {
-    return audio.audioAuthor === "Константин Рай";
+    return audio.audioAuthor === 'Константин Рай';
   });
 
   return (
@@ -105,7 +105,7 @@ const AudioList = ({ data, setData, searchTerm, sortType }) => {
             От автора "{activeAudio.audioAuthor}" найдено {data.length} аудио
           </div>
         ) : (
-          ""
+          ''
         ))}
       <div className={styles.audioContainer}>
         {data.map((audio) => {

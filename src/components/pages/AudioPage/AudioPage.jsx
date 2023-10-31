@@ -1,14 +1,14 @@
-import { useState, useEffect, useCallback } from "react";
-import PulseLoader from "react-spinners/PulseLoader";
+import { useState, useEffect, useCallback } from 'react';
+import PulseLoader from 'react-spinners/PulseLoader';
 
-import Navbar from "../Main/Header/Navbar.jsx";
-import Footer from "../Main/Footer/Footer.jsx";
+import Navbar from '../Main/Header/Navbar.jsx';
+import Footer from '../Main/Footer/Footer.jsx';
 
-import BackToTopButton from "./../../common-components/BackToTopButton/BackToTopButton.jsx";
-import AudiosArrayData from "./AudiosArray.jsx";
-import AudioList from "./AudioList/index.jsx";
-import styles from "./AudioPage.module.scss";
-import CasseteAnimation from "./CasseteAnimation/CasseteAnimation.jsx";
+import BackToTopButton from './../../common-components/BackToTopButton/BackToTopButton.jsx';
+import AudiosArrayData from './AudiosArray.jsx';
+import AudioList from './AudioList/index.jsx';
+import styles from './AudioPage.module.scss';
+import CasseteAnimation from './CasseteAnimation/CasseteAnimation.jsx';
 // import AudioPagePhoto from "./img/AudioPagePhoto.jpg";
 
 const filterAudios = (searchText, listOfAudios) => {
@@ -21,15 +21,15 @@ const filterAudios = (searchText, listOfAudios) => {
 };
 
 const AudioPage = () => {
-  const [sortType, setSortType] = useState("asc");
-  const [searchTerm, setSearchTerm] = useState("");
+  const [sortType, setSortType] = useState('asc');
+  const [searchTerm, setSearchTerm] = useState('');
 
   //// Массив всех аудио
   const [data, setData] = useState(AudiosArrayData);
 
   const [errorSnippet, setErrorSnippet] = useState(true);
 
-  const [errorText, setErrorText] = useState("");
+  const [errorText, setErrorText] = useState('');
 
   useEffect(() => {
     const Debounce = setTimeout(() => {
@@ -39,10 +39,10 @@ const AudioPage = () => {
         setTimeout(() => {
           setErrorSnippet(false);
         }, 1000);
-        setErrorText("По вашему запросу ничего не найдено");
+        setErrorText('По вашему запросу ничего не найдено');
       } else {
         setErrorSnippet(true);
-        setErrorText("");
+        setErrorText('');
       }
     }, 0);
 
@@ -53,11 +53,11 @@ const AudioPage = () => {
     setSortType(e.target.value);
 
     setData((prevState) => {
-      if (e.target.value === "asc") {
+      if (e.target.value === 'asc') {
         return [...prevState.sort((prev, next) => next.id - prev.id)];
       }
 
-      if (e.target.value === "desc") {
+      if (e.target.value === 'desc') {
         return [...prevState.sort((prev, next) => prev.id - next.id)];
       }
     });

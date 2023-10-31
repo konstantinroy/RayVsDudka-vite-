@@ -13,7 +13,7 @@ function Navbar() {
   const updateMenu = () => {
     setIsMenuClicked(!isMenuClicked);
   };
-  const theme = localStorage.getItem("theme");
+  const theme = localStorage.getItem('theme');
 
   return (
     <>
@@ -32,7 +32,7 @@ function Navbar() {
           <div className={styles.pages}>
             <div className={styles.fifaIcon}>
               {theme === 'dark' ? <img src={FifaIcon} alt=""></img> :
-              <img src={FifaBlcakIcon} alt=""></img>}
+                <img src={FifaBlcakIcon} alt=""></img>}
             </div>
             <Link to="/results">Результаты</Link>
             <Link to="/locations">Локации</Link>

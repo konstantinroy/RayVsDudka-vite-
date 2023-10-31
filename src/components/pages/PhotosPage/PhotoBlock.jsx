@@ -1,12 +1,12 @@
-import { IoIosArrowBack } from "react-icons/io";
-import { AiOutlineEllipsis, AiFillHeart, AiOutlineHeart } from "react-icons/ai";
-import { GoComment } from "react-icons/go";
-import { PiShareFatLight } from "react-icons/pi";
-import { useState, useEffect } from "react";
-import Carousel from "../../common-components/Carousel/index.jsx";
-import PhotosArray from "./PhotosArray.jsx";
+import { IoIosArrowBack } from 'react-icons/io';
+import { AiOutlineEllipsis, AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
+import { GoComment } from 'react-icons/go';
+import { PiShareFatLight } from 'react-icons/pi';
+import { useState, useEffect } from 'react';
+import Carousel from '../../common-components/Carousel/index.jsx';
+import PhotosArray from './PhotosArray.jsx';
 
-import styles from "./PhotoBlock.module.scss";
+import styles from './PhotoBlock.module.scss';
 
 const PhotoBlock = ({ post }) => {
   const [activePostPhotos, setActivePostPhotos] = useState([]);
@@ -34,7 +34,7 @@ const PhotoBlock = ({ post }) => {
   };
 
   const additionalFeaturesBtn = () => {
-    console.log("additionalFeatures");
+    console.log('additionalFeatures');
   };
 
   const likeBtn = () => {
@@ -53,7 +53,7 @@ const PhotoBlock = ({ post }) => {
         <div className={styles.photoBlock} onClick={openPhoto}>
           <div className={styles.carouselBlock}>
             <Carousel
-            withoutControls={(post.photos.length > 1) ? false : true}
+              withoutControls={(post.photos.length > 1) ? false : true}
               {...sliderParams}
               afterSlide={(currentIndex) => setActivePhotoIndex(currentIndex)}
             >

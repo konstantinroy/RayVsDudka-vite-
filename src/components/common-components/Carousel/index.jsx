@@ -1,5 +1,5 @@
-import NukaCarousel from "nuka-carousel/lib/carousel";
-import styles from "./styles.module.scss";
+import NukaCarousel from 'nuka-carousel/lib/carousel';
+import styles from './styles.module.scss';
 
 const Carousel = ({ children, ...props }) => {
   return (

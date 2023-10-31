@@ -1,12 +1,12 @@
-import { useState, useEffect, useRef } from "react";
-import { BsMusicNote } from "react-icons/bs";
-import { TbPlayerTrackPrevFilled } from "react-icons/tb";
-import { TbPlayerTrackNextFilled } from "react-icons/tb";
-import { FaPause } from "react-icons/fa";
-import { FaPlay } from "react-icons/fa";
-import { BsFillVolumeOffFill } from "react-icons/bs";
-import { BsFillVolumeUpFill } from "react-icons/bs";
-import styles from "./styles.module.scss";
+import { useState, useEffect, useRef } from 'react';
+import { BsMusicNote } from 'react-icons/bs';
+import { TbPlayerTrackPrevFilled } from 'react-icons/tb';
+import { TbPlayerTrackNextFilled } from 'react-icons/tb';
+import { FaPause } from 'react-icons/fa';
+import { FaPlay } from 'react-icons/fa';
+import { BsFillVolumeOffFill } from 'react-icons/bs';
+import { BsFillVolumeUpFill } from 'react-icons/bs';
+import styles from './styles.module.scss';
 
 const Index = ({
   data,
@@ -35,8 +35,8 @@ const Index = ({
 
   //// Состояние уровня звука играющего аудио
   const [volume, setVolume] = useState(
-    JSON.parse(localStorage.getItem("volume")) ||
-      localStorage.setItem("volume", JSON.stringify("1"))
+    JSON.parse(localStorage.getItem('volume')) ||
+      localStorage.setItem('volume', JSON.stringify('1'))
   );
 
   //// Функция для сворачивания полноэкранного аудиоплеера
@@ -103,7 +103,7 @@ const Index = ({
       return `${minutes}:${seconds}`;
     }
 
-    return "00:00";
+    return '00:00';
   };
 
   //// Функция для перемотки аудио по клику
@@ -119,9 +119,9 @@ const Index = ({
   const filterAudiosByAuthor = () => {
     const dataCopy = [...data];
     const filterData = dataCopy.filter((audio) => {
-      return activeAudio.audioAuthor === "Никита Дудка"
-        ? audio.audioAuthor === "Никита Дудка"
-        : audio.audioAuthor === "Константин Рай";
+      return activeAudio.audioAuthor === 'Никита Дудка'
+        ? audio.audioAuthor === 'Никита Дудка'
+        : audio.audioAuthor === 'Константин Рай';
     });
     setData(filterData);
     setFullScreenAudioPopup(false);
@@ -144,8 +144,8 @@ const Index = ({
   //// Функция изменения уровня звука играющего аудио
   const handleVolume = (e) => {
     const { value } = e.target;
-    localStorage.setItem("volume", JSON.stringify(Number(value) / MAX));
-    currentAudio.volume = JSON.parse(localStorage.getItem("volume"));
+    localStorage.setItem('volume', JSON.stringify(Number(value) / MAX));
+    currentAudio.volume = JSON.parse(localStorage.getItem('volume'));
     setVolume(currentAudio.volume);
     volumeRangeRef.value = volume;
   };
@@ -191,7 +191,7 @@ const Index = ({
         </div>
         <div className={styles.audioImageBlock}>
           <div className={styles.audioImgBlock}>
-            {activeAudio.audioImage !== "" ? (
+            {activeAudio.audioImage !== '' ? (
               <img
                 className={styles.audioIamge}
                 src={activeAudio.audioImage}
@@ -227,7 +227,7 @@ const Index = ({
         <div className={styles.audioInfo}>
           <div
             className={`${styles.audioName}
-      ${activeAudio.audioName.length > 25 ? styles.animateAudioName : ""}
+      ${activeAudio.audioName.length > 25 ? styles.animateAudioName : ''}
       `}
           >
             {activeAudio.audioName}
